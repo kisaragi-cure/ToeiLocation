@@ -1,0 +1,4352 @@
+
+
+
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" content="noindex,noarchive,nofollow" />
+    <title>都営浅草線・京急線在線モニタ - 如月交通Ａ団</title>
+	<link rel="icon" href="A.ico">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta http-equiv="refresh" content="15">
+
+<style type="text/css">
+
+body{
+	background-repeat: no-repeat;
+	background-image: url(asakusa.png);
+	background-size:1200px;
+	font-family:'BIZ UDゴシック','Arial',"Hiragino Sans",sans-serif;
+	zoom: 85%;
+	line-height: 17px;
+}
+
+textarea {
+width: 250px;
+height: 7em;
+}
+
+input[type="text"]:disabled {
+background-color: #ffffff;
+  color: inheri;
+  cursor: default;
+    font-size: 16pt;
+    width: 155px;
+}
+
+.keiseibutton{
+    width: 250px;
+    height: 2em;
+    padding: 7px;
+    font-size: 14pt;
+}
+.mitabutton{
+    width: 120px;
+    height: 2em;
+    padding: 7px;
+    font-size: 14pt;
+}
+
+
+</style>
+
+  </head>
+
+
+  <body>
+
+<nobr>
+<p> 都営浅草線～京急線　[自動更新：15秒]　　　　　　　　　　　　　　　　　　　　(C)Cure_kisaragi 2024-2026 / Ver.3.00 03/10</p>
+<div style="position: absolute; top: 20px; left:10px; font-size:10pt"><p>本Webアプリが利用する公共交通データは、公共交通オープンデータセンターにおいて提供されるものです。交通事業者により提供されたデータを元に</p></div>
+<div style="position: absolute; top: 35px; left:10px; font-size:10pt"><p>していますが、必ずしも正確・完全なものとは限りません。本Webアプリの表示内容について、交通事業者への直接の問合せは行わないでください。</p></div>
+
+<div style="position: absolute; top: 65px; left:10px; font-size:10pt"><p>本Webアプリに関するお問い合わせ先(X)@cure_kisaragi</p></div>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<div id="koshin-T" style="position: absolute; top: 80px; left:370px; color:#000000; font-size:12pt; ">都営更新：ー</div>
+<div id="koshin-H" style="position: absolute; top: 80px; left:650px; color:#000000; font-size:12pt; ">京急更新：ー</div>
+
+<div style="position: absolute; top: 225px; left:290px;  color:#ff69b4; font-size:14pt"><p>●</p></div> <!快速>
+<div style="position: absolute; top: 225px; left:310px;  color:#0000ff; font-size:14pt"><p>●</p></div> <!通特>
+<div style="position: absolute; top: 225px; left:330px;  color:#ff0000; font-size:14pt"><p>●</p></div> <!特急>
+<div style="position: absolute; top: 225px; left:350px;  color:#32cd32; font-size:14pt"><p>●</p></div> <!快特>
+<div style="position: absolute; top: 225px; left:370px;  color:#ff8c00; font-size:14pt"><p>●</p></div> <!ア特>
+<div style="position: absolute; top: 245px; left:300px; font-size:18pt"><p>押　上</p></div>
+<div style="position: absolute; top: 275px; left:250px; font-size:12pt"><p><スカイツリー前></p></div>
+
+
+<div style="position: absolute; top: 200px; left:720px; font-size:12pt"><p>(押上駅について)</p></div>
+<div style="position: absolute; top: 222px; left:720px; font-size:11pt"><p>押上駅はこちらで確認できます↓</p></div>
+
+<div style="position: absolute; top: 260px; left:700px; font-size:24pt"><input type="button" id = "keisei" value="京成押上線列車走行位置" class="keiseibutton"></div>
+
+<!押上-本所>
+<div id="a20-19d" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "a20-19" disabled / name="address" size="14" value=""　></div>
+<div id="a20-19b" style="position: absolute; top: 405px; left:545px; font-size:12pt; "></div>
+<div id="a20-19e" style="position: absolute; top: 405px; left:555px; font-size:12pt; "></div>
+<div id="a20-19c" style="position: absolute; top: 460px; left:545px; font-size:12pt; color:#FF0000; "></div>
+<div id="a19-20d" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "a19-20" disabled / name="address" size="14" value=""　></div>
+<div id="a19-20b" style="position: absolute; top: 405px; left:485px; font-size:12pt; "></div>
+<div id="a19-20e" style="position: absolute; top: 405px; left:495px; font-size:12pt; "></div>
+<div id="a19-20c" style="position: absolute; top: 460px; left:485px; font-size:12pt; color:#FF0000; "></div>
+
+<div style="position: absolute; top: 500px; left:300px; font-size:18pt"><p>本所吾妻橋</p></div>
+<div id="a19-1ad" style="position: absolute; top: -100px; left:-100px;"><input type="text" id="a19-1a"  disabled / name="address" size="14" value=""　></div>
+<div id="a19-1b" style="position: absolute; top: 500px; left:545px; font-size:12pt; "></div>
+<div id="a19-1" style="position: absolute; top: 500px; left:555px; font-size:12pt; "></div>
+<div id="a19-1c" style="position: absolute; top: 555px; left:545px; font-size:12pt; color:#FF0000; "></div>
+<div id="a19-2ad" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "a19-2a"  disabled / name="address" size="14" value=""></div>
+<div id="a19-2b" style="position: absolute; top: 500px; left:485px; font-size:12pt; "></div>
+<div id="a19-2" style="position: absolute; top: 500px; left:495px; font-size:12pt; "></div>
+<div id="a19-2c" style="position: absolute; top: 555px; left:485px; font-size:12pt; color:#FF0000; "></div>
+
+<!本所-浅草>
+<div id="a19-18d" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "a19-18" disabled / name="address" size="14" value=""　></div>
+<div id="a19-18b" style="position: absolute; top: 600px; left:545px; font-size:12pt; "></div>
+<div id="a19-18e" style="position: absolute; top: 600px; left:555px; font-size:12pt; "></div>
+<div id="a19-18c" style="position: absolute; top: 655px; left:545px; font-size:12pt; color:#FF0000; "></div>
+<div id="a18-19d" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "a18-19" disabled / name="address" size="14" value=""　></div>
+<div id="a18-19b" style="position: absolute; top: 600px; left:485px; font-size:12pt; "></div>
+<div id="a18-19e" style="position: absolute; top: 600px; left:495px; font-size:12pt; "></div>
+<div id="a18-19c" style="position: absolute; top: 655px; left:485px; font-size:12pt; color:#FF0000; "></div>
+
+<div style="position: absolute; top: 680px; left:370px;  color:#ff8c00; font-size:14pt"><p>●</p></div> <!エア快>
+<div style="position: absolute; top: 700px; left:330px; font-size:18pt"><p>浅　草</p></div>
+<div id="a18-1ad" style="position: absolute; top: -100px; left:-100px;"><input type="text" id="a18-1a"  disabled / name="address" size="14" value=""　></div>
+<div id="a18-1b" style="position: absolute; top: 700px; left:545px; font-size:12pt; "></div>
+<div id="a18-1" style="position: absolute; top: 700px; left:555px; font-size:12pt; "></div>
+<div id="a18-1c" style="position: absolute; top: 755px; left:545px; font-size:12pt; color:#FF0000; "></div>
+<div id="a18-2ad" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "a18-2a"  disabled / name="address" size="14" value=""></div>
+<div id="a18-2b" style="position: absolute; top: 700px; left:485px; font-size:12pt; "></div>
+<div id="a18-2" style="position: absolute; top: 700px; left:495px; font-size:12pt; "></div>
+<div id="a18-2c" style="position: absolute; top: 755px; left:485px; font-size:12pt; color:#FF0000; "></div>
+
+<!浅草-蔵前>
+<div id="a18-17d" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "a18-17" disabled / name="address" size="14" value=""　></div>
+<div id="a18-17b" style="position: absolute; top: 800px; left:545px; font-size:12pt; "></div>
+<div id="a18-17e" style="position: absolute; top: 800px; left:555px; font-size:12pt; "></div>
+<div id="a18-17c" style="position: absolute; top: 855px; left:545px; font-size:12pt; color:#FF0000; "></div>
+<div id="a17-18d" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "a17-18" disabled / name="address" size="14" value=""　></div>
+<div id="a17-18b" style="position: absolute; top: 800px; left:485px; font-size:12pt; "></div>
+<div id="a17-18e" style="position: absolute; top: 800px; left:495px; font-size:12pt; "></div>
+<div id="a17-18c" style="position: absolute; top: 855px; left:485px; font-size:12pt; color:#FF0000; "></div>
+
+<div style="position: absolute; top: 900px; left:330px; font-size:18pt"><p>蔵　前</p></div>
+<div id="a17-1ad" style="position: absolute; top: -100px; left:-100px;"><input type="text" id="a17-1a"  disabled / name="address" size="14" value=""　></div>
+<div id="a17-1b" style="position: absolute; top: 900px; left:545px; font-size:12pt; "></div>
+<div id="a17-1" style="position: absolute; top: 900px; left:555px; font-size:12pt; "></div>
+<div id="a17-1c" style="position: absolute; top: 955px; left:545px; font-size:12pt; color:#FF0000; "></div>
+<div id="a17-2ad" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "a17-2a"  disabled / name="address" size="14" value=""></div>
+<div id="a17-2b" style="position: absolute; top: 900px; left:485px; font-size:12pt; "></div>
+<div id="a17-2" style="position: absolute; top: 900px; left:495px; font-size:12pt; "></div>
+<div id="a17-2c" style="position: absolute; top: 955px; left:485px; font-size:12pt; color:#FF0000; "></div>
+
+<!蔵前-浅草橋>
+<div id="a17-16d" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "a17-16" disabled / name="address" size="14" value=""　></div>
+<div id="a17-16b" style="position: absolute; top: 1055px; left:555px; font-size:12pt; "></div>
+<div id="a17-16e" style="position: absolute; top: 1055px; left:565px; font-size:12pt; "></div>
+<div id="a17-16c" style="position: absolute; top: 1110px; left:555px; font-size:12pt; color:#FF0000; "></div>
+<div id="a16-17d" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "a16-17" disabled / name="address" size="14" value=""　></div>
+<div id="a16-17b" style="position: absolute; top: 1055px; left:475px; font-size:12pt; "></div>
+<div id="a16-17e" style="position: absolute; top: 1055px; left:485px; font-size:12pt; "></div>
+<div id="a16-17c" style="position: absolute; top: 1110px; left:475px; font-size:12pt; color:#FF0000; "></div>
+
+<div style="position: absolute; top: 1190px; left:330px; font-size:18pt"><p>浅草橋</p></div>
+<div id="a16-1ad" style="position: absolute; top: -100px; left:-100px;"><input type="text" id="a16-1a"  disabled / name="address" size="14" value=""　></div>
+<div id="a16-1b" style="position: absolute; top: 1190px; left:555px; font-size:12pt; "></div>
+<div id="a16-1" style="position: absolute; top: 1190px; left:565px; font-size:12pt; "></div>
+<div id="a16-1c" style="position: absolute; top: 1245px; left:555px; font-size:12pt; color:#FF0000; "></div>
+<div id="a16-2ad" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "a16-2a"  disabled / name="address" size="14" value=""></div>
+<div id="a16-2b" style="position: absolute; top: 1190px; left:475px; font-size:12pt; "></div>
+<div id="a16-2" style="position: absolute; top: 1190px; left:485px; font-size:12pt; "></div>
+<div id="a16-2c" style="position: absolute; top: 1245px; left:475px; font-size:12pt; color:#FF0000; "></div>
+
+<!浅草橋-東日本橋>
+<div id="a16-15d" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "a16-15" disabled / name="address" size="14" value=""　></div>
+<div id="a16-15b" style="position: absolute; top: 1320px; left:545px; font-size:12pt; "></div>
+<div id="a16-15e" style="position: absolute; top: 1320px; left:555px; font-size:12pt; "></div>
+<div id="a16-15c" style="position: absolute; top: 1375px; left:545px; font-size:12pt; color:#FF0000; "></div>
+<div id="a15-16d" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "a15-16" disabled / name="address" size="14" value=""　></div>
+<div id="a15-16b" style="position: absolute; top: 1320px; left:485px; font-size:12pt; "></div>
+<div id="a15-16e" style="position: absolute; top: 1320px; left:495px; font-size:12pt; "></div>
+<div id="a15-16c" style="position: absolute; top: 1375px; left:485px; font-size:12pt; color:#FF0000; "></div>
+
+<div style="position: absolute; top: 1400px; left:370px;  color:#ff8c00; font-size:14pt"><p>●</p></div> <!エア快>
+<div style="position: absolute; top: 1420px; left:320px; font-size:18pt"><p>東日本橋</p></div>
+<div id="a15-1ad" style="position: absolute; top: -100px; left:-100px;"><input type="text" id="a15-1a"  disabled / name="address" size="14" value=""　></div>
+<div id="a15-1b" style="position: absolute; top: 1420px; left:545px; font-size:12pt; "></div>
+<div id="a15-1" style="position: absolute; top: 1420px; left:555px; font-size:12pt; "></div>
+<div id="a15-1c" style="position: absolute; top: 1475px; left:545px; font-size:12pt; color:#FF0000; "></div>
+<div id="a15-2ad" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "a15-2a"  disabled / name="address" size="14" value=""></div>
+<div id="a15-2b" style="position: absolute; top: 1420px; left:485px; font-size:12pt; "></div>
+<div id="a15-2" style="position: absolute; top: 1420px; left:495px; font-size:12pt; "></div>
+<div id="a15-2c" style="position: absolute; top: 1475px; left:485px; font-size:12pt; color:#FF0000; "></div>
+
+<!東日本橋-人形町>
+<div id="a15-14d" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "a15-14" disabled / name="address" size="14" value=""　></div>
+<div id="a15-14b" style="position: absolute; top: 1520px; left:545px; font-size:12pt; "></div>
+<div id="a15-14e" style="position: absolute; top: 1520px; left:555px; font-size:12pt; "></div>
+<div id="a15-14c" style="position: absolute; top: 1575px; left:545px; font-size:12pt; color:#FF0000; "></div>
+<div id="a14-15d" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "a14-15" disabled / name="address" size="14" value=""　></div>
+<div id="a14-15b" style="position: absolute; top: 1520px; left:485px; font-size:12pt; "></div>
+<div id="a14-15e" style="position: absolute; top: 1520px; left:495px; font-size:12pt; "></div>
+<div id="a14-15c" style="position: absolute; top: 1575px; left:485px; font-size:12pt; color:#FF0000; "></div>
+
+<div style="position: absolute; top: 1650px; left:330px; font-size:18pt"><p>人形町</p></div>
+<div id="a14-1ad" style="position: absolute; top: -100px; left:-100px;"><input type="text" id="a14-1a"  disabled / name="address" size="14" value=""　></div>
+<div id="a14-1b" style="position: absolute; top: 1650px; left:555px; font-size:12pt; "></div>
+<div id="a14-1" style="position: absolute; top: 1650px; left:565px; font-size:12pt; "></div>
+<div id="a14-1c" style="position: absolute; top: 1705px; left:555px; font-size:12pt; color:#FF0000; "></div>
+<div id="a14-2ad" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "a14-2a"  disabled / name="address" size="14" value=""></div>
+<div id="a14-2b" style="position: absolute; top: 1650px; left:475px; font-size:12pt; "></div>
+<div id="a14-2" style="position: absolute; top: 1650px; left:485px; font-size:12pt; "></div>
+<div id="a14-2c" style="position: absolute; top: 1705px; left:475px; font-size:12pt; color:#FF0000; "></div>
+
+<!人形町-日本橋>
+<div id="a14-13d" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "a14-13" disabled / name="address" size="14" value=""　></div>
+<div id="a14-13b" style="position: absolute; top: 1780px; left:545px; font-size:12pt; "></div>
+<div id="a14-13e" style="position: absolute; top: 1780px; left:555px; font-size:12pt; "></div>
+<div id="a14-13c" style="position: absolute; top: 1835px; left:545px; font-size:12pt; color:#FF0000; "></div>
+<div id="a13-14d" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "a13-14" disabled / name="address" size="14" value=""　></div>
+<div id="a13-14b" style="position: absolute; top: 1780px; left:485px; font-size:12pt; "></div>
+<div id="a13-14e" style="position: absolute; top: 1780px; left:495px; font-size:12pt; "></div>
+<div id="a13-14c" style="position: absolute; top: 1835px; left:485px; font-size:12pt; color:#FF0000; "></div>
+
+<div style="position: absolute; top: 1860px; left:370px;  color:#ff8c00; font-size:14pt"><p>●</p></div> <!エア快>
+<div style="position: absolute; top: 1880px; left:330px; font-size:18pt"><p>日本橋</p></div>
+<div id="a13-1ad" style="position: absolute; top: -100px; left:-100px;"><input type="text" id="a13-1a"  disabled / name="address" size="14" value=""　></div>
+<div id="a13-1b" style="position: absolute; top: 1880px; left:545px; font-size:12pt; "></div>
+<div id="a13-1" style="position: absolute; top: 1880px; left:555px; font-size:12pt; "></div>
+<div id="a13-1c" style="position: absolute; top: 1935px; left:545px; font-size:12pt; color:#FF0000; "></div>
+<div id="a13-2ad" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "a13-2a"  disabled / name="address" size="14" value=""></div>
+<div id="a13-2b" style="position: absolute; top: 1880px; left:485px; font-size:12pt; "></div>
+<div id="a13-2" style="position: absolute; top: 1880px; left:495px; font-size:12pt; "></div>
+<div id="a13-2c" style="position: absolute; top: 1935px; left:485px; font-size:12pt; color:#FF0000; "></div>
+
+<!日本橋-宝町>
+<div id="a13-12d" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "a13-12" disabled / name="address" size="14" value=""　></div>
+<div id="a13-12b" style="position: absolute; top: 1980px; left:545px; font-size:12pt; "></div>
+<div id="a13-12e" style="position: absolute; top: 1980px; left:555px; font-size:12pt; "></div>
+<div id="a13-12c" style="position: absolute; top: 2035px; left:545px; font-size:12pt; color:#FF0000; "></div>
+<div id="a12-13d" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "a12-13" disabled / name="address" size="14" value=""　></div>
+<div id="a12-13b" style="position: absolute; top: 1980px; left:485px; font-size:12pt; "></div>
+<div id="a12-13e" style="position: absolute; top: 1980px; left:495px; font-size:12pt; "></div>
+<div id="a12-13c" style="position: absolute; top: 2035px; left:485px; font-size:12pt; color:#FF0000; "></div>
+
+<div style="position: absolute; top: 2080px; left:330px; font-size:18pt"><p>宝　町</p></div>
+<div id="a12-1ad" style="position: absolute; top: -100px; left:-100px;"><input type="text" id="a12-1a"  disabled / name="address" size="14" value=""　></div>
+<div id="a12-1b" style="position: absolute; top: 2080px; left:545px; font-size:12pt; "></div>
+<div id="a12-1" style="position: absolute; top: 2080px; left:555px; font-size:12pt; "></div>
+<div id="a12-1c" style="position: absolute; top: 2135px; left:545px; font-size:12pt; color:#FF0000; "></div>
+<div id="a12-2ad" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "a12-2a"  disabled / name="address" size="14" value=""></div>
+<div id="a12-2b" style="position: absolute; top: 2080px; left:485px; font-size:12pt; "></div>
+<div id="a12-2" style="position: absolute; top: 2080px; left:495px; font-size:12pt; "></div>
+<div id="a12-2c" style="position: absolute; top: 2135px; left:485px; font-size:12pt; color:#FF0000; "></div>
+
+<!宝町-東銀座>
+<div id="a12-11d" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "a12-11" disabled / name="address" size="14" value=""　></div>
+<div id="a12-11b" style="position: absolute; top: 2180px; left:545px; font-size:12pt; "></div>
+<div id="a12-11e" style="position: absolute; top: 2180px; left:555px; font-size:12pt; "></div>
+<div id="a12-11c" style="position: absolute; top: 2235px; left:545px; font-size:12pt; color:#FF0000; "></div>
+<div id="a11-12d" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "a11-12" disabled / name="address" size="14" value=""　></div>
+<div id="a11-12b" style="position: absolute; top: 2180px; left:485px; font-size:12pt; "></div>
+<div id="a11-12e" style="position: absolute; top: 2180px; left:495px; font-size:12pt; "></div>
+<div id="a11-12c" style="position: absolute; top: 2235px; left:485px; font-size:12pt; color:#FF0000; "></div>
+
+<div style="position: absolute; top: 2310px; left:330px; font-size:18pt"><p>東銀座</p></div>
+<div id="a11-1ad" style="position: absolute; top: -100px; left:-100px;"><input type="text" id="a11-1a"  disabled / name="address" size="14" value=""　></div>
+<div id="a11-1b" style="position: absolute; top: 2310px; left:555px; font-size:12pt; "></div>
+<div id="a11-1" style="position: absolute; top: 2310px; left:565px; font-size:12pt; "></div>
+<div id="a11-1c" style="position: absolute; top: 2365px; left:555px; font-size:12pt; color:#FF0000; "></div>
+<div id="a11-2ad" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "a11-2a"  disabled / name="address" size="14" value=""></div>
+<div id="a11-2b" style="position: absolute; top: 2310px; left:475px; font-size:12pt; "></div>
+<div id="a11-2" style="position: absolute; top: 2310px; left:485px; font-size:12pt; "></div>
+<div id="a11-2c" style="position: absolute; top: 2365px; left:475px; font-size:12pt; color:#FF0000; "></div>
+
+<!東銀座-新橋>
+<div id="a11-10d" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "a11-10" disabled / name="address" size="14" value=""　></div>
+<div id="a11-10b" style="position: absolute; top: 2445px; left:545px; font-size:12pt; "></div>
+<div id="a11-10e" style="position: absolute; top: 2445px; left:555px; font-size:12pt; "></div>
+<div id="a11-10c" style="position: absolute; top: 2500px; left:545px; font-size:12pt; color:#FF0000; "></div>
+<div id="a10-11d" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "a10-11" disabled / name="address" size="14" value=""　></div>
+<div id="a10-11b" style="position: absolute; top: 2445px; left:485px; font-size:12pt; "></div>
+<div id="a10-11e" style="position: absolute; top: 2445px; left:495px; font-size:12pt; "></div>
+<div id="a10-11c" style="position: absolute; top: 2500px; left:485px; font-size:12pt; color:#FF0000; "></div>
+
+<div style="position: absolute; top: 2520px; left:370px;  color:#ff8c00; font-size:14pt"><p>●</p></div> <!エア快>
+<div style="position: absolute; top: 2540px; left:330px; font-size:18pt"><p>新　橋</p></div>
+<div id="a10-1ad" style="position: absolute; top: -100px; left:-100px;"><input type="text" id="a10-1a"  disabled / name="address" size="14" value=""　></div>
+<div id="a10-1b" style="position: absolute; top: 2540px; left:545px; font-size:12pt; "></div>
+<div id="a10-1" style="position: absolute; top: 2540px; left:555px; font-size:12pt; "></div>
+<div id="a10-1c" style="position: absolute; top: 2595px; left:545px; font-size:12pt; color:#FF0000; "></div>
+<div id="a10-2ad" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "a10-2a"  disabled / name="address" size="14" value=""></div>
+<div id="a10-2b" style="position: absolute; top: 2540px; left:485px; font-size:12pt; "></div>
+<div id="a10-2" style="position: absolute; top: 2540px; left:495px; font-size:12pt; "></div>
+<div id="a10-2c" style="position: absolute; top: 2595px; left:485px; font-size:12pt; color:#FF0000; "></div>
+
+<!新橋-大門>
+<div id="a10-09d" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "a10-09" disabled / name="address" size="14" value=""　></div>
+<div id="a10-09b" style="position: absolute; top: 2690px; left:545px; font-size:12pt; "></div>
+<div id="a10-09e" style="position: absolute; top: 2690px; left:555px; font-size:12pt; "></div>
+<div id="a10-09c" style="position: absolute; top: 2745px; left:545px; font-size:12pt; color:#FF0000; "></div>
+<div id="a09-10d" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "a09-10" disabled / name="address" size="14" value=""　></div>
+<div id="a09-10b" style="position: absolute; top: 2690px; left:485px; font-size:12pt; "></div>
+<div id="a09-10e" style="position: absolute; top: 2690px; left:495px; font-size:12pt; "></div>
+<div id="a09-10c" style="position: absolute; top: 2745px; left:485px; font-size:12pt; color:#FF0000; "></div>
+
+<div style="position: absolute; top: 2770px; left:370px;  color:#ff8c00; font-size:14pt"><p>●</p></div> <!エア快>
+<div style="position: absolute; top: 2790px; left:330px; font-size:18pt"><p>大　門</p></div>
+<div id="a09-1ad" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "a09-1a" disabled / name="address" size="14" value=""　></div>
+<div id="a09-1b" style="position: absolute; top: 2790px; left:545px; font-size:12pt; "></div>
+<div id="a09-1" style="position: absolute; top: 2790px; left:555px; font-size:12pt; "></div>
+<div id="a09-1c" style="position: absolute; top: 2845px; left:545px; font-size:12pt; color:#FF0000; "></div>
+<div id="a09-2ad" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "a09-2a" disabled / name="address" size="14" value=""　></div>
+<div id="a09-2b" style="position: absolute; top: 2790px; left:485px; font-size:12pt; "></div>
+<div id="a09-2" style="position: absolute; top: 2790px; left:495px; font-size:12pt; "></div>
+<div id="a09-2c" style="position: absolute; top: 2845px; left:485px; font-size:12pt; color:#FF0000; "></div>
+
+<!大門-三田>
+<div id="a09-08d" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "a09-08" disabled / name="address" size="14" value=""　></div>
+<div id="a09-08b" style="position: absolute; top: 2890px; left:545px; font-size:12pt; "></div>
+<div id="a09-08e" style="position: absolute; top: 2890px; left:555px; font-size:12pt; "></div>
+<div id="a09-08c" style="position: absolute; top: 2945px; left:545px; font-size:12pt; color:#FF0000; "></div>
+<div id="a08-09d" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "a08-09" disabled / name="address" size="14" value=""　></div>
+<div id="a08-09b" style="position: absolute; top: 2890px; left:485px; font-size:12pt; "></div>
+<div id="a08-09e" style="position: absolute; top: 2890px; left:495px; font-size:12pt; "></div>
+<div id="a08-09c" style="position: absolute; top: 2945px; left:485px; font-size:12pt; color:#FF0000; "></div>
+
+<div style="position: absolute; top: 3000px; left:370px;  color:#ff8c00; font-size:14pt"><p>●</p></div> <!エア快>
+<div style="position: absolute; top: 3020px; left:330px; font-size:18pt"><p>三　田</p></div>
+<div id="a08-1ad" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "a08-1a" disabled / name="address" size="14" value=""　></div>
+<div id="a08-1b" style="position: absolute; top: 3020px; left:555px; font-size:12pt; "></div>
+<div id="a08-1" style="position: absolute; top: 3020px; left:565px; font-size:12pt; "></div>
+<div id="a08-1c" style="position: absolute; top: 3075px; left:555px; font-size:12pt; color:#FF0000; "></div>
+<div id="a08-2ad" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "a08-2a" disabled / name="address" size="14" value=""　></div>
+<div id="a08-2b" style="position: absolute; top: 3020px; left:475px; font-size:12pt; "></div>
+<div id="a08-2" style="position: absolute; top: 3020px; left:485px; font-size:12pt; "></div>
+<div id="a08-2c" style="position: absolute; top: 3075px; left:475px; font-size:12pt; color:#FF0000; "></div>
+
+<div style="position: absolute; top: 3030px; left:650px; font-size:24pt"><input type="button" id = "mita" value="都営三田線" class="mitabutton"></div>
+
+<!三田-泉岳寺>
+<div id="a08-07d" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "a08-07" disabled / name="address" size="14" value=""　></div>
+<div id="a08-07b" style="position: absolute; top: 3120px; left:555px; font-size:12pt; "></div>
+<div id="a08-07e" style="position: absolute; top: 3120px; left:565px; font-size:12pt; "></div>
+<div id="a08-07c" style="position: absolute; top: 3175px; left:555px; font-size:12pt; color:#FF0000; "></div>
+<div id="a07-08d" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "a07-08" disabled / name="address" size="14" value=""　></div>
+<div id="a07-08b" style="position: absolute; top: 3120px; left:475px; font-size:12pt; "></div>
+<div id="a07-08e" style="position: absolute; top: 3120px; left:485px; font-size:12pt; "></div>
+<div id="a07-08c" style="position: absolute; top: 3175px; left:475px; font-size:12pt; color:#FF0000; "></div>
+
+<div style="position: absolute; top: 3310px; left:310px;  color:#0000ff; font-size:14pt"><p>●</p></div> <!急行>
+<div style="position: absolute; top: 3310px; left:330px;  color:#ff0000; font-size:14pt"><p>●</p></div> <!特急>
+<div style="position: absolute; top: 3310px; left:350px;  color:#32cd32; font-size:14pt"><p>●</p></div> <!快特>
+<div style="position: absolute; top: 3310px; left:370px;  color:#ff8c00; font-size:14pt"><p>●</p></div> <!エア快>
+<div style="position: absolute; top: 3330px; left:315px; font-size:18pt"><p>泉岳寺</p></div>
+<div style="position: absolute; top: 3365px; left:235px; color:#ff0000;  font-size:10pt"><p>※一部実番線と異なります</p></div>
+<div id="a07-1ad" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "a07-1a" disabled / name="address" size="14" value=""　></div>
+<div id="a07-1b" style="position: absolute; top: 3330px; left:625px; font-size:12pt; "></div>
+<div id="a07-1" style="position: absolute; top: 3330px; left:635px; font-size:12pt; "></div>
+<div id="a07-1c" style="position: absolute; top: 3385px; left:625px; font-size:12pt; color:#FF0000; "></div>
+<div id="a07-2ad" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "a07-2a" disabled / name="address" size="14" value=""　></div>
+<div id="a07-2b" style="position: absolute; top: 3330px; left:545px; font-size:12pt; "></div>
+<div id="a07-2" style="position: absolute; top: 3330px; left:555px; font-size:12pt; "></div>
+<div id="a07-2c" style="position: absolute; top: 3385px; left:545px; font-size:12pt; color:#FF0000; "></div>
+<div id="a07-3ad" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "a07-3a" disabled / name="address" size="14" value=""　></div>
+<div id="a07-3b" style="position: absolute; top: 3330px; left:485px; font-size:12pt; "></div>
+<div id="a07-3" style="position: absolute; top: 3330px; left:495px; font-size:12pt; "></div>
+<div id="a07-3c" style="position: absolute; top: 3385px; left:485px; font-size:12pt; color:#FF0000; "></div>
+<div id="a07-4ad" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "a07-4a" disabled / name="address" size="14" value=""　></div>
+<div id="a07-4b" style="position: absolute; top: 3330px; left:405px; font-size:12pt; "></div>
+<div id="a07-4" style="position: absolute; top: 3330px; left:415px; font-size:12pt; "></div>
+<div id="a07-4c" style="position: absolute; top: 3385px; left:405px; font-size:12pt; color:#FF0000; "></div>
+
+<!泉岳寺-高輪台>
+<div id="a07-06d" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "a07-06" disabled / name="address" size="14" value=""　></div>
+<div id="a07-06b" style="position: absolute; top: 3610px; left:320px; font-size:12pt; "></div>
+<div id="a07-06e" style="position: absolute; top: 3610px; left:330px; font-size:12pt; "></div>
+<div id="a07-06c" style="position: absolute; top: 3665px; left:320px; font-size:12pt; color:#FF0000; "></div>
+<div id="a06-07d" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "a06-07" disabled / name="address" size="14" value=""　></div>
+<div id="a06-07b" style="position: absolute; top: 3610px; left:240px; font-size:12pt; "></div>
+<div id="a06-07e" style="position: absolute; top: 3610px; left:250px; font-size:12pt; "></div>
+<div id="a06-07c" style="position: absolute; top: 3665px; left:240px; font-size:12pt; color:#FF0000; "></div>
+
+<div style="position: absolute; top: 3700px; left:150px; font-size:18pt"><p>高輪台</p></div>
+<div id="a06-1ad" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "a06-1a" disabled / name="address" size="14" value=""　></div>
+<div id="a06-1b" style="position: absolute; top: 3700px; left:320px; font-size:12pt; "></div>
+<div id="a06-1" style="position: absolute; top: 3700px; left:330px; font-size:12pt; "></div>
+<div id="a06-1c" style="position: absolute; top: 3755px; left:320px; font-size:12pt; color:#FF0000; "></div>
+<div id="a06-2ad" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "a06-2a" disabled / name="address" size="14" value=""　></div>
+<div id="a06-2b" style="position: absolute; top: 3700px; left:240px; font-size:12pt; "></div>
+<div id="a06-2" style="position: absolute; top: 3700px; left:250px; font-size:12pt; "></div>
+<div id="a06-2c" style="position: absolute; top: 3755px; left:240px; font-size:12pt; color:#FF0000; "></div>
+
+<!高輪台-五反田>
+<div id="a06-05d" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "a06-05" disabled / name="address" size="14" value=""　></div>
+<div id="a06-05b" style="position: absolute; top: 3800px; left:320px; font-size:12pt; "></div>
+<div id="a06-05e" style="position: absolute; top: 3800px; left:330px; font-size:12pt; "></div>
+<div id="a06-05c" style="position: absolute; top: 3855px; left:320px; font-size:12pt; color:#FF0000; "></div>
+<div id="a05-06d" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "a05-06" disabled / name="address" size="14" value=""　></div>
+<div id="a05-06b" style="position: absolute; top: 3800px; left:240px; font-size:12pt; "></div>
+<div id="a05-06e" style="position: absolute; top: 3800px; left:250px; font-size:12pt; "></div>
+<div id="a05-06c" style="position: absolute; top: 3855px; left:240px; font-size:12pt; color:#FF0000; "></div>
+
+<div style="position: absolute; top: 3900px; left:150px; font-size:18pt"><p>五反田</p></div>
+<div id="a05-1ad" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "a05-1a" disabled / name="address" size="14" value=""　></div>
+<div id="a05-1b" style="position: absolute; top: 3900px; left:320px; font-size:12pt; "></div>
+<div id="a05-1" style="position: absolute; top: 3900px; left:330px; font-size:12pt; "></div>
+<div id="a05-1c" style="position: absolute; top: 3955px; left:320px; font-size:12pt; color:#FF0000; "></div>
+<div id="a05-2ad" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "a05-2a" disabled / name="address" size="14" value=""　></div>
+<div id="a05-2b" style="position: absolute; top: 3900px; left:240px; font-size:12pt; "></div>
+<div id="a05-2" style="position: absolute; top: 3900px; left:250px; font-size:12pt; "></div>
+<div id="a05-2c" style="position: absolute; top: 3955px; left:240px; font-size:12pt; color:#FF0000; "></div>
+
+<!五反田-戸越>
+<div id="a05-04d" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "a05-04" disabled / name="address" size="14" value=""　></div>
+<div id="a05-04b" style="position: absolute; top: 4000px; left:320px; font-size:12pt; "></div>
+<div id="a05-04e" style="position: absolute; top: 4000px; left:330px; font-size:12pt; "></div>
+<div id="a05-04c" style="position: absolute; top: 4055px; left:320px; font-size:12pt; color:#FF0000; "></div>
+<div id="a04-05d" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "a04-05" disabled / name="address" size="14" value=""　></div>
+<div id="a04-05b" style="position: absolute; top: 4000px; left:240px; font-size:12pt; "></div>
+<div id="a04-05e" style="position: absolute; top: 4000px; left:250px; font-size:12pt; "></div>
+<div id="a04-05c" style="position: absolute; top: 4055px; left:240px; font-size:12pt; color:#FF0000; "></div>
+
+<div style="position: absolute; top: 4100px; left:150px; font-size:18pt"><p>戸　越</p></div>
+<div id="a04-1ad" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "a04-1a" disabled / name="address" size="14" value=""　></div>
+<div id="a04-1b" style="position: absolute; top: 4100px; left:320px; font-size:12pt; "></div>
+<div id="a04-1" style="position: absolute; top: 4100px; left:330px; font-size:12pt; "></div>
+<div id="a04-1c" style="position: absolute; top: 4155px; left:320px; font-size:12pt; color:#FF0000; "></div>
+<div id="a04-2ad" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "a04-2a" disabled / name="address" size="14" value=""　></div>
+<div id="a04-2b" style="position: absolute; top: 4100px; left:240px; font-size:12pt; "></div>
+<div id="a04-2" style="position: absolute; top: 4100px; left:250px; font-size:12pt; "></div>
+<div id="a04-2c" style="position: absolute; top: 4155px; left:240px; font-size:12pt; color:#FF0000; "></div>
+
+<!戸越-中延>
+<div id="a04-03d" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "a04-03" disabled / name="address" size="14" value=""　></div>
+<div id="a04-03b" style="position: absolute; top: 4200px; left:320px; font-size:12pt; "></div>
+<div id="a04-03e" style="position: absolute; top: 4200px; left:330px; font-size:12pt; "></div>
+<div id="a04-03c" style="position: absolute; top: 4255px; left:320px; font-size:12pt; color:#FF0000; "></div>
+<div id="a03-04d" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "a03-04" disabled / name="address" size="14" value=""　></div>
+<div id="a03-04b" style="position: absolute; top: 4200px; left:240px; font-size:12pt; "></div>
+<div id="a03-04e" style="position: absolute; top: 4200px; left:250px; font-size:12pt; "></div>
+<div id="a03-04c" style="position: absolute; top: 4255px; left:240px; font-size:12pt; color:#FF0000; "></div>
+
+<div style="position: absolute; top: 4300px; left:150px; font-size:18pt"><p>中　延</p></div>
+<div id="a03-1ad" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "a03-1a" disabled / name="address" size="14" value=""　></div>
+<div id="a03-1b" style="position: absolute; top: 4300px; left:320px; font-size:12pt; "></div>
+<div id="a03-1" style="position: absolute; top: 4300px; left:330px; font-size:12pt; "></div>
+<div id="a03-1c" style="position: absolute; top: 4355px; left:320px; font-size:12pt; color:#FF0000; "></div>
+<div id="a03-2ad" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "a03-2a" disabled / name="address" size="14" value=""　></div>
+<div id="a03-2b" style="position: absolute; top: 4300px; left:240px; font-size:12pt; "></div>
+<div id="a03-2" style="position: absolute; top: 4300px; left:250px; font-size:12pt; "></div>
+<div id="a03-2c" style="position: absolute; top: 4355px; left:240px; font-size:12pt; color:#FF0000; "></div>
+
+<!中延-馬込>
+<div id="a03-02d" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "a03-02" disabled / name="address" size="14" value=""　></div>
+<div id="a03-02b" style="position: absolute; top: 4400px; left:320px; font-size:12pt; "></div>
+<div id="a03-02e" style="position: absolute; top: 4400px; left:330px; font-size:12pt; "></div>
+<div id="a03-02c" style="position: absolute; top: 4455px; left:320px; font-size:12pt; color:#FF0000; "></div>
+<div id="a02-03d" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "a02-03" disabled / name="address" size="14" value=""　></div>
+<div id="a02-03b" style="position: absolute; top: 4400px; left:240px; font-size:12pt; "></div>
+<div id="a02-03e" style="position: absolute; top: 4400px; left:250px; font-size:12pt; "></div>
+<div id="a02-03c" style="position: absolute; top: 4455px; left:240px; font-size:12pt; color:#FF0000; "></div>
+
+<div style="position: absolute; top: 4500px; left:150px; font-size:18pt"><p>馬　込</p></div>
+<div id="a02-1ad" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "a02-1a" disabled / name="address" size="14" value=""　></div>
+<div id="a02-1b" style="position: absolute; top: 4500px; left:320px; font-size:12pt; "></div>
+<div id="a02-1" style="position: absolute; top: 4500px; left:330px; font-size:12pt; "></div>
+<div id="a02-1c" style="position: absolute; top: 4555px; left:320px; font-size:12pt; color:#FF0000; "></div>
+<div id="a02-2ad" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "a02-2a" disabled / name="address" size="14" value=""　></div>
+<div id="a02-2b" style="position: absolute; top: 4500px; left:240px; font-size:12pt; "></div>
+<div id="a02-2" style="position: absolute; top: 4500px; left:250px; font-size:12pt; "></div>
+<div id="a02-2c" style="position: absolute; top: 4555px; left:240px; font-size:12pt; color:#FF0000; "></div>
+
+<!馬込-西馬込>
+<div id="a02-01d" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "a02-01" disabled / name="address" size="14" value=""　></div>
+<div id="a02-01b" style="position: absolute; top: 4630px; left:310px; font-size:12pt; "></div>
+<div id="a02-01e" style="position: absolute; top: 4630px; left:320px; font-size:12pt; "></div>
+<div id="a02-01c" style="position: absolute; top: 4685px; left:310px; font-size:12pt; color:#FF0000; "></div>
+<div id="a01-02d" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "a01-02" disabled / name="address" size="14" value=""　></div>
+<div id="a01-02b" style="position: absolute; top: 4630px; left:250px; font-size:12pt; "></div>
+<div id="a01-02e" style="position: absolute; top: 4630px; left:260px; font-size:12pt; "></div>
+<div id="a01-02c" style="position: absolute; top: 4685px; left:250px; font-size:12pt; color:#FF0000; "></div>
+
+<div style="position: absolute; top: 4790px; left:140px; font-size:18pt"><p>西馬込</p></div>
+<div id="a01-1ad" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "a01-1a" disabled / name="address" size="14" value=""　></div>
+<div id="a01-1b" style="position: absolute; top: 4790px; left:310px; font-size:12pt; "></div>
+<div id="a01-1" style="position: absolute; top: 4790px; left:320px; font-size:12pt; "></div>
+<div id="a01-1c" style="position: absolute; top: 4845px; left:310px; font-size:12pt; color:#FF0000; "></div>
+<div id="a01-2ad" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "a01-2a" disabled / name="address" size="14" value=""　></div>
+<div id="a01-2b" style="position: absolute; top: 4790px; left:250px; font-size:12pt; "></div>
+<div id="a01-2" style="position: absolute; top: 4790px; left:260px; font-size:12pt; "></div>
+<div id="a01-2c" style="position: absolute; top: 4845px; left:250px; font-size:12pt; color:#FF0000; "></div>
+
+
+<!西馬込発車>
+<div style="position: absolute; top: 5050px; left:190px; color:#ffffff; font-size:12pt"><p>西馬込発車順序</p></div>
+<div id="a01dep11" style="position: absolute; top: 5095px; left:170px; color:#ffffff; font-size:12pt; "></div>
+<div id="a01dep12" style="position: absolute; top: 5095px; left:210px; color:#ffffff; font-size:12pt; "></div>
+<div id="a01dep13" style="position: absolute; top: 5095px; left:290px; color:#ffffff; font-size:12pt; "></div>
+<div id="a01dep14" style="position: absolute; top: 5095px; left:340px; color:#ffffff; font-size:12pt; "></div>
+<div id="a01dep15" style="position: absolute; top: 5095px; left:390px; color:#ffff00; font-size:12pt; "></div>
+
+<div id="a01dep21" style="position: absolute; top: 5120px; left:170px; color:#ffffff; font-size:12pt; "></div>
+<div id="a01dep22" style="position: absolute; top: 5120px; left:210px; color:#ffffff; font-size:12pt; "></div>
+<div id="a01dep23" style="position: absolute; top: 5120px; left:290px; color:#ffffff; font-size:12pt; "></div>
+<div id="a01dep24" style="position: absolute; top: 5120px; left:340px; color:#ffffff; font-size:12pt; "></div>
+<div id="a01dep25" style="position: absolute; top: 5120px; left:390px; color:#ffff00; font-size:12pt; "></div>
+
+<div style="position: absolute; top: 5150px; left:160px; color:#ff0000;  font-size:11pt"><p>※時刻表に掲載の番線で表示しています。</p></div>
+<div style="position: absolute; top: 5170px; left:160px; color:#ff0000;  font-size:11pt"><p>※出庫列車はホーム到着で順序割込します。</p></div>
+
+
+
+
+<div id="ty99d" style="position: absolute; top: -50px; left:-50px; font-size:18pt"　><input type="text"  id = "ty99" disabled / name="address" size="100" value="試験"　></div>
+
+<div style="position: absolute; top: 3400px; left:720px; font-size:12pt"><p>(泉岳寺～品川間について)</p></div>
+<div style="position: absolute; top: 3424px; left:720px; font-size:10pt"><p>ダイヤ乱れ時は正確に表示されません。</p></div>
+<div style="position: absolute; top: 3440px; left:720px; font-size:10pt"><p>京急の泉岳寺折返列車は表示されません。</p></div>
+
+<!泉岳寺-品川>
+<div id="a07-kkd" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "a07-kk" disabled / name="address" size="14" value=""　></div>
+<div id="a07-kkb" style="position: absolute; top: 3605px; left:800px; font-size:12pt; "></div>
+<div id="a07-kke" style="position: absolute; top: 3605px; left:810px; font-size:12pt; "></div>
+<div id="a07-kkc" style="position: absolute; top: 3660px; left:800px; font-size:12pt; color:#FF0000; "></div>
+<div id="kk-a07d" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "kk-a07" disabled / name="address" size="14" value=""　></div>
+<div id="kk-a07b" style="position: absolute; top: 3605px; left:660px; font-size:12pt; "></div>
+<div id="kk-a07e" style="position: absolute; top: 3605px; left:670px; font-size:12pt; "></div>
+<div id="kk-a07c" style="position: absolute; top: 3660px; left:660px; font-size:12pt; color:#FF0000; "></div>
+
+<div style="position: absolute; top: 3720px; left:520px;  color:#0000ff; font-size:14pt"><p>●</p></div> <!急行>
+<div style="position: absolute; top: 3720px; left:540px;  color:#ff0000; font-size:14pt"><p>●</p></div> <!特急>
+<div style="position: absolute; top: 3720px; left:560px;  color:#32cd32; font-size:14pt"><p>●</p></div> <!快特>
+<div style="position: absolute; top: 3720px; left:580px;  color:#ff8c00; font-size:14pt"><p>●</p></div> <!エア快>
+<div style="position: absolute; top: 3740px; left:520px; font-size:18pt"><p>品　川</p></div>
+<div style="position: absolute; top: 3775px; left:450px; color:#ff0000; font-size:10pt"><p>※一部実番線と異なります</p></div>
+<div id="kk01-1ad" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "kk01-1a" disabled / name="address" size="14" value=""　></div>
+<div id="kk01-1b" style="position: absolute; top: 3740px; left:760px; font-size:12pt; "></div>
+<div id="kk01-1" style="position: absolute; top: 3740px; left:770px; font-size:12pt; "></div>
+<div id="kk01-2ad" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "kk01-2a" disabled / name="address" size="14" value=""　></div>
+<div id="kk01-2b" style="position: absolute; top: 3740px; left:700px; font-size:12pt; "></div>
+<div id="kk01-2" style="position: absolute; top: 3740px; left:710px; font-size:12pt; "></div>
+<div id="kk01-2c" style="position: absolute; top: 3795px; left:700px; font-size:12pt; color:#FF0000; "></div>
+<div id="kk01-3ad" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "kk01-3a" disabled / name="address" size="14" value=""　></div>
+<div id="kk01-3b" style="position: absolute; top: 3740px; left:620px; font-size:12pt; "></div>
+<div id="kk01-3" style="position: absolute; top: 3740px; left:630px; font-size:12pt; "></div>
+
+<!品川-北品川>
+<div id="kk01-02d" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "kk01-02" disabled / name="address" size="14" value=""　></div>
+<div id="kk01-02b" style="position: absolute; top: 3935px; left:760px; font-size:12pt; "></div>
+<div id="kk01-02e" style="position: absolute; top: 3935px; left:767px; font-size:12pt; "></div>
+<div id="kk02-01d" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "kk02-01" disabled / name="address" size="14" value=""　></div>
+<div id="kk02-01b" style="position: absolute; top: 3935px; left:700px; font-size:12pt; "></div>
+<div id="kk02-01e" style="position: absolute; top: 3935px; left:707px; font-size:12pt; "></div>
+<div id="kk02-01c" style="position: absolute; top: 3990px; left:700px; font-size:12pt; color:#FF0000; "></div>
+
+
+<div style="position: absolute; top: 4040px; left:520px; font-size:18pt"><p>北品川</p></div>
+<div id="kk02-1ad" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "kk02-1a" disabled / name="address" size="14" value=""　></div>
+<div id="kk02-1b" style="position: absolute; top: 4040px; left:760px; font-size:12pt; "></div>
+<div id="kk02-1" style="position: absolute; top: 4040px; left:770px; font-size:12pt; "></div>
+<div id="kk02-2ad" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "kk02-2a" disabled / name="address" size="14" value=""　></div>
+<div id="kk02-2b" style="position: absolute; top: 4040px; left:700px; font-size:12pt; "></div>
+<div id="kk02-2" style="position: absolute; top: 4040px; left:710px; font-size:12pt; "></div>
+<div id="kk02-2c" style="position: absolute; top: 4095px; left:700px; font-size:12pt; color:#FF0000; "></div>
+
+
+<!北品川-新馬場>
+<div id="kk02-03d" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "kk02-03" disabled / name="address" size="14" value=""　></div>
+<div id="kk02-03b" style="position: absolute; top: 4135px; left:760px; font-size:12pt; "></div>
+<div id="kk02-03e" style="position: absolute; top: 4135px; left:770px; font-size:12pt; "></div>
+<div id="kk03-02d" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "kk03-02" disabled / name="address" size="14" value=""　></div>
+<div id="kk03-02b" style="position: absolute; top: 4135px; left:700px; font-size:12pt; "></div>
+<div id="kk03-02e" style="position: absolute; top: 4135px; left:710px; font-size:12pt; "></div>
+<div id="kk03-02c" style="position: absolute; top: 4190px; left:700px; font-size:12pt; color:#FF0000; "></div>
+
+<div style="position: absolute; top: 4230px; left:520px; font-size:18pt"><p>新馬場</p></div>
+<div id="kk03-1ad" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "kk03-1a" disabled / name="address" size="14" value=""　></div>
+<div id="kk03-1b" style="position: absolute; top: 4230px; left:760px; font-size:12pt; "></div>
+<div id="kk03-1" style="position: absolute; top: 4230px; left:770px; font-size:12pt; "></div>
+<div id="kk03-2ad" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "kk03-2a" disabled / name="address" size="14" value=""　></div>
+<div id="kk03-2b" style="position: absolute; top: 4230px; left:700px; font-size:12pt; "></div>
+<div id="kk03-2" style="position: absolute; top: 4230px; left:710px; font-size:12pt; "></div>
+<div id="kk03-2c" style="position: absolute; top: 4295px; left:700px; font-size:12pt; color:#FF0000; "></div>
+
+
+<!新馬場-青物横丁>
+<div id="kk03-04d" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "kk03-04" disabled / name="address" size="14" value=""　></div>
+<div id="kk03-04b" style="position: absolute; top: 4325px; left:760px; font-size:12pt; "></div>
+<div id="kk03-04e" style="position: absolute; top: 4325px; left:770px; font-size:12pt; "></div>
+<div id="kk04-03d" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "kk04-03" disabled / name="address" size="14" value=""　></div>
+<div id="kk04-03b" style="position: absolute; top: 4325px; left:700px; font-size:12pt; "></div>
+<div id="kk04-03e" style="position: absolute; top: 4325px; left:710px; font-size:12pt; "></div>
+
+<div style="position: absolute; top: 4400px; left:520px;  color:#0000ff; font-size:14pt"><p>●</p></div> <!急行>
+<div style="position: absolute; top: 4400px; left:540px;  color:#ff0000; font-size:14pt"><p>●</p></div> <!特急>
+<div style="position: absolute; top: 4420px; left:520px; font-size:18pt"><p>青物横丁</p></div>
+<div id="kk04-1ad" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "kk04-1a" disabled / name="address" size="14" value=""　></div>
+<div id="kk04-1b" style="position: absolute; top: 4420px; left:760px; font-size:12pt; "></div>
+<div id="kk04-1" style="position: absolute; top: 4420px; left:770px; font-size:12pt; "></div>
+<div id="kk04-2ad" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "kk04-2a" disabled / name="address" size="14" value=""　></div>
+<div id="kk04-2b" style="position: absolute; top: 4420px; left:700px; font-size:12pt; "></div>
+<div id="kk04-2" style="position: absolute; top: 4420px; left:710px; font-size:12pt; "></div>
+
+<!青物横丁-鮫洲>
+<div id="kk04-05d" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "kk04-05" disabled / name="address" size="14" value=""　></div>
+<div id="kk04-05b" style="position: absolute; top: 4515px; left:760px; font-size:12pt; "></div>
+<div id="kk04-05e" style="position: absolute; top: 4515px; left:770px; font-size:12pt; "></div>
+<div id="kk05-04d" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "kk05-04" disabled / name="address" size="14" value=""　></div>
+<div id="kk05-04b" style="position: absolute; top: 4515px; left:700px; font-size:12pt; "></div>
+<div id="kk05-04e" style="position: absolute; top: 4515px; left:710px; font-size:12pt; "></div>
+
+<div style="position: absolute; top: 4675px; left:520px; font-size:18pt"><p>鮫　洲</p></div>
+<div id="kk05-1ad" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "kk05-1a" disabled / name="address" size="14" value=""　></div>
+<div id="kk05-1b" style="position: absolute; top: 4675px; left:830px; font-size:12pt; "></div>
+<div id="kk05-1" style="position: absolute; top: 4675px; left:840px; font-size:12pt; "></div>
+<div id="kk05-2ad" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "kk05-2a" disabled / name="address" size="14" value=""　></div>
+<div id="kk05-2b" style="position: absolute; top: 4675px; left:770px; font-size:12pt; "></div>
+<div id="kk05-2" style="position: absolute; top: 4675px; left:780px; font-size:12pt; "></div>
+<div id="kk05-3ad" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "kk05-3a" disabled / name="address" size="14" value=""　></div>
+<div id="kk05-3b" style="position: absolute; top: 4675px; left:690px; font-size:12pt; "></div>
+<div id="kk05-3" style="position: absolute; top: 4675px; left:700px; font-size:12pt; "></div>
+<div id="kk05-4ad" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "kk05-4a" disabled / name="address" size="14" value=""　></div>
+<div id="kk05-4b" style="position: absolute; top: 4675px; left:630px; font-size:12pt; "></div>
+<div id="kk05-4" style="position: absolute; top: 4675px; left:640px; font-size:12pt; "></div>
+
+<!鮫洲-立会川>
+<div id="kk05-06d" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "kk05-06" disabled / name="address" size="14" value=""　></div>
+<div id="kk05-06b" style="position: absolute; top: 4840px; left:760px; font-size:12pt; "></div>
+<div id="kk05-06e" style="position: absolute; top: 4840px; left:770px; font-size:12pt; "></div>
+<div id="kk06-05d" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "kk06-05" disabled / name="address" size="14" value=""　></div>
+<div id="kk06-05b" style="position: absolute; top: 4840px; left:700px; font-size:12pt; "></div>
+<div id="kk06-05e" style="position: absolute; top: 4840px; left:710px; font-size:12pt; "></div>
+
+<div style="position: absolute; top: 4915px; left:520px;  color:#0000ff; font-size:14pt"><p>●</p></div> <!急行>
+<div style="position: absolute; top: 4935px; left:520px; font-size:18pt"><p>立会川</p></div>
+<div id="kk06-1ad" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "kk06-1a" disabled / name="address" size="14" value=""　></div>
+<div id="kk06-1b" style="position: absolute; top: 4935px; left:760px; font-size:12pt; "></div>
+<div id="kk06-1" style="position: absolute; top: 4935px; left:770px; font-size:12pt; "></div>
+<div id="kk06-2ad" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "kk06-2a" disabled / name="address" size="14" value=""　></div>
+<div id="kk06-2b" style="position: absolute; top: 4935px; left:700px; font-size:12pt; "></div>
+<div id="kk06-2" style="position: absolute; top: 4935px; left:710px; font-size:12pt; "></div>
+
+<!立会川-大森海岸>
+<div id="kk06-07d" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "kk06-07" disabled / name="address" size="14" value=""　></div>
+<div id="kk06-07b" style="position: absolute; top: 5030px; left:760px; font-size:12pt; "></div>
+<div id="kk06-07e" style="position: absolute; top: 5030px; left:770px; font-size:12pt; "></div>
+<div id="kk07-06d" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "kk07-06" disabled / name="address" size="14" value=""　></div>
+<div id="kk07-06b" style="position: absolute; top: 5030px; left:700px; font-size:12pt; "></div>
+<div id="kk07-06e" style="position: absolute; top: 5030px; left:710px; font-size:12pt; "></div>
+
+<div style="position: absolute; top: 5125px; left:520px; font-size:18pt"><p>大森海岸</p></div>
+<div id="kk07-1ad" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "kk07-1a" disabled / name="address" size="14" value=""　></div>
+<div id="kk07-1b" style="position: absolute; top: 5125px; left:760px; font-size:12pt; "></div>
+<div id="kk07-1" style="position: absolute; top: 5125px; left:770px; font-size:12pt; "></div>
+<div id="kk07-2ad" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "kk07-2a" disabled / name="address" size="14" value=""　></div>
+<div id="kk07-2b" style="position: absolute; top: 5125px; left:700px; font-size:12pt; "></div>
+<div id="kk07-2" style="position: absolute; top: 5125px; left:710px; font-size:12pt; "></div>
+
+<!大森海岸-平和島>
+<div id="kk07-08d" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "kk07-08" disabled / name="address" size="14" value=""　></div>
+<div id="kk07-08b" style="position: absolute; top: 5220px; left:760px; font-size:12pt; "></div>
+<div id="kk07-08e" style="position: absolute; top: 5220px; left:770px; font-size:12pt; "></div>
+<div id="kk08-07d" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "kk08-07" disabled / name="address" size="14" value=""　></div>
+<div id="kk08-07b" style="position: absolute; top: 5220px; left:700px; font-size:12pt; "></div>
+<div id="kk08-07e" style="position: absolute; top: 5220px; left:710px; font-size:12pt; "></div>
+
+<div style="position: absolute; top: 5350px; left:520px;  color:#0000ff; font-size:14pt"><p>●</p></div> <!急行>
+<div style="position: absolute; top: 5350px; left:540px;  color:#ff0000; font-size:14pt"><p>●</p></div> <!特急>
+<div style="position: absolute; top: 5370px; left:520px; font-size:18pt"><p>平和島</p></div>
+<div style="position: absolute; top: 5405px; left:450px; color:#ff0000; font-size:10pt"><p>※一部実番線と異なります</p></div>
+<div id="kk08-1ad" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "kk08-1a" disabled / name="address" size="14" value=""　></div>
+<div id="kk08-1b" style="position: absolute; top: 5370px; left:840px; font-size:12pt; "></div>
+<div id="kk08-1" style="position: absolute; top: 5370px; left:850px; font-size:12pt; "></div>
+<div id="kk08-2ad" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "kk08-2a" disabled / name="address" size="14" value=""　></div>
+<div id="kk08-2b" style="position: absolute; top: 5370px; left:760px; font-size:12pt; "></div>
+<div id="kk08-2" style="position: absolute; top: 5370px; left:770px; font-size:12pt; "></div>
+<div id="kk08-3ad" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "kk08-3a" disabled / name="address" size="14" value=""　></div>
+<div id="kk08-3b" style="position: absolute; top: 5370px; left:700px; font-size:12pt; "></div>
+<div id="kk08-3" style="position: absolute; top: 5370px; left:710px; font-size:12pt; "></div>
+<div id="kk08-4ad" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "kk08-4a" disabled / name="address" size="14" value=""　></div>
+<div id="kk08-4b" style="position: absolute; top: 5370px; left:620px; font-size:12pt; "></div>
+<div id="kk08-4" style="position: absolute; top: 5370px; left:630px; font-size:12pt; "></div>
+
+<!平和島-大森町>
+<div id="kk08-09d" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "kk08-09" disabled / name="address" size="14" value=""　></div>
+<div id="kk08-09b" style="position: absolute; top: 5520px; left:760px; font-size:12pt; "></div>
+<div id="kk08-09e" style="position: absolute; top: 5520px; left:770px; font-size:12pt; "></div>
+<div id="kk09-08d" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "kk09-08" disabled / name="address" size="14" value=""　></div>
+<div id="kk09-08b" style="position: absolute; top: 5520px; left:700px; font-size:12pt; "></div>
+<div id="kk09-08e" style="position: absolute; top: 5520px; left:710px; font-size:12pt; "></div>
+
+<div style="position: absolute; top: 5615px; left:520px; font-size:18pt"><p>大森町</p></div>
+<div id="kk09-1ad" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "kk09-1a" disabled / name="address" size="14" value=""　></div>
+<div id="kk09-1b" style="position: absolute; top: 5615px; left:760px; font-size:12pt; "></div>
+<div id="kk09-1" style="position: absolute; top: 5615px; left:770px; font-size:12pt; "></div>
+<div id="kk09-2ad" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "kk09-2a" disabled / name="address" size="14" value=""　></div>
+<div id="kk09-2b" style="position: absolute; top: 5615px; left:700px; font-size:12pt; "></div>
+<div id="kk09-2" style="position: absolute; top: 5615px; left:710px; font-size:12pt; "></div>
+
+<!大森町-梅屋敷>
+<div id="kk09-10d" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "kk09-10" disabled / name="address" size="14" value=""　></div>
+<div id="kk09-10b" style="position: absolute; top: 5710px; left:760px; font-size:12pt; "></div>
+<div id="kk09-10e" style="position: absolute; top: 5710px; left:770px; font-size:12pt; "></div>
+<div id="kk10-09d" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "kk10-09" disabled / name="address" size="14" value=""　></div>
+<div id="kk10-09b" style="position: absolute; top: 5710px; left:700px; font-size:12pt; "></div>
+<div id="kk10-09e" style="position: absolute; top: 5710px; left:710px; font-size:12pt; "></div>
+
+<div style="position: absolute; top: 5805px; left:520px; font-size:18pt"><p>梅屋敷</p></div>
+<div id="kk10-1ad" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "kk10-1a" disabled / name="address" size="14" value=""　></div>
+<div id="kk10-1b" style="position: absolute; top: 5805px; left:760px; font-size:12pt; "></div>
+<div id="kk10-1" style="position: absolute; top: 5805px; left:770px; font-size:12pt; "></div>
+<div id="kk10-2ad" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "kk10-2a" disabled / name="address" size="14" value=""　></div>
+<div id="kk10-2b" style="position: absolute; top: 5805px; left:700px; font-size:12pt; "></div>
+<div id="kk10-2" style="position: absolute; top: 5805px; left:710px; font-size:12pt; "></div>
+
+<!梅屋敷-京急蒲田>
+<div id="kk10-11d" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "kk10-11" disabled / name="address" size="14" value=""　></div>
+<div id="kk10-11b" style="position: absolute; top: 5900px; left:760px; font-size:12pt; "></div>
+<div id="kk10-11e" style="position: absolute; top: 5900px; left:770px; font-size:12pt; "></div>
+<div id="kk11-10d" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "kk11-10" disabled / name="address" size="14" value=""　></div>
+<div id="kk11-10b" style="position: absolute; top: 5900px; left:700px; font-size:12pt; "></div>
+<div id="kk11-10e" style="position: absolute; top: 5900px; left:710px; font-size:12pt; "></div>
+
+<div style="position: absolute; top: 6180px; left:360px;  color:#0000ff; font-size:14pt"><p>●</p></div> <!急行>
+<div style="position: absolute; top: 6180px; left:380px;  color:#ff0000; font-size:14pt"><p>●</p></div> <!特急>
+<div style="position: absolute; top: 6180px; left:400px;  color:#32cd32; font-size:14pt"><p>●</p></div> <!快特>
+<div style="position: absolute; top: 6200px; left:360px; font-size:18pt"><p>京急蒲田</p></div>
+<div style="position: absolute; top: 6090px; left:570px; font-size:16pt"><p>(２階）</p></div>
+<div style="position: absolute; top: 6090px; left:810px; font-size:16pt"><p>(３階）</p></div>
+<div style="position: absolute; top: 6235px; left:320px; color:#ff0000; font-size:10pt"><p>※一部実番線と異なります</p></div>
+<div id="kk11-1ad" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "kk11-1a" disabled / name="address" size="14" value=""　></div>
+<div id="kk11-1b" style="position: absolute; top: 6150px; left:900px; font-size:12pt; "></div>
+<div id="kk11-1" style="position: absolute; top: 6150px; left:910px; font-size:12pt; "></div>
+<div id="kk11-2ad" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "kk11-2a" disabled / name="address" size="14" value=""　></div>
+<div id="kk11-2b" style="position: absolute; top: 6280px; left:820px; font-size:12pt; "></div>
+<div id="kk11-2" style="position: absolute; top: 6280px; left:830px; font-size:12pt; "></div>
+<div id="kk11-3ad" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "kk11-3a" disabled / name="address" size="14" value=""　></div>
+<div id="kk11-3b" style="position: absolute; top: 6150px; left:760px; font-size:12pt; "></div>
+<div id="kk11-3" style="position: absolute; top: 6150px; left:770px; font-size:12pt; "></div>
+<div id="kk11-4ad" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "kk11-4a" disabled / name="address" size="14" value=""　></div>
+<div id="kk11-4b" style="position: absolute; top: 6150px; left:630px; font-size:12pt; "></div>
+<div id="kk11-4" style="position: absolute; top: 6150px; left:640px; font-size:12pt; "></div>
+<div id="kk11-5ad" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "kk11-5a" disabled / name="address" size="14" value=""　></div>
+<div id="kk11-5b" style="position: absolute; top: 6280px; left:550px; font-size:12pt; "></div>
+<div id="kk11-5" style="position: absolute; top: 6280px; left:560px; font-size:12pt; "></div>
+<div id="kk11-6ad" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "kk11-6a" disabled / name="address" size="14" value=""　></div>
+<div id="kk11-6b" style="position: absolute; top: 6150px; left:490px; font-size:12pt; "></div>
+<div id="kk11-6" style="position: absolute; top: 6150px; left:500px; font-size:12pt; "></div>
+
+<!京急蒲田-雑色>
+<div id="kk11-18d" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "kk11-18" disabled / name="address" size="14" value=""　></div>
+<div id="kk11-18b" style="position: absolute; top: 6685px; left:420px; font-size:12pt; "></div>
+<div id="kk11-18e" style="position: absolute; top: 6685px; left:430px; font-size:12pt; "></div>
+<div id="kk18-11d" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "kk18-11" disabled / name="address" size="14" value=""　></div>
+<div id="kk18-11b" style="position: absolute; top: 6490px; left:490px; font-size:12pt; "></div>
+<div id="kk18-11e" style="position: absolute; top: 6490px; left:500px; font-size:12pt; "></div>
+<div id="kk18-11dp" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "kk18-11p" disabled / name="address" size="14" value=""　></div>
+<div id="kk18-11bp" style="position: absolute; top: 6490px; left:430px; font-size:12pt; "></div>
+<div id="kk18-11ep" style="position: absolute; top: 6490px; left:440px; font-size:12pt; "></div>
+
+<div style="position: absolute; top: 6770px; left:240px; font-size:18pt"><p>雑　色</p></div>
+<div id="kk18-1ad" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "kk18-1a" disabled / name="address" size="14" value=""　></div>
+<div id="kk18-1b" style="position: absolute; top: 6770px; left:420px; font-size:12pt; "></div>
+<div id="kk18-1" style="position: absolute; top: 6770px; left:430px; font-size:12pt; "></div>
+<div id="kk18-2ad" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "kk18-2a" disabled / name="address" size="14" value=""　></div>
+<div id="kk18-2b" style="position: absolute; top: 6770px; left:360px; font-size:12pt; "></div>
+<div id="kk18-2" style="position: absolute; top: 6770px; left:370px; font-size:12pt; "></div>
+
+<!雑色-六郷土手>
+<div id="kk18-19d" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "kk18-19" disabled / name="address" size="14" value=""　></div>
+<div id="kk18-19b" style="position: absolute; top: 6865px; left:420px; font-size:12pt; "></div>
+<div id="kk18-19e" style="position: absolute; top: 6865px; left:430px; font-size:12pt; "></div>
+<div id="kk19-18d" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "kk19-18" disabled / name="address" size="14" value=""　></div>
+<div id="kk19-18b" style="position: absolute; top: 6865px; left:360px; font-size:12pt; "></div>
+<div id="kk19-18e" style="position: absolute; top: 6865px; left:370px; font-size:12pt; "></div>
+
+<div style="position: absolute; top: 6960px; left:220px; font-size:18pt"><p>六郷土手</p></div>
+<div id="kk19-1ad" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "kk19-1a" disabled / name="address" size="14" value=""　></div>
+<div id="kk19-1b" style="position: absolute; top: 6960px; left:420px; font-size:12pt; "></div>
+<div id="kk19-1" style="position: absolute; top: 6960px; left:430px; font-size:12pt; "></div>
+<div id="kk19-2ad" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "kk19-2a" disabled / name="address" size="14" value=""　></div>
+<div id="kk19-2b" style="position: absolute; top: 6960px; left:360px; font-size:12pt; "></div>
+<div id="kk19-2" style="position: absolute; top: 6960px; left:370px; font-size:12pt; "></div>
+
+<!六郷土手-京急川崎>
+<div id="kk19-20d" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "kk19-20" disabled / name="address" size="14" value=""　></div>
+<div id="kk19-20b" style="position: absolute; top: 7055px; left:420px; font-size:12pt; "></div>
+<div id="kk19-20e" style="position: absolute; top: 7055px; left:430px; font-size:12pt; "></div>
+<div id="kk20-19d" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "kk20-19" disabled / name="address" size="14" value=""　></div>
+<div id="kk20-19b" style="position: absolute; top: 7055px; left:360px; font-size:12pt; "></div>
+<div id="kk20-19e" style="position: absolute; top: 7055px; left:370px; font-size:12pt; "></div>
+
+<div style="position: absolute; top: 7350px; left:160px;  color:#0000ff; font-size:14pt"><p>●</p></div> <!急行>
+<div style="position: absolute; top: 7350px; left:180px;  color:#ff0000; font-size:14pt"><p>●</p></div> <!特急>
+<div style="position: absolute; top: 7350px; left:200px;  color:#32cd32; font-size:14pt"><p>●</p></div> <!快特>
+
+<div style="position: absolute; top: 7405px; left:110px; color:#ff0000; font-size:10pt"><p>※一部実番線と異なります</p></div>
+<div style="position: absolute; top: 7370px; left:160px; font-size:18pt"><p>京急川崎</p></div>
+<div id="kk20-1ad" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "kk20-1a" disabled / name="address" size="14" value=""　></div>
+<div id="kk20-1b" style="position: absolute; top: 7370px; left:500px; font-size:12pt; "></div>
+<div id="kk20-1" style="position: absolute; top: 7370px; left:510px; font-size:12pt; "></div>
+<div id="kk20-2ad" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "kk20-2a" disabled / name="address" size="14" value=""　></div>
+<div id="kk20-2b" style="position: absolute; top: 7370px; left:420px; font-size:12pt; "></div>
+<div id="kk20-2" style="position: absolute; top: 7370px; left:430px; font-size:12pt; "></div>
+<div id="kk20-3ad" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "kk20-3a" disabled / name="address" size="14" value=""　></div>
+<div id="kk20-3b" style="position: absolute; top: 7370px; left:360px; font-size:12pt; "></div>
+<div id="kk20-3" style="position: absolute; top: 7370px; left:370px; font-size:12pt; "></div>
+<div id="kk20-4ad" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "kk20-4a" disabled / name="address" size="14" value=""　></div>
+<div id="kk20-4b" style="position: absolute; top: 7370px; left:280px; font-size:12pt; "></div>
+<div id="kk20-4" style="position: absolute; top: 7370px; left:290px; font-size:12pt; "></div>
+
+
+<!空港線　京急蒲田-糀谷>
+<div id="kk11-12d" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "kk11-12" disabled / name="address" size="14" value=""　></div>
+<div id="kk11-12b" style="position: absolute; top: 6650px; left:900px; font-size:12pt; "></div>
+<div id="kk11-12e" style="position: absolute; top: 6650px; left:910px; font-size:12pt; "></div>
+<div id="kk11-12dp" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "kk11-12p" disabled / name="address" size="14" value=""　></div>
+<div id="kk11-12bp" style="position: absolute; top: 6650px; left:960px; font-size:12pt; "></div>
+<div id="kk11-12ep" style="position: absolute; top: 6650px; left:970px; font-size:12pt; "></div>
+<div id="kk12-11d" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "kk12-11" disabled / name="address" size="14" value=""　></div>
+<div id="kk12-11b" style="position: absolute; top: 6650px; left:841px; font-size:12pt; "></div>
+<div id="kk12-11e" style="position: absolute; top: 6650px; left:851px; font-size:12pt; "></div>
+<div id="yokoku" style="position: absolute; top: 6610px; left:802px;  font-size:12pt; ">予告</div>
+<div id="kamata" style="position: absolute; top: 6640px; left:810px; color:#0000ff; font-size:12pt; "></div>
+
+<div style="position: absolute; top: 6720px; left:720px;  color:#0000ff; font-size:14pt"><p>●</p></div> <!急行>
+<div style="position: absolute; top: 6720px; left:740px;  color:#ff0000; font-size:14pt"><p>●</p></div> <!特急>
+<div style="position: absolute; top: 6740px; left:720px; font-size:18pt"><p>糀　谷</p></div>
+<div id="kk12-1ad" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "kk12-1a" disabled / name="address" size="14" value=""　></div>
+<div id="kk12-1b" style="position: absolute; top: 6740px; left:900px; font-size:12pt; "></div>
+<div id="kk12-1" style="position: absolute; top: 6740px; left:910px; font-size:12pt; "></div>
+<div id="kk12-2ad" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "kk12-2a" disabled / name="address" size="14" value=""　></div>
+<div id="kk12-2b" style="position: absolute; top: 6740px; left:841px; font-size:12pt; "></div>
+<div id="kk12-2" style="position: absolute; top: 6740px; left:851px; font-size:12pt; "></div>
+
+<!空港線　糀谷-大鳥居>
+<div id="kk12-13d" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "kk12-13" disabled / name="address" size="14" value=""　></div>
+<div id="kk12-13b" style="position: absolute; top: 6830px; left:900px; font-size:12pt; "></div>
+<div id="kk12-13e" style="position: absolute; top: 6830px; left:910px; font-size:12pt; "></div>
+<div id="kk13-12d" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "kk13-12" disabled / name="address" size="14" value=""　></div>
+<div id="kk13-12b" style="position: absolute; top: 6830px; left:841px; font-size:12pt; "></div>
+<div id="kk13-12e" style="position: absolute; top: 6830px; left:851px; font-size:12pt; "></div>
+
+<div style="position: absolute; top: 6900px; left:720px;  color:#0000ff; font-size:14pt"><p>●</p></div> <!急行>
+<div style="position: absolute; top: 6900px; left:740px;  color:#ff0000; font-size:14pt"><p>●</p></div> <!特急>
+<div style="position: absolute; top: 6920px; left:720px; font-size:18pt"><p>大鳥居</p></div>
+<div id="kk13-1ad" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "kk13-1a" disabled / name="address" size="14" value=""　></div>
+<div id="kk13-1b" style="position: absolute; top: 6920px; left:900px; font-size:12pt; "></div>
+<div id="kk13-1" style="position: absolute; top: 6920px; left:910px; font-size:12pt; "></div>
+<div id="kk13-2ad" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "kk13-2a" disabled / name="address" size="14" value=""　></div>
+<div id="kk13-2b" style="position: absolute; top: 6920px; left:841px; font-size:12pt; "></div>
+<div id="kk13-2" style="position: absolute; top: 6920px; left:851px; font-size:12pt; "></div>
+
+<!空港線　大鳥居-穴守稲荷>
+<div id="kk13-14d" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "kk13-14" disabled / name="address" size="14" value=""　></div>
+<div id="kk13-14b" style="position: absolute; top: 7010px; left:900px; font-size:12pt; "></div>
+<div id="kk13-14e" style="position: absolute; top: 7010px; left:910px; font-size:12pt; "></div>
+<div id="kk14-13d" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "kk14-13" disabled / name="address" size="14" value=""　></div>
+<div id="kk14-13b" style="position: absolute; top: 7010px; left:841px; font-size:12pt; "></div>
+<div id="kk14-13e" style="position: absolute; top: 7010px; left:851px; font-size:12pt; "></div>
+
+<div style="position: absolute; top: 7080px; left:720px;  color:#0000ff; font-size:14pt"><p>●</p></div> <!急行>
+<div style="position: absolute; top: 7080px; left:740px;  color:#ff0000; font-size:14pt"><p>●</p></div> <!特急>
+<div style="position: absolute; top: 7100px; left:700px; font-size:18pt"><p>穴守稲荷</p></div>
+<div id="kk14-1ad" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "kk14-1a" disabled / name="address" size="14" value=""　></div>
+<div id="kk14-1b" style="position: absolute; top: 7100px; left:900px; font-size:12pt; "></div>
+<div id="kk14-1" style="position: absolute; top: 7100px; left:910px; font-size:12pt; "></div>
+<div id="kk14-2ad" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "kk14-2a" disabled / name="address" size="14" value=""　></div>
+<div id="kk14-2b" style="position: absolute; top: 7100px; left:841px; font-size:12pt; "></div>
+<div id="kk14-2" style="position: absolute; top: 7100px; left:851px; font-size:12pt; "></div>
+
+<!空港線　穴守稲荷-天空橋>
+<div id="kk14-15d" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "kk14-15" disabled / name="address" size="14" value=""　></div>
+<div id="kk14-15b" style="position: absolute; top: 7190px; left:900px; font-size:12pt; "></div>
+<div id="kk14-15e" style="position: absolute; top: 7190px; left:910px; font-size:12pt; "></div>
+<div id="kk15-14d" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "kk15-14" disabled / name="address" size="14" value=""　></div>
+<div id="kk15-14b" style="position: absolute; top: 7190px; left:841px; font-size:12pt; "></div>
+<div id="kk15-14e" style="position: absolute; top: 7190px; left:851px; font-size:12pt; "></div>
+
+<div style="position: absolute; top: 7260px; left:720px;  color:#0000ff; font-size:14pt"><p>●</p></div> <!急行>
+<div style="position: absolute; top: 7260px; left:740px;  color:#ff0000; font-size:14pt"><p>●</p></div> <!特急>
+<div style="position: absolute; top: 7280px; left:720px; font-size:18pt"><p>天空橋</p></div>
+<div id="kk15-1ad" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "kk15-1a" disabled / name="address" size="14" value=""　></div>
+<div id="kk15-1b" style="position: absolute; top: 7280px; left:900px; font-size:12pt; "></div>
+<div id="kk15-1" style="position: absolute; top: 7280px; left:910px; font-size:12pt; "></div>
+<div id="kk15-2ad" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "kk15-2a" disabled / name="address" size="14" value=""　></div>
+<div id="kk15-2b" style="position: absolute; top: 7280px; left:841px; font-size:12pt; "></div>
+<div id="kk15-2" style="position: absolute; top: 7280px; left:851px; font-size:12pt; "></div>
+
+<!空港線　天空橋-羽３>
+<div id="kk15-16d" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "kk15-16" disabled / name="address" size="14" value=""　></div>
+<div id="kk15-16b" style="position: absolute; top: 7370px; left:900px; font-size:12pt; "></div>
+<div id="kk15-16e" style="position: absolute; top: 7370px; left:910px; font-size:12pt; "></div>
+<div id="kk16-15d" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "kk16-15" disabled / name="address" size="14" value=""　></div>
+<div id="kk16-15b" style="position: absolute; top: 7370px; left:841px; font-size:12pt; "></div>
+<div id="kk16-15e" style="position: absolute; top: 7370px; left:851px; font-size:12pt; "></div>
+
+<div style="position: absolute; top: 7440px; left:720px;  color:#0000ff; font-size:14pt"><p>●</p></div> <!急行>
+<div style="position: absolute; top: 7440px; left:740px;  color:#ff0000; font-size:14pt"><p>●</p></div> <!特急>
+<div style="position: absolute; top: 7440px; left:760px;  color:#32cd32; font-size:14pt"><p>●</p></div> <!快特>
+<div style="position: absolute; top: 7440px; left:780px;  color:#ff8c00; font-size:14pt"><p>●</p></div> <!エア快>
+<div style="position: absolute; top: 7460px; left:630px; font-size:18pt"><p>羽田空港第３</p></div>
+<div style="position: absolute; top: 7490px; left:670px; font-size:18pt"><p>ターミナル</p></div>
+<div id="kk16-1ad" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "kk16-1a" disabled / name="address" size="14" value=""　></div>
+<div id="kk16-1b" style="position: absolute; top: 7460px; left:900px; font-size:12pt; "></div>
+<div id="kk16-1" style="position: absolute; top: 7460px; left:910px; font-size:12pt; "></div>
+<div id="kk16-2ad" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "kk16-2a" disabled / name="address" size="14" value=""　></div>
+<div id="kk16-2b" style="position: absolute; top: 7460px; left:841px; font-size:12pt; "></div>
+<div id="kk16-2" style="position: absolute; top: 7460px; left:851px; font-size:12pt; "></div>
+
+<!空港線　羽３-羽１２>
+<div id="kk16-17d" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "kk16-17" disabled / name="address" size="14" value=""　></div>
+<div id="kk16-17b" style="position: absolute; top: 7550px; left:900px; font-size:12pt; "></div>
+<div id="kk16-17e" style="position: absolute; top: 7550px; left:910px; font-size:12pt; "></div>
+<div id="kk17-16d" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "kk17-16" disabled / name="address" size="14" value=""　></div>
+<div id="kk17-16b" style="position: absolute; top: 7550px; left:841px; font-size:12pt; "></div>
+<div id="kk17-16e" style="position: absolute; top: 7550px; left:857px; font-size:12pt; "></div>
+
+<div style="position: absolute; top: 7710px; left:720px;  color:#0000ff; font-size:14pt"><p>●</p></div> <!急行>
+<div style="position: absolute; top: 7710px; left:740px;  color:#ff0000; font-size:14pt"><p>●</p></div> <!特急>
+<div style="position: absolute; top: 7710px; left:760px;  color:#32cd32; font-size:14pt"><p>●</p></div> <!快特>
+<div style="position: absolute; top: 7710px; left:780px;  color:#ff8c00; font-size:14pt"><p>●</p></div> <!エア快>
+<div style="position: absolute; top: 7730px; left:630px; font-size:18pt"><p>羽田空港第１</p></div>
+<div style="position: absolute; top: 7760px; left:630px; font-size:18pt"><p>・第２ターミナル</p></div>
+<div id="kk17-1ad" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "kk17-1a" disabled / name="address" size="14" value=""　></div>
+<div id="kk17-1b" style="position: absolute; top: 7730px; left:910px; font-size:12pt; "></div>
+<div id="kk17-1" style="position: absolute; top: 7730px; left:920px; font-size:12pt; "></div>
+<div id="kk17-2ad" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "kk17-2a" disabled / name="address" size="14" value=""　></div>
+<div id="kk17-2b" style="position: absolute; top: 7730px; left:831px; font-size:12pt; "></div>
+<div id="kk17-2" style="position: absolute; top: 7730px; left:841px; font-size:12pt; "></div>
+<div style="position: absolute; top: 7800px; left:630px; color:#ff0000; font-size:10pt"><p>※一部実番線と異なります</p></div>
+
+<div style="position: absolute; top: 7900px; left:1100px; font-size:18pt"><p>　</p></div>
+
+</nobr>
+</font>
+
+<script type="module" >
+
+
+/////////////////////////////////////ここから都営
+
+document.getElementById("keisei").addEventListener("click", function () {
+  location.href ="https://zaisen.tid-keisei.jp/html/zaisen.html?line=4";
+}, false);
+
+document.getElementById("mita").addEventListener("click", function () {
+  location.href ="https://kisaragi-cure.github.io/ToeiMita";
+}, false);
+
+var request2 = new XMLHttpRequest();
+request2.open("GET", "https://api.odpt.org/api/v4/odpt:Train?odpt:railway=odpt.Railway:Toei.Asakusa&acl:consumerKey=qkpjriztbhvaxwjzum1oluug1hnfvwfq3ztxnsb56xtbt6qve7zdwv8bb73ajavy", true);
+request2.responseType = "text";
+
+request2.onload = () => {
+  if (request2.readyState === request2.DONE) {
+    if (request2.status === 200) {
+var data0 = request2.responseText.replaceAll("dc:","dc");
+var data = JSON.parse(data0.replaceAll("odpt:","odpt"));
+
+var request3 = new XMLHttpRequest();
+request3.open("GET", "https://api-public.odpt.org/api/v4/odpt:StationTimetable?odpt:station=odpt.Station:Toei.Asakusa.NishiMagome", true);
+request3.responseType = "text";
+
+request3.onload = () => {
+  if (request3.readyState === request3.DONE) {
+    if (request3.status === 200) {
+var data3 = JSON.parse(request3.responseText.replaceAll("odpt:","odpt"));
+
+//更新時刻
+var koshinT =   JSON.stringify(data[0].dcdate) ;
+koshinT = "都営更新：" + koshinT.replaceAll('-','/');
+koshinT =  koshinT.replaceAll('T',' ');
+koshinT =  koshinT.replaceAll('+09:00','');
+koshinT =  koshinT.replaceAll('"','');
+
+console.log(koshinT);
+document.getElementById("koshin-T").innerHTML = koshinT ;
+
+
+//在線情報の処理
+let nowtime = Math.floor(Date.now() / 60000) ;
+      let info = '';
+      let len = '';
+      let len3 = '';
+      let kind = '';
+      let kind0 = '';
+      let unban = '';
+      let unban1 = '';
+      let unban2 = '';
+      let des = '';
+      let des0 = '';
+      let stid = '';
+      let scid = '';
+      let trid = '';
+      let sha = '';
+      let hensei = '';
+      let delay = '';
+      let line = '';
+      let cars = '';
+      let dai = 0;
+      let n = 1;
+      let m = 1;
+      let p = 1;
+      let timesec = 0;
+      let sengakuji = '';
+      let sengakujia = '';
+      let sengakujib = '';
+//西馬込発車
+	let kind1 = '';
+	let des1 = '';
+	let dep1 = '';
+	let num1 = '';
+	let ptf1 = '';
+
+	let kind2 = '';
+	let des2 = '';
+	let dep2 = '';
+	let num2 = '';
+	let ptf2 = '';
+
+      len = JSON.stringify(data.length) ;
+
+	let nameText = document.getElementById('ty01-3a');
+
+if ( nowtime - sessionStorage.getItem("sktime")  > 4 ){
+	sessionStorage.setItem("sengakuji1a",'');
+	sessionStorage.setItem("sengakuji1b",'');
+	sessionStorage.setItem("sengakuji1c",'');
+	sessionStorage.setItem("sengakuji2a",'');
+	sessionStorage.setItem("sengakuji2b",'');
+	sessionStorage.setItem("sengakuji2c",'');
+}
+
+if ( nowtime - sessionStorage.getItem("kstime")  > 4 ){
+	sessionStorage.setItem("shinagawa1a",'');
+	sessionStorage.setItem("shinagawa1b",'');
+	sessionStorage.setItem("shinagawa1c",'');
+	sessionStorage.setItem("shinagawa2a",'');
+	sessionStorage.setItem("shinagawa2b",'');
+	sessionStorage.setItem("shinagawa2c",'');
+}
+
+let now = new Date();
+      let day = now.getDay();
+      let month = now.getMonth();
+      let date = now.getDate();
+
+	if ( month == 0 && date > 0 && date < 4 ) {
+	day = 0;
+	}
+	if ( month == 1 && date == 11 ) {
+	day = 0;
+	}
+	if ( month == 1 && date == 23 ) {
+	day = 0;
+	}
+	if ( month == 3 && date == 29 ) {
+	day = 0;
+	}
+	if ( month == 4 && date == 3 ) {
+	day = 0;
+	}
+	if ( month == 4 && date == 4 ) {
+	day = 0;
+	}
+	if ( month == 4 && date == 5 ) {
+	day = 0;
+	}
+	if ( month == 10 && date == 3 ) {
+	day = 0;
+	}
+	if ( month == 10 && date == 23 ) {
+	day = 0;
+	}
+
+now = now.getHours();
+
+	if ( now < 3 ) {
+		timesec = 4;
+	} else if ( now > 2 && now < 10 ) {
+		timesec = 1;
+		m = 0;
+	} else if ( now < 15 ) {
+		timesec = 2;
+		m = 30;
+		if ( day > 0 && day < 6 ) {
+		m = 40;
+		}
+	} else if ( now < 20 ) {
+		timesec = 3;
+		m = 50;
+		if ( day > 0 && day < 6 ) {
+		m = 70;
+		}
+	} else if ( now < 25 ) {
+		timesec = 4;
+		m = 70;
+		if ( day > 0 && day < 6 ) {
+		m = 100;
+		}
+	}
+	p = m;
+	var dest = {};
+	var newkind = {};
+	var kindn = {};
+	var desn = {};
+if ( day > 0 && day < 6 ) {
+      var data4= JSON.parse(JSON.stringify(data3[1].odptstationTimetableObject)); 
+} else {
+      var data4= JSON.parse(JSON.stringify(data3[0].odptstationTimetableObject)); 
+}
+      len3 = JSON.stringify(data4.length) ;
+if ( len3 - m > 100 && timesec != 4 ){
+	len3 = m +100 ;
+}
+
+for ( m = m; m < len3; m++) {
+	var dest1 = JSON.stringify(data4[m].odpttrainNumber); 
+	var dest2 = JSON.stringify(data4[m].odptplatformNumber); 
+	var dest3 = JSON.stringify(data4[m].odptdepartureTime); 
+	var dest4 = JSON.stringify(data4[m].odptdestinationStation); 
+	var dest5 = JSON.stringify(data4[m].odpttrainType); 
+
+	dest[dest1] = dest2;
+	newkind[dest1] = dest3;
+	kindn[dest1] = dest5;
+	desn[dest1] = dest4;
+}
+
+
+
+for ( n = 0; n < len; n++) {
+
+
+
+dai = 0;
+
+if (JSON.stringify(data[n].odptrailway) == '"odpt.Railway:Toei.Asakusa"'){ 
+
+//種別設定
+     kind= JSON.stringify(data[n].odpttrainType); 
+     kind0 = JSON.stringify(data[n].odpttrainType).replaceAll('"','') ;
+	switch (kind) {
+case '"odpt.TrainType:Toei.Local"':
+	kind = "普";
+	break;
+case '"odpt.TrainType:Toei.Express"':
+	kind = "急";
+	break;
+case '"odpt.TrainType:Toei.LimitedExpress"':
+	kind = "特";
+	break;
+case '"odpt.TrainType:Toei.RapidLimitedExpress"':
+	kind = "快";
+	break;
+case '"odpt.TrainType:Toei.Rapid"':
+	kind = "速";
+	break;
+case '"odpt.TrainType:Toei.AccessExpress"':
+	kind = "ア";
+	break;
+case '"odpt.TrainType:Toei.AirportRapidLimitedExpress"':
+	kind = "エ";
+	break;
+case '"odpt.TrainType:Toei.CommuterLimitedExpress"':
+	kind = "通";
+	break;
+case 'null':
+	kind = "　";
+	break;
+}
+
+//行先設定
+      des= JSON.stringify(data[n].odptdestinationStation) ;
+      des0= JSON.stringify(data[n].odptdestinationStation).replaceAll('"','') ;
+	switch (des) {
+case '["odpt.Station:Keisei.Main.KeiseiTakasago"]':
+	des = "高";
+	break;
+case '["odpt.Station:Toei.Asakusa.Sengakuji"]':
+	des = "泉";
+	break;
+case '["odpt.Station:Toei.Asakusa.NishiMagome"]':
+	des = "西";
+	break;
+case '["odpt.Station:Toei.Asakusa.Magome"]':
+	des = "馬";
+	break;
+case '["odpt.Station:Toei.Asakusa.Gotanda"]':
+	des = "五";
+	break;
+case '["odpt.Station:Toei.Asakusa.Shimbashi"]':
+	des = "新";
+	break;
+case '["odpt.Station:Toei.Asakusa.Ningyocho"]':
+	des = "人";
+	break;
+case '["odpt.Station:Toei.Asakusa.Asakusabashi"]':
+	des = "橋";
+	break;
+case '["odpt.Station:Keisei.NaritaSkyAccess.NaritaAirportTerminal1"]':
+case '["odpt.Station:Keisei.Main.NaritaAirportTerminal1"]':
+	des = "空";
+	break;
+case '["odpt.Station:Keisei.Main.KeiseiSakura"]':
+	des = "佐";
+	break;
+case '["odpt.Station:Hokuso.Hokuso.ImbaNihonIdai"]':
+	des = "医";
+	break;
+case '["odpt.Station:Keisei.Oshiage.Aoto"]':
+	des = "青";
+	break;
+case '["odpt.Station:Keikyu.Airport.HanedaAirportTerminal1and2"]':
+	des = "羽";
+	break;
+case '["odpt.Station:Keikyu.Kurihama.Misakiguchi"]':
+	des = "三";
+	break;
+case '["odpt.Station:Keikyu.Main.KanagawaShimmachi"]':
+	des = "神";
+	break;
+case '["odpt.Station:Keikyu.Main.KanazawaBunko"]':
+	des = "文";
+	break;
+case '["odpt.Station:Keikyu.Kurihama.Miurakaigan"]':
+	des = "海";
+	break;
+case '["odpt.Station:Hokuso.Hokuso.InzaiMakinohara"]':
+	des = "牧";
+	break;
+case '["odpt.Station:Keikyu.Kurihama.KeikyuKurihama"]':
+	des = "久";
+	break;
+case '["odpt.Station:Keikyu.Zushi.ZushiHayama"]':
+	des = "逗";
+	break;
+case '["odpt.Station:Toei.Asakusa.Oshiage"]':
+	des = "押";
+	break;
+case '["odpt.Station:Keisei.Main.KeiseiNarita"]':
+	des = "成";
+	break;
+case '["odpt.Station:Keisei.Main.Sogosando"]':
+	des = "宗";
+	break;
+case '["odpt.Station:Shibayama.Shibayama.ShibayamaChiyoda"]':
+	des = "芝";
+	break;
+case '["odpt.Station:Keikyu.Main.Shinagawa"]':
+	des = "品";
+	break;
+case '0':
+	des = "―";
+	break;
+}
+
+      unban1 = JSON.stringify(data[n].odpttrainNumber) ;
+	if( unban1.substr ( -2,1) == 'b' ||  unban1.substr ( -2,1) == 'a' ) {
+      unban = unban1.substr( -5,3 ) ;
+}else{
+      unban = unban1.substr( -4,3 ) ;
+}
+      sha = JSON.stringify(data[n].odpttrainOwner) ;
+
+switch ( sha ) {
+case '"odpt.Operator:Keisei"' :
+	sha = "　(K)" ;
+	break;
+case '"odpt.Operator:Toei"':
+	sha = "　(T)" ;
+	break;
+case '"odpt.Operator:Hokuso"':
+	sha = "　(N)" ;
+	break;
+case '"odpt.Operator:Keikyu"':
+	sha = "　(H)" ;
+	break;
+}
+
+//所属不一致判定
+switch ( unban.substr ( -1,1) ) {
+case 'T' :
+	if ( sha != "　(T)") {
+	dai = 1;
+	}
+	break;
+case 'H' :
+	if ( sha != "　(H)") {
+	dai = 1;
+	}
+	break;
+case 'N' :
+	if ( sha != "　(N)") {
+	dai = 1;
+	}
+	break;
+case 'K' :
+	if ( sha != "　(K)") {
+	dai = 1;
+	}
+	break;
+}
+
+//運番設定
+
+      stid= JSON.stringify(data[n].odptfromStation) ;
+      scid= JSON.stringify(data[n].odpttoStation) ;
+      trid= JSON.stringify(data[n].odptrailDirection) ;
+      delay= JSON.stringify(data[n].odptdelay) ;
+	delay = delay / 60 ;
+      cars= '' ;
+//所属編成設定
+      line = '' ; 
+      hensei= JSON.stringify(data[n].odptoriginStation) ;
+
+//運番奇数化処理
+
+	if ( trid == '"odpt.RailDirection:Northbound"' ) {
+	} else {
+	var kisu = unban.substr( 1,1 ) ;
+	kisu = kisu - ( -1 ) 
+	unban = unban.substr( 0,1 ) + kisu + unban.substr( 2,1 )
+	}
+
+
+//遅れ
+if ( delay == "0"){
+ delay = "" ;
+} else if ( delay < 10 ) {
+ delay = "　 " + delay + "　" ;
+} else {
+ delay = "　" + delay　+ "　";
+}
+
+
+
+      info =   '　　'+ des + '<br/>' +  '　' +　unban +　 '<br/>' +  sha  +　 '<br/>' +  '　　' ;
+
+	nameText = 0;
+
+	let date = new Date()  ;
+	date = ('0' + (date.getMonth() + 1)).slice(-2) + '月' +('0' + date.getDate()).slice(-2) + '日 ' +  ('0' + date.getHours()).slice(-2) + '時' + ('0' + date.getMinutes()).slice(-2) + '分' + ('0' + date.getSeconds()).slice(-2) + '秒現在';
+	
+	var target;
+	var doc0= document.getElementById("ty99");  
+	var doc1= document.getElementById("ty99");
+	var doc2= document.getElementById("ty99");
+
+//ab列番
+if (dest[unban1] == undefined ) { 
+	var unban2a = (unban1.substr( 1,2 )) ;
+	var unban2b = (unban1.substr( 3,2 )) - (-1);
+	if ( unban2b < 10 ){
+		unban2b = '0' + unban2b;
+	}
+	var unban2c = (unban1.substr( 5,1 ));
+	unban2 = '"' + unban2a + unban2b + unban2c +  'b"';
+
+
+//1時間
+if (dest[unban2] == undefined ) {
+	unban2a = (unban1.substr( 1,2 )) - (-1) ;
+	unban2b = (unban1.substr( 3,2 )) - (-1);
+	unban2c = (unban1.substr( 5,1 ));
+	if (unban1.substr( 1,1 ) > 3) {
+		unban2a = (unban1.substr( 1,1 )) - (-1) ;
+		unban2b = (unban1.substr( 2,2 )) - (-1);
+		unban2c = (unban1.substr( 4,1 ));
+	}
+	if ( unban2b < 10 ){
+		unban2b = '0' + unban2b;
+	}
+	unban2 = '"' + unban2a + unban2b + unban2c +  '"';
+}
+
+if (dest[unban2] == undefined ) {
+	unban2 = '"' + unban2a + unban2b + unban2c +  'a"';
+}
+
+//2時間
+if (dest[unban2] == undefined ) {
+	unban2a = (unban1.substr( 1,2 )) - (-2) ;
+	unban2b = (unban1.substr( 3,2 )) - (-1);
+	unban2c = (unban1.substr( 5,1 ));
+	if (unban1.substr( 1,1 ) > 3) {
+		unban2a = (unban1.substr( 1,1 )) - (-2) ;
+		unban2b = (unban1.substr( 2,2 )) - (-1);
+		unban2c = (unban1.substr( 4,1 ));
+	}
+	if ( unban2b < 10 ){
+	unban2b = '0' + unban2b;
+	}
+	unban2 = '"' + unban2a + unban2b + unban2c +  '"';
+}
+
+if (dest[unban2] == undefined ) {
+	unban2 = '"' + unban2a + unban2b + unban2c +  'a"';
+}
+
+//console.log(unban2);
+} else {
+unban2 = unban1;
+}
+
+
+	let now = Math.floor(Date.now() / 60000) ;
+
+switch (stid){
+
+case ('"odpt.Station:Toei.Asakusa.Oshiage"'):
+	switch ( scid) {
+	case ( 'null' ):
+
+	break ;
+
+	case ( '"odpt.Station:Toei.Asakusa.HonjoAzumabashi"'):	
+		nameText = document.getElementById('a20-19');
+		target = document.getElementById('a20-19d');
+		doc2= document.getElementById("a20-19e"); 
+		doc0= document.getElementById("a20-19b");  
+		doc1= document.getElementById("a20-19c");  
+	break ;
+
+	default:
+	nameText = 0;
+        break ;
+	}
+        break ;
+
+case ('"odpt.Station:Toei.Asakusa.HonjoAzumabashi"'):
+	switch ( scid) {
+	case ( 'null' ):
+	if ( trid == '"odpt.RailDirection:Northbound"' ) {
+		nameText = document.getElementById('a19-2a');
+		target = document.getElementById('a19-2ad');
+		doc2= document.getElementById("a19-2"); 
+		doc0= document.getElementById("a19-2b");  
+		doc1= document.getElementById("a19-2c");  
+	} else {
+		nameText = document.getElementById('a19-1a');
+		target = document.getElementById('a19-1ad');
+		doc2= document.getElementById("a19-1"); 
+		doc0= document.getElementById("a19-1b");  
+		doc1= document.getElementById("a19-1c");  
+	}
+	break ;
+
+	case ( '"odpt.Station:Toei.Asakusa.Oshiage"'):	
+		nameText = document.getElementById('a19-20');
+		target = document.getElementById('a19-20d');
+		doc2= document.getElementById("a19-20e"); 
+		doc0= document.getElementById("a19-20b");  
+		doc1= document.getElementById("a19-20c");  
+	break ;
+
+	case ( '"odpt.Station:Toei.Asakusa.Asakusa"'):	
+		nameText = document.getElementById('a19-18');
+		target = document.getElementById('a19-18d');
+		doc2= document.getElementById("a19-18e"); 
+		doc0= document.getElementById("a19-18b");  
+		doc1= document.getElementById("a19-18c");  
+	break ;
+
+	default:
+	nameText = 0;
+        break ;
+	}
+        break ;
+
+case ('"odpt.Station:Toei.Asakusa.Asakusa"'):
+	switch ( scid) {
+	case ( 'null' ):
+	if ( trid == '"odpt.RailDirection:Northbound"' ) {
+		nameText = document.getElementById('a18-2a');
+		target = document.getElementById('a18-2ad');
+		doc2= document.getElementById("a18-2"); 
+		doc0= document.getElementById("a18-2b");  
+		doc1= document.getElementById("a18-2c");  
+	} else {
+		nameText = document.getElementById('a18-1a');
+		target = document.getElementById('a18-1ad');
+		doc2= document.getElementById("a18-1"); 
+		doc0= document.getElementById("a18-1b");  
+		doc1= document.getElementById("a18-1c");  
+	}
+	break ;
+
+	case ( '"odpt.Station:Toei.Asakusa.HonjoAzumabashi"'):	
+		nameText = document.getElementById('a18-19');
+		target = document.getElementById('a18-19d');
+		doc2= document.getElementById("a18-19e"); 
+		doc0= document.getElementById("a18-19b");  
+		doc1= document.getElementById("a18-19c");  
+	break ;
+
+	case ( '"odpt.Station:Toei.Asakusa.Kuramae"'):	
+		nameText = document.getElementById('a18-17');
+		target = document.getElementById('a18-17d');
+		doc2= document.getElementById("a18-17e"); 
+		doc0= document.getElementById("a18-17b");  
+		doc1= document.getElementById("a18-17c");  
+	break ;
+
+
+	default:
+	nameText = 0;
+        break ;
+	}
+        break ;
+
+
+case ('"odpt.Station:Toei.Asakusa.Kuramae"'):
+	switch ( scid) {
+	case ( 'null' ):
+	if ( trid == '"odpt.RailDirection:Northbound"' ) {
+		nameText = document.getElementById('a17-2a');
+		target = document.getElementById('a17-2ad');
+		doc2= document.getElementById("a17-2"); 
+		doc0= document.getElementById("a17-2b");  
+		doc1= document.getElementById("a17-2c");  
+	} else {
+		nameText = document.getElementById('a17-1a');
+		target = document.getElementById('a17-1ad');
+		doc2= document.getElementById("a17-1"); 
+		doc0= document.getElementById("a17-1b");  
+		doc1= document.getElementById("a17-1c");  
+	}
+	break ;
+
+	case ( '"odpt.Station:Toei.Asakusa.Asakusa"'):	
+		nameText = document.getElementById('a17-18');
+		target = document.getElementById('a17-18d');
+		doc2= document.getElementById("a17-18e"); 
+		doc0= document.getElementById("a17-18b");  
+		doc1= document.getElementById("a17-18c");  
+	break ;
+
+	case ( '"odpt.Station:Toei.Asakusa.Asakusabashi"'):	
+		nameText = document.getElementById('a17-16');
+		target = document.getElementById('a17-16d');
+		doc2= document.getElementById("a17-16e"); 
+		doc0= document.getElementById("a17-16b");  
+		doc1= document.getElementById("a17-16c");  
+	break ;
+
+	default:
+	nameText = 0;
+        break ;
+	}
+        break ;
+
+case ('"odpt.Station:Toei.Asakusa.Asakusabashi"'):
+	switch ( scid) {
+	case ( 'null' ):
+	if ( trid == '"odpt.RailDirection:Northbound"' ) {
+		nameText = document.getElementById('a16-2a');
+		target = document.getElementById('a16-2ad');
+		doc2= document.getElementById("a16-2"); 
+		doc0= document.getElementById("a16-2b");  
+		doc1= document.getElementById("a16-2c");  
+	} else {
+		nameText = document.getElementById('a16-1a');
+		target = document.getElementById('a16-1ad');
+		doc2= document.getElementById("a16-1"); 
+		doc0= document.getElementById("a16-1b");  
+		doc1= document.getElementById("a16-1c");  
+	}
+	break ;
+
+	case ( '"odpt.Station:Toei.Asakusa.Kuramae"'):	
+		nameText = document.getElementById('a16-17');
+		target = document.getElementById('a16-17d');
+		doc2= document.getElementById("a16-17e"); 
+		doc0= document.getElementById("a16-17b");  
+		doc1= document.getElementById("a16-17c");  
+	break ;
+
+	case ( '"odpt.Station:Toei.Asakusa.HigashiNihombashi"'):	
+		nameText = document.getElementById('a16-15');
+		target = document.getElementById('a16-15d');
+		doc2= document.getElementById("a16-15e"); 
+		doc0= document.getElementById("a16-15b");  
+		doc1= document.getElementById("a16-15c");  
+	break ;
+
+
+	default:
+	nameText = 0;
+        break ;
+	}
+        break ;
+
+case ('"odpt.Station:Toei.Asakusa.HigashiNihombashi"'):
+	switch ( scid) {
+	case ( 'null' ):
+	if ( trid == '"odpt.RailDirection:Northbound"' ) {
+		nameText = document.getElementById('a15-2a');
+		target = document.getElementById('a15-2ad');
+		doc2= document.getElementById("a15-2"); 
+		doc0= document.getElementById("a15-2b");  
+		doc1= document.getElementById("a15-2c");  
+	} else {
+		nameText = document.getElementById('a15-1a');
+		target = document.getElementById('a15-1ad');
+		doc2= document.getElementById("a15-1"); 
+		doc0= document.getElementById("a15-1b");  
+		doc1= document.getElementById("a15-1c");  
+	}
+	break ;
+
+	case ( '"odpt.Station:Toei.Asakusa.Asakusabashi"'):	
+		nameText = document.getElementById('a15-16');
+		target = document.getElementById('a15-16d');
+		doc2= document.getElementById("a15-16e"); 
+		doc0= document.getElementById("a15-16b");  
+		doc1= document.getElementById("a15-16c");  
+	break ;
+
+	case ( '"odpt.Station:Toei.Asakusa.Ningyocho"'):	
+		nameText = document.getElementById('a15-14');
+		target = document.getElementById('a15-14d');
+		doc2= document.getElementById("a15-14e"); 
+		doc0= document.getElementById("a15-14b");  
+		doc1= document.getElementById("a15-14c");  
+	break ;
+
+
+	default:
+	nameText = 0;
+        break ;
+	}
+        break ;
+
+case ('"odpt.Station:Toei.Asakusa.Ningyocho"'):
+	switch ( scid) {
+	case ( 'null' ):
+	if ( trid == '"odpt.RailDirection:Northbound"' ) {
+		nameText = document.getElementById('a14-2a');
+		target = document.getElementById('a14-2ad');
+		doc2= document.getElementById("a14-2"); 
+		doc0= document.getElementById("a14-2b");  
+		doc1= document.getElementById("a14-2c");  
+	} else {
+		nameText = document.getElementById('a14-1a');
+		target = document.getElementById('a14-1ad');
+		doc2= document.getElementById("a14-1"); 
+		doc0= document.getElementById("a14-1b");  
+		doc1= document.getElementById("a14-1c");  
+	}
+	break ;
+
+	case ( '"odpt.Station:Toei.Asakusa.HigashiNihombashi"'):	
+		nameText = document.getElementById('a14-15');
+		target = document.getElementById('a14-15d');
+		doc2= document.getElementById("a14-15e"); 
+		doc0= document.getElementById("a14-15b");  
+		doc1= document.getElementById("a14-15c");  
+	break ;
+
+	case ( '"odpt.Station:Toei.Asakusa.Nihombashi"'):	
+		nameText = document.getElementById('a14-13');
+		target = document.getElementById('a14-13d');
+		doc2= document.getElementById("a14-13e"); 
+		doc0= document.getElementById("a14-13b");  
+		doc1= document.getElementById("a14-13c");  
+	break ;
+
+	default:
+	nameText = 0;
+        break ;
+	}
+        break ;
+
+case ('"odpt.Station:Toei.Asakusa.Nihombashi"'):
+	switch ( scid) {
+	case ( 'null' ):
+	if ( trid == '"odpt.RailDirection:Northbound"' ) {
+		nameText = document.getElementById('a13-2a');
+		target = document.getElementById('a13-2ad');
+		doc2= document.getElementById("a13-2"); 
+		doc0= document.getElementById("a13-2b");  
+		doc1= document.getElementById("a13-2c");  
+	} else {
+		nameText = document.getElementById('a13-1a');
+		target = document.getElementById('a13-1ad');
+		doc2= document.getElementById("a13-1"); 
+		doc0= document.getElementById("a13-1b");  
+		doc1= document.getElementById("a13-1c");  
+	}
+	break ;
+
+	case ( '"odpt.Station:Toei.Asakusa.Ningyocho"'):	
+		nameText = document.getElementById('a13-14');
+		target = document.getElementById('a13-14d');
+		doc2= document.getElementById("a13-14e"); 
+		doc0= document.getElementById("a13-14b");  
+		doc1= document.getElementById("a13-14c");  
+	break ;
+
+	case ( '"odpt.Station:Toei.Asakusa.Takaracho"'):	
+		nameText = document.getElementById('a13-12');
+		target = document.getElementById('a13-12d');
+		doc2= document.getElementById("a13-12e"); 
+		doc0= document.getElementById("a13-12b");  
+		doc1= document.getElementById("a13-12c");  
+	break ;
+
+
+	default:
+	nameText = 0;
+        break ;
+	}
+        break ;
+
+case ('"odpt.Station:Toei.Asakusa.Takaracho"'):
+	switch ( scid) {
+	case ( 'null' ):
+	if ( trid == '"odpt.RailDirection:Northbound"' ) {
+		nameText = document.getElementById('a12-2a');
+		target = document.getElementById('a12-2ad');
+		doc2= document.getElementById("a12-2"); 
+		doc0= document.getElementById("a12-2b");  
+		doc1= document.getElementById("a12-2c");  
+	} else {
+		nameText = document.getElementById('a12-1a');
+		target = document.getElementById('a12-1ad');
+		doc2= document.getElementById("a12-1"); 
+		doc0= document.getElementById("a12-1b");  
+		doc1= document.getElementById("a12-1c");  
+	}
+	break ;
+
+	case ( '"odpt.Station:Toei.Asakusa.Nihombashi"'):	
+		nameText = document.getElementById('a12-13');
+		target = document.getElementById('a12-13d');
+		doc2= document.getElementById("a12-13e"); 
+		doc0= document.getElementById("a12-13b");  
+		doc1= document.getElementById("a12-13c");  
+	break ;
+
+	case ( '"odpt.Station:Toei.Asakusa.HigashiGinza"'):	
+		nameText = document.getElementById('a12-11');
+		target = document.getElementById('a12-11d');
+		doc2= document.getElementById("a12-11e"); 
+		doc0= document.getElementById("a12-11b");  
+		doc1= document.getElementById("a12-11c");  
+	break ;
+
+
+	default:
+	nameText = 0;
+        break ;
+	}
+        break ;
+
+case ('"odpt.Station:Toei.Asakusa.HigashiGinza"'):
+	switch ( scid) {
+	case ( 'null' ):
+	if ( trid == '"odpt.RailDirection:Northbound"' ) {
+		nameText = document.getElementById('a11-2a');
+		target = document.getElementById('a11-2ad');
+		doc2= document.getElementById("a11-2"); 
+		doc0= document.getElementById("a11-2b");  
+		doc1= document.getElementById("a11-2c");  
+	} else {
+		nameText = document.getElementById('a11-1a');
+		target = document.getElementById('a11-1ad');
+		doc2= document.getElementById("a11-1"); 
+		doc0= document.getElementById("a11-1b");  
+		doc1= document.getElementById("a11-1c");  
+	}
+	break ;
+
+	case ( '"odpt.Station:Toei.Asakusa.Takaracho"'):	
+		nameText = document.getElementById('a11-12');
+		target = document.getElementById('a11-12d');
+		doc2= document.getElementById("a11-12e"); 
+		doc0= document.getElementById("a11-12b");  
+		doc1= document.getElementById("a11-12c");  
+	break ;
+
+	case ( '"odpt.Station:Toei.Asakusa.Shimbashi"'):	
+		nameText = document.getElementById('a11-10');
+		target = document.getElementById('a11-10d');
+		doc2= document.getElementById("a11-10e"); 
+		doc0= document.getElementById("a11-10b");  
+		doc1= document.getElementById("a11-10c");  
+	break ;
+
+
+
+	default:
+	nameText = 0;
+        break ;
+	}
+        break ;
+
+case ('"odpt.Station:Toei.Asakusa.Shimbashi"'):
+	switch ( scid) {
+	case ( 'null' ):
+	if ( trid == '"odpt.RailDirection:Northbound"' ) {
+		nameText = document.getElementById('a10-2a');
+		target = document.getElementById('a10-2ad');
+		doc2= document.getElementById("a10-2"); 
+		doc0= document.getElementById("a10-2b");  
+		doc1= document.getElementById("a10-2c");  
+	} else {
+		nameText = document.getElementById('a10-1a');
+		target = document.getElementById('a10-1ad');
+		doc2= document.getElementById("a10-1"); 
+		doc0= document.getElementById("a10-1b");  
+		doc1= document.getElementById("a10-1c");  
+	}
+	break ;
+
+	case ( '"odpt.Station:Toei.Asakusa.Daimon"'):	
+		nameText = document.getElementById('a10-09');
+		target = document.getElementById('a10-09d');
+		doc2= document.getElementById("a10-09e"); 
+		doc0= document.getElementById("a10-09b");  
+		doc1= document.getElementById("a10-09c");  
+	break ;
+
+	case ( '"odpt.Station:Toei.Asakusa.HigashiGinza"'):	
+		nameText = document.getElementById('a10-11');
+		target = document.getElementById('a10-11d');
+		doc2= document.getElementById("a10-11e"); 
+		doc0= document.getElementById("a10-11b");  
+		doc1= document.getElementById("a10-11c");  
+	break ;
+
+	default:
+	nameText = 0;
+        break ;
+	}
+        break ;
+
+
+case ('"odpt.Station:Toei.Asakusa.Daimon"'):
+	switch ( scid) {
+	case ( 'null' ):
+	if ( trid == '"odpt.RailDirection:Northbound"' ) {
+		nameText = document.getElementById('a09-2a');
+		target = document.getElementById('a09-2ad');
+		doc2= document.getElementById("a09-2"); 
+		doc0= document.getElementById("a09-2b");  
+		doc1= document.getElementById("a09-2c");  
+	} else {
+		nameText = document.getElementById('a09-1a');
+		target = document.getElementById('a09-1ad');
+		doc2= document.getElementById("a09-1"); 
+		doc0= document.getElementById("a09-1b");  
+		doc1= document.getElementById("a09-1c");  
+	}
+	break ;
+
+	case ( '"odpt.Station:Toei.Asakusa.Shimbashi"'):	
+		nameText = document.getElementById('a09-10');
+		target = document.getElementById('a09-10d');
+		doc2= document.getElementById("a09-10e"); 
+		doc0= document.getElementById("a09-10b");  
+		doc1= document.getElementById("a09-10c");  
+	break ;
+
+	case ( '"odpt.Station:Toei.Asakusa.Mita"'):	
+		nameText = document.getElementById('a09-08');
+		target = document.getElementById('a09-08d');
+		doc2= document.getElementById("a09-08e"); 
+		doc0= document.getElementById("a09-08b");  
+		doc1= document.getElementById("a09-08c");  
+	break ;
+	}
+	break ;
+
+case ('"odpt.Station:Toei.Asakusa.Mita"'):
+	switch ( scid) {
+	case ( 'null' ):
+	if ( trid == '"odpt.RailDirection:Northbound"' ) {
+		nameText = document.getElementById('a08-2a');
+		target = document.getElementById('a08-2ad');
+		doc2= document.getElementById("a08-2"); 
+		doc0= document.getElementById("a08-2b");  
+		doc1= document.getElementById("a08-2c");  
+	} else {
+		nameText = document.getElementById('a08-1a');
+		target = document.getElementById('a08-1ad');
+		doc2= document.getElementById("a08-1"); 
+		doc0= document.getElementById("a08-1b");  
+		doc1= document.getElementById("a08-1c");  
+	}
+	break ;
+
+	case ( '"odpt.Station:Toei.Asakusa.Daimon"'):	
+		nameText = document.getElementById('a08-09');
+		target = document.getElementById('a08-09d');
+		doc2= document.getElementById("a08-09e"); 
+		doc0= document.getElementById("a08-09b");  
+		doc1= document.getElementById("a08-09c");  
+	break ;
+
+	case ( '"odpt.Station:Toei.Asakusa.Sengakuji"'):	
+		nameText = document.getElementById('a08-07');
+		target = document.getElementById('a08-07d');
+		doc2= document.getElementById("a08-07e"); 
+		doc0= document.getElementById("a08-07b");  
+		doc1= document.getElementById("a08-07c");  
+	break ;
+
+
+	default:
+	nameText = 0;
+        break ;
+	}
+
+        break ;
+
+case ('"odpt.Station:Toei.Asakusa.Sengakuji"'):
+	switch ( scid) {
+	case ( 'null' ):
+	if ( trid == '"odpt.RailDirection:Northbound"' ) {
+if ( hensei == '["odpt.Station:Toei.Asakusa.NishiMagome"]' ){
+		nameText = document.getElementById('a07-3a');
+		target = document.getElementById('a07-3ad');
+		doc2= document.getElementById("a07-3"); 
+		doc0= document.getElementById("a07-3b");  
+		doc1= document.getElementById("a07-3c");  
+} else {
+	if ( sessionStorage.getItem("shinagawa2a").replace('　','').substr( 0, 2 ) == unban.replace('&nbsp;','').substr( 0, 2 ) && sessionStorage.getItem("shinagawa2a").replace('　','').substr( -1, 1 ) == unban.replace('&nbsp;','').substr( -1, 1 ) ) {
+	doc2= document.getElementById("kk-a07e"); 
+	doc0= document.getElementById("kk-a07b");  
+	doc2.innerHTML= '' ;
+	doc0.innerHTML= '';
+	sessionStorage.setItem('shinagawa2a', '');
+	sessionStorage.setItem('shinagawa2b', '');
+	sessionStorage.setItem('shinagawa2c', '');
+	}
+		nameText = document.getElementById('a07-4a');
+		target = document.getElementById('a07-4ad');
+		doc2= document.getElementById("a07-4"); 
+		doc0= document.getElementById("a07-4b");  
+		doc1= document.getElementById("a07-4c");  
+	
+
+}
+	} else {
+if ( des == '西' ){
+		nameText = document.getElementById('a07-2a');
+		target = document.getElementById('a07-2ad');
+		doc2= document.getElementById("a07-2"); 
+		doc0= document.getElementById("a07-2b");  
+		doc1= document.getElementById("a07-2c"); 
+}else {
+		nameText = document.getElementById('a07-1a');
+		target = document.getElementById('a07-1ad');
+		doc2= document.getElementById("a07-1"); 
+		doc0= document.getElementById("a07-1b");  
+		doc1= document.getElementById("a07-1c"); 
+	if ( des != '泉' ){
+		sengakuji = unban ; 
+		sengakujia = kind ; 
+		sengakujib = info ; 
+		sessionStorage.setItem('sktime', nowtime);
+	}
+}
+	}
+	break ;
+
+	case ( '"odpt.Station:Toei.Asakusa.Mita"'):	
+		nameText = document.getElementById('a07-08');
+		target = document.getElementById('a07-08d');
+		doc2= document.getElementById("a07-08e"); 
+		doc0= document.getElementById("a07-08b");  
+		doc1= document.getElementById("a07-08c");  
+	break ;
+
+	case ( '"odpt.Station:Toei.Asakusa.Takanawadai"'):	
+		nameText = document.getElementById('a07-06');
+		target = document.getElementById('a07-06d');
+		doc2= document.getElementById("a07-06e"); 
+		doc0= document.getElementById("a07-06b");  
+		doc1= document.getElementById("a07-06c");  
+	break ;
+
+	default:
+	nameText = 0;
+        break ;
+	}
+
+        break ;
+
+case ('"odpt.Station:Toei.Asakusa.Takanawadai"'):
+	switch ( scid) {
+	case ( 'null' ):
+	if ( trid == '"odpt.RailDirection:Northbound"' ) {
+		nameText = document.getElementById('a06-2a');
+		target = document.getElementById('a06-2ad');
+		doc2= document.getElementById("a06-2"); 
+		doc0= document.getElementById("a06-2b");  
+		doc1= document.getElementById("a06-2c");  
+	} else {
+		nameText = document.getElementById('a06-1a');
+		target = document.getElementById('a06-1ad');
+		doc2= document.getElementById("a06-1"); 
+		doc0= document.getElementById("a06-1b");  
+		doc1= document.getElementById("a06-1c");  
+	}
+	break ;
+
+	case ( '"odpt.Station:Toei.Asakusa.Sengakuji"'):	
+		nameText = document.getElementById('a06-07');
+		target = document.getElementById('a06-07d');
+		doc2= document.getElementById("a06-07e"); 
+		doc0= document.getElementById("a06-07b");  
+		doc1= document.getElementById("a06-07c");  
+	break ;
+
+	case ( '"odpt.Station:Toei.Asakusa.Gotanda"'):	
+		nameText = document.getElementById('a06-05');
+		target = document.getElementById('a06-05d');
+		doc2= document.getElementById("a06-05e"); 
+		doc0= document.getElementById("a06-05b");  
+		doc1= document.getElementById("a06-05c");  
+	break ;
+
+	default:
+	nameText = 0;
+        break ;
+	}
+
+        break ;
+
+case ('"odpt.Station:Toei.Asakusa.Gotanda"'):
+	switch ( scid) {
+	case ( 'null' ):
+	if ( trid == '"odpt.RailDirection:Northbound"' ) {
+		nameText = document.getElementById('a05-2a');
+		target = document.getElementById('a05-2ad');
+		doc2= document.getElementById("a05-2"); 
+		doc0= document.getElementById("a05-2b");  
+		doc1= document.getElementById("a05-2c");  
+	} else {
+		nameText = document.getElementById('a05-1a');
+		target = document.getElementById('a05-1ad');
+		doc2= document.getElementById("a05-1"); 
+		doc0= document.getElementById("a05-1b");  
+		doc1= document.getElementById("a05-1c");  
+	}
+	break ;
+
+	case ( '"odpt.Station:Toei.Asakusa.Takanawadai"'):	
+		nameText = document.getElementById('a05-06');
+		target = document.getElementById('a05-06d');
+		doc2= document.getElementById("a05-06e"); 
+		doc0= document.getElementById("a05-06b");  
+		doc1= document.getElementById("a05-06c");  
+	break ;
+
+	case ( '"odpt.Station:Toei.Asakusa.Togoshi"'):	
+		nameText = document.getElementById('a05-04');
+		target = document.getElementById('a05-04d');
+		doc2= document.getElementById("a05-04e"); 
+		doc0= document.getElementById("a05-04b");  
+		doc1= document.getElementById("a05-04c");  
+	break ;
+
+
+	default:
+	nameText = 0;
+        break ;
+	}
+
+        break ;
+
+case ('"odpt.Station:Toei.Asakusa.Togoshi"'):
+	switch ( scid) {
+	case ( 'null' ):
+	if ( trid == '"odpt.RailDirection:Northbound"' ) {
+		nameText = document.getElementById('a04-2a');
+		target = document.getElementById('a04-2ad');
+		doc2= document.getElementById("a04-2"); 
+		doc0= document.getElementById("a04-2b");  
+		doc1= document.getElementById("a04-2c");  
+	} else {
+		nameText = document.getElementById('a04-1a');
+		target = document.getElementById('a04-1ad');
+		doc2= document.getElementById("a04-1"); 
+		doc0= document.getElementById("a04-1b");  
+		doc1= document.getElementById("a04-1c");  
+	}
+	break ;
+
+	case ( '"odpt.Station:Toei.Asakusa.Gotanda"'):	
+		nameText = document.getElementById('a04-05');
+		target = document.getElementById('a04-05d');
+		doc2= document.getElementById("a04-05e"); 
+		doc0= document.getElementById("a04-05b");  
+		doc1= document.getElementById("a04-05c");  
+	break ;
+
+	case ( '"odpt.Station:Toei.Asakusa.Nakanobu"'):	
+		nameText = document.getElementById('a04-03');
+		target = document.getElementById('a04-03d');
+		doc2= document.getElementById("a04-03e"); 
+		doc0= document.getElementById("a04-03b");  
+		doc1= document.getElementById("a04-03c");  
+
+	if ( newkind[unban2] != undefined){
+	if ( kind1 == '' || dep1 > newkind[unban2].replaceAll('"','')){
+		kind2 = kind1 ;
+		des2 = des1 ;
+		dep2 = dep1 ;
+		num2 = num1 ;
+		ptf2 = ptf1 ;
+
+		kind1 = kindn[unban2].replaceAll('"','');
+		des1 = desn[unban2].replaceAll('"','');
+		dep1 = newkind[unban2].replaceAll('"','');
+		num1 = unban2.replaceAll('"','');
+		ptf1 = dest[unban2].replaceAll('"','');
+	} else if ( kind2 == ''  || dep2 > newkind[unban2].replaceAll('"','') ){
+		kind2 = kindn[unban2].replaceAll('"','');
+		des2 = desn[unban2].replaceAll('"','');
+		dep2 = newkind[unban2].replaceAll('"','');
+		num2 = unban2.replaceAll('"','');
+		ptf2 = dest[unban2].replaceAll('"','');
+	}
+	} 
+	break ;
+
+
+
+	default:
+	nameText = 0;
+        break ;
+	}
+
+        break ;
+
+case ('"odpt.Station:Toei.Asakusa.Nakanobu"'):
+	switch ( scid) {
+	case ( 'null' ):
+	if ( trid == '"odpt.RailDirection:Northbound"' ) {
+		nameText = document.getElementById('a03-2a');
+		target = document.getElementById('a03-2ad');
+		doc2= document.getElementById("a03-2"); 
+		doc0= document.getElementById("a03-2b");  
+		doc1= document.getElementById("a03-2c");  
+	} else {
+		nameText = document.getElementById('a03-1a');
+		target = document.getElementById('a03-1ad');
+		doc2= document.getElementById("a03-1"); 
+		doc0= document.getElementById("a03-1b");  
+		doc1= document.getElementById("a03-1c");   
+
+	if ( newkind[unban2] != undefined){
+	if ( kind1 == '' || dep1 > newkind[unban2].replaceAll('"','')){
+		kind2 = kind1 ;
+		des2 = des1 ;
+		dep2 = dep1 ;
+		num2 = num1 ;
+		ptf2 = ptf1 ;
+
+		kind1 = kindn[unban2].replaceAll('"','');
+		des1 = desn[unban2].replaceAll('"','');
+		dep1 = newkind[unban2].replaceAll('"','');
+		num1 = unban2.replaceAll('"','');
+		ptf1 = dest[unban2].replaceAll('"','');
+	} else if ( kind2 == ''  || dep2 > newkind[unban2].replaceAll('"','') ){
+		kind2 = kindn[unban2].replaceAll('"','');
+		des2 = desn[unban2].replaceAll('"','');
+		dep2 = newkind[unban2].replaceAll('"','');
+		num2 = unban2.replaceAll('"','');
+		ptf2 = dest[unban2].replaceAll('"','');
+	}
+	}
+	}
+	break ;
+
+	case ( '"odpt.Station:Toei.Asakusa.Togoshi"'):	
+		nameText = document.getElementById('a03-04');
+		target = document.getElementById('a03-04d');
+		doc2= document.getElementById("a03-04e"); 
+		doc0= document.getElementById("a03-04b");  
+		doc1= document.getElementById("a03-04c");  
+	break ;
+
+	case ( '"odpt.Station:Toei.Asakusa.Magome"'):	
+		nameText = document.getElementById('a03-02');
+		target = document.getElementById('a03-02d');
+		doc2= document.getElementById("a03-02e"); 
+		doc0= document.getElementById("a03-02b");  
+		doc1= document.getElementById("a03-02c");  
+
+	if ( newkind[unban2] != undefined){
+	if ( kind1 == '' || dep1 > newkind[unban2].replaceAll('"','')){
+		kind2 = kind1 ;
+		des2 = des1 ;
+		dep2 = dep1 ;
+		num2 = num1 ;
+		ptf2 = ptf1 ;
+
+		kind1 = kindn[unban2].replaceAll('"','');
+		des1 = desn[unban2].replaceAll('"','');
+		dep1 = newkind[unban2].replaceAll('"','');
+		num1 = unban2.replaceAll('"','');
+		ptf1 = dest[unban2].replaceAll('"','');
+	} else if ( kind2 == ''  || dep2 > newkind[unban2].replaceAll('"','') ){
+		kind2 = kindn[unban2].replaceAll('"','');
+		des2 = desn[unban2].replaceAll('"','');
+		dep2 = newkind[unban2].replaceAll('"','');
+		num2 = unban2.replaceAll('"','');
+		ptf2 = dest[unban2].replaceAll('"','');
+	}
+	}
+	break ;
+
+	default:
+	nameText = 0;
+        break ;
+	}
+
+        break ;
+
+case ('"odpt.Station:Toei.Asakusa.Magome"'):
+	switch ( scid) {
+	case ( 'null' ):
+	if ( trid == '"odpt.RailDirection:Northbound"' ) {
+		nameText = document.getElementById('a02-2a');
+		target = document.getElementById('a02-2ad');
+		doc2= document.getElementById("a02-2"); 
+		doc0= document.getElementById("a02-2b");  
+		doc1= document.getElementById("a02-2c");  
+	} else {
+		nameText = document.getElementById('a02-1a');
+		target = document.getElementById('a02-1ad');
+		doc2= document.getElementById("a02-1"); 
+		doc0= document.getElementById("a02-1b");  
+		doc1= document.getElementById("a02-1c");  
+
+	if ( newkind[unban2] != undefined){
+	if ( kind1 == '' || dep1 > newkind[unban2].replaceAll('"','')){
+		kind2 = kind1 ;
+		des2 = des1 ;
+		dep2 = dep1 ;
+		num2 = num1 ;
+		ptf2 = ptf1 ;
+
+		kind1 = kindn[unban2].replaceAll('"','');
+		des1 = desn[unban2].replaceAll('"','');
+		dep1 = newkind[unban2].replaceAll('"','');
+		num1 = unban2.replaceAll('"','');
+		ptf1 = dest[unban2].replaceAll('"','');
+	} else if ( kind2 == ''  || dep2 > newkind[unban2].replaceAll('"','') ){
+		kind2 = kindn[unban2].replaceAll('"','');
+		des2 = desn[unban2].replaceAll('"','');
+		dep2 = newkind[unban2].replaceAll('"','');
+		num2 = unban2.replaceAll('"','');
+		ptf2 = dest[unban2].replaceAll('"','');
+	}
+	}
+	}
+	break ;
+
+	case ( '"odpt.Station:Toei.Asakusa.Nakanobu"'):	
+		nameText = document.getElementById('a02-03');
+		target = document.getElementById('a02-03d');
+		doc2= document.getElementById("a02-03e"); 
+		doc0= document.getElementById("a02-03b");  
+		doc1= document.getElementById("a02-03c");  
+	break ;
+
+	case ( '"odpt.Station:Toei.Asakusa.NishiMagome"'):	
+		nameText = document.getElementById('a02-01');
+		target = document.getElementById('a02-01d');
+		doc2= document.getElementById("a02-01e"); 
+		doc0= document.getElementById("a02-01b");  
+		doc1= document.getElementById("a02-01c"); 
+
+	if ( newkind[unban2] != undefined){
+	if ( kind1 == '' || dep1 > newkind[unban2].replaceAll('"','')){
+		kind2 = kind1 ;
+		des2 = des1 ;
+		dep2 = dep1 ;
+		num2 = num1 ;
+		ptf2 = ptf1 ;
+
+		kind1 = kindn[unban2].replaceAll('"','');
+		des1 = desn[unban2].replaceAll('"','');
+		dep1 = newkind[unban2].replaceAll('"','');
+		num1 = unban2.replaceAll('"','');
+		ptf1 = dest[unban2].replaceAll('"','');
+	} else if ( kind2 == ''  || dep2 > newkind[unban2].replaceAll('"','') ){
+		kind2 = kindn[unban2].replaceAll('"','');
+		des2 = desn[unban2].replaceAll('"','');
+		dep2 = newkind[unban2].replaceAll('"','');
+		num2 = unban2.replaceAll('"','');
+		ptf2 = dest[unban2].replaceAll('"','');
+	}
+	}
+ 
+	break ;
+
+	default:
+	nameText = 0;
+        break ;
+	}
+
+        break ;
+
+case ('"odpt.Station:Toei.Asakusa.NishiMagome"'):
+//番線指定
+	switch ( scid) {
+	case ( 'null' ):
+	
+	switch ( dest[unban2] ) {
+	case ( '"1"' ):
+		nameText = document.getElementById('a01-1a');
+		target = document.getElementById('a01-1ad');
+		doc2= document.getElementById("a01-1"); 
+		doc0= document.getElementById("a01-1b");  
+		doc1= document.getElementById("a01-1c"); 
+ 
+	if ( newkind[unban2] != undefined){
+	if ( kind1 == '' || dep1 > newkind[unban2].replaceAll('"','')){
+		kind2 = kind1 ;
+		des2 = des1 ;
+		dep2 = dep1 ;
+		num2 = num1 ;
+		ptf2 = ptf1 ;
+
+		kind1 = kindn[unban2].replaceAll('"','');
+		des1 = desn[unban2].replaceAll('"','');
+		dep1 = newkind[unban2].replaceAll('"','');
+		num1 = unban2.replaceAll('"','');
+		ptf1 = dest[unban2].replaceAll('"','');
+	if ( trid == '"odpt.RailDirection:Northbound"' ) {
+		des1 = des0;
+		kind1 = kind0;
+	}
+	} else if ( kind2 == ''  || dep2 > newkind[unban2].replaceAll('"','') ){
+		kind2 = kindn[unban2].replaceAll('"','');
+		des2 = desn[unban2].replaceAll('"','');
+		dep2 = newkind[unban2].replaceAll('"','');
+		num2 = unban2.replaceAll('"','');
+		ptf2 = dest[unban2].replaceAll('"','');
+	if ( trid == '"odpt.RailDirection:Northbound"' ) {
+		des2 = des0;
+		kind2 = kind0;
+	}
+	}
+	}
+
+	break ;
+	case ( '"2"' ):
+		nameText = document.getElementById('a01-2a');
+		target = document.getElementById('a01-2ad');
+		doc2= document.getElementById("a01-2"); 
+		doc0= document.getElementById("a01-2b");  
+		doc1= document.getElementById("a01-2c");  
+
+	if ( newkind[unban2] != undefined){
+	if ( kind1 == '' || dep1 > newkind[unban2].replaceAll('"','')){
+		kind2 = kind1 ;
+		des2 = des1 ;
+		dep2 = dep1 ;
+		num2 = num1 ;
+		ptf2 = ptf1 ;
+
+		kind1 = kindn[unban2].replaceAll('"','');
+		des1 = desn[unban2].replaceAll('"','');
+		dep1 = newkind[unban2].replaceAll('"','');
+		num1 = unban2.replaceAll('"','');
+		ptf1 = dest[unban2].replaceAll('"','');
+	if ( trid == '"odpt.RailDirection:Northbound"' ) {
+		des1 = des0;
+		kind1 = kind0;
+	}
+	} else if ( kind2 == '' || dep2 > newkind[unban2].replaceAll('"','') ){
+		kind2 = kindn[unban2].replaceAll('"','');
+		des2 = desn[unban2].replaceAll('"','');
+		dep2 = newkind[unban2].replaceAll('"','');
+		num2 = unban2.replaceAll('"','');
+		ptf2 = dest[unban2].replaceAll('"','');
+	if ( trid == '"odpt.RailDirection:Northbound"' ) {
+		des2 = des0;
+		kind2 = kind0;
+	}
+	}
+	}
+
+	break ;
+	default:
+		nameText = document.getElementById('a01-1a');
+			if ( nameText.value == "" ){
+		target = document.getElementById('a01-1ad');
+		doc2= document.getElementById("a01-1"); 
+		doc0= document.getElementById("a01-1b");  
+		doc1= document.getElementById("a01-1c");  
+			} else {
+		nameText = document.getElementById('a01-2a');
+		target = document.getElementById('a01-2ad');
+		doc2= document.getElementById("a01-2"); 
+		doc0= document.getElementById("a01-2b");  
+		doc1= document.getElementById("a01-2c");  
+			}
+	break ;
+	}
+
+	break ;
+
+	case ( '"odpt.Station:Toei.Asakusa.Magome"'):	
+		nameText = document.getElementById('a01-02');
+		target = document.getElementById('a01-02d');
+		doc2= document.getElementById("a01-02e"); 
+		doc0= document.getElementById("a01-02b");  
+		doc1= document.getElementById("a01-02c");  
+	break ;
+
+	default:
+	nameText = 0;
+        break ;
+	}
+
+        break ;
+
+
+default:
+	
+	nameText = 0;
+        break ;
+
+}
+
+	doc2.innerHTML= kind ;
+if ( nameText.value == "" ){
+	doc0.innerHTML= info.replace("―999","留置");
+	doc1.innerHTML= delay;
+}
+
+doc0.style.backgroundColor = '#ffffff'; //背景
+doc1.style.backgroundColor = '#ffffff'; //背景
+doc2.style.backgroundColor = '#ffffff'; //背景
+
+
+if ( nameText == 0 ){
+} else {
+nameText.value = "　";
+
+if ( dai == 1){
+doc0.style.backgroundColor = '#98fb98'; //背景
+}
+
+switch (kind) {
+case '急' :
+case '通' :
+doc2.style.color = '#0000ff'; //文字
+break;
+case '特' :
+doc2.style.color = '#ff0000'; //文字
+break;
+case '快' :
+doc2.style.color = '#32cd32'; //文字
+break;
+case 'ア' :
+case 'エ' :
+doc2.style.color = '#ff8c00'; //文字
+break;
+case '速' :
+doc2.style.color = '#ff69b4'; //文字
+break;
+}
+
+
+switch (cars) {
+	case '"6"' :
+	doc0.style.textDecoration = "underline";
+	break;
+	case '"8"' :
+	break;
+	case '"10"' :
+	doc0.style.fontWeight = "bold";
+	break;
+}
+}
+}
+
+}
+
+//泉岳寺～品川仮想表示
+
+if (sengakuji == sessionStorage.getItem("sengakuji1a") ) {
+	sessionStorage.setItem('sengakuji1a', sengakuji);
+	sessionStorage.setItem('sengakuji1b', sengakujia);
+	sessionStorage.setItem('sengakuji1c', sengakujib);
+} else {
+
+	nameText = document.getElementById('a07-kk');
+	target = document.getElementById('a07-kkd');
+	doc2= document.getElementById("a07-kke"); 
+	doc0= document.getElementById("a07-kkb");  
+	doc1= document.getElementById("a07-kkc");  
+	doc2.innerHTML= sessionStorage.getItem("sengakuji1b") ;
+	doc0.innerHTML= sessionStorage.getItem("sengakuji1c");
+	doc0.style.backgroundColor = '#ffffff'; //背景
+	doc1.style.backgroundColor = '#ffffff'; //背景
+	doc2.style.backgroundColor = '#ffffff'; //背景
+	switch (sessionStorage.getItem("sengakuji1b")) {
+	case '急' :
+	doc2.style.color = '#0000ff'; //文字
+	break;
+	case '特' :
+	doc2.style.color = '#ff0000'; //文字
+	break;
+	case '快' :
+	doc2.style.color = '#32cd32'; //文字
+	break;
+	case 'エ' :
+	doc2.style.color = '#ff8c00'; //文字
+	break;
+	}
+
+	sessionStorage.setItem('sengakuji2a', sessionStorage.getItem("sengakuji1a"));
+	sessionStorage.setItem('sengakuji2b', sessionStorage.getItem("sengakuji1b"));
+	sessionStorage.setItem('sengakuji2c', sessionStorage.getItem("sengakuji1c"));
+	sessionStorage.setItem('sengakuji1a', sengakuji);
+	sessionStorage.setItem('sengakuji1b', sengakujia);
+	sessionStorage.setItem('sengakuji1c', sengakujib);
+}
+
+if ( sessionStorage.getItem("sengakuji2a") != '' && sessionStorage.getItem("sengakuji2a") != 'null') {
+	nameText = document.getElementById('a07-kk');
+	target = document.getElementById('a07-kkd');
+	doc2= document.getElementById("a07-kke"); 
+	doc0= document.getElementById("a07-kkb");  
+	doc2.innerHTML= sessionStorage.getItem("sengakuji2b") ;
+	doc0.innerHTML= sessionStorage.getItem("sengakuji2c");
+	doc0.style.backgroundColor = '#ffffff'; //背景
+	doc2.style.backgroundColor = '#ffffff'; //背景
+	switch (sessionStorage.getItem("sengakuji2b")) {
+	case '急' :
+	doc2.style.color = '#0000ff'; //文字
+	break;
+	case '特' :
+	doc2.style.color = '#ff0000'; //文字
+	break;
+	case '快' :
+	doc2.style.color = '#32cd32'; //文字
+	break;
+	case 'エ' :
+	doc2.style.color = '#ff8c00'; //文字
+	break;
+	}
+}
+
+
+	//西馬込発車案内ここから
+if (kind1 != ""){
+	if (ptf1 == "1") {
+	ptf1 = "1番→";
+	} else {
+	ptf1 = "←2番";
+	}
+	switch (kind1) {
+	case 'odpt.TrainType:Toei.Local' :
+	kind1 = "普通";
+	break;
+	case 'odpt.TrainType:Toei.Rapid' :
+	kind1 = "快速";
+	document.getElementById("a01dep11").style.backgroundColor = '#ff2b8a'
+	break;
+	case 'odpt.TrainType:Toei.LimitedExpress' :
+	kind1 = "特急";
+	document.getElementById("a01dep11").style.backgroundColor = '#ff0000'
+	break;
+	case 'odpt.TrainType:Toei.RapidLimitedExpress' :
+	kind1 = "快特";
+	document.getElementById("a01dep11").style.backgroundColor = '#00aa0e'
+	break;
+	case 'odpt.TrainType:Toei.CommuterLimitedExpress' :
+	kind1 = "通特";
+	document.getElementById("a01dep11").style.backgroundColor = '#0000ff'
+	break;
+	case 'odpt.TrainType:Toei.AccessExpress' :
+	kind1 = "ア特";
+	document.getElementById("a01dep11").style.backgroundColor = '#ff3e00'
+	break;
+	}
+	switch (des1) {
+	case '[odpt.Station:Keisei.Main.KeiseiTakasago]':
+	des1 = "京成高砂";
+	break;
+	case '[odpt.Station:Toei.Asakusa.Sengakuji]':
+	des1 = "泉岳寺";
+	break;
+	case '[odpt.Station:Toei.Asakusa.Magome]':
+	des1 = "馬　込";
+	break;
+	case '[odpt.Station:Toei.Asakusa.Gotanda]':
+	des1 = "五反田";
+	break;
+	case '[odpt.Station:Toei.Asakusa.Shimbashi]':
+	des1 = "新　橋";
+	break;
+	case '[odpt.Station:Toei.Asakusa.Ningyocho]':
+	des1 = "人形町";
+	break;
+	case '[odpt.Station:Toei.Asakusa.Asakusabashi]':
+	des1 = "浅草橋";
+	break;
+	case '[odpt.Station:Keisei.NaritaSkyAccess.NaritaAirportTerminal1]':
+	case '[odpt.Station:Keisei.Main.NaritaAirportTerminal1]':
+	des1 = "成田空港";
+	break;
+	case '[odpt.Station:Keisei.Main.KeiseiSakura]':
+	des1 = "京成佐倉";
+	break;
+	case '[odpt.Station:Hokuso.Hokuso.ImbaNihonIdai]':
+	des1 = "印旛日医";
+	break;
+	case '[odpt.Station:Keisei.Oshiage.Aoto]':
+	des1 = "青　砥";
+	break;
+	case '[odpt.Station:Hokuso.Hokuso.InzaiMakinohara]':
+	des1 = "印西牧原";
+	break;
+	case '[odpt.Station:Toei.Asakusa.Oshiage]':
+	des1 = "押　上";
+	break;
+	case '[odpt.Station:Keisei.Main.KeiseiNarita]':
+	des1 = "京成成田";
+	break;
+	case '[odpt.Station:Keisei.Main.Sogosando]':
+	des1 = "宗吾参道";
+	break;
+	case '[odpt.Station:Shibayama.Shibayama.ShibayamaChiyoda]':
+	des1 = "芝山千代";
+	break;
+	default:
+	des1 = "―";
+	break;
+	}
+}
+
+if (kind2 != ""){
+	if (ptf2 == "1") {
+	ptf2 = "1番→"
+	} else {
+	ptf2 = "←2番"
+	}
+	switch (kind2) {
+	case 'odpt.TrainType:Toei.Local' :
+	kind2 = "普通";
+	break;
+	case 'odpt.TrainType:Toei.Rapid' :
+	kind2 = "快速";
+	document.getElementById("a01dep21").style.backgroundColor = '#ff2b8a'
+	break;
+	case 'odpt.TrainType:Toei.LimitedExpress' :
+	kind2 = "特急";
+	document.getElementById("a01dep21").style.backgroundColor = '#ff0000'
+	break;
+	case 'odpt.TrainType:Toei.RapidLimitedExpress' :
+	kind2 = "快特";
+	document.getElementById("a01dep21").style.backgroundColor = '#00ff00'
+	break;
+	case 'odpt.TrainType:Toei.CommuterLimitedExpress' :
+	kind2 = "通特";
+	document.getElementById("a01dep21").style.backgroundColor = '#0000ff'
+	break;
+	case 'odpt.TrainType:Toei.AccessExpress' :
+	kind2 = "ア特";
+	document.getElementById("a01dep21").style.backgroundColor = '#ff3e00'
+	break;
+	}
+	switch (des2) {
+	case '[odpt.Station:Keisei.Main.KeiseiTakasago]':
+	des2 = "京成高砂";
+	break;
+	case '[odpt.Station:Toei.Asakusa.Sengakuji]':
+	des2 = "泉岳寺";
+	break;
+	case '[odpt.Station:Toei.Asakusa.Magome]':
+	des2 = "馬　込";
+	break;
+	case '[odpt.Station:Toei.Asakusa.Gotanda]':
+	des2 = "五反田";
+	break;
+	case '[odpt.Station:Toei.Asakusa.Shimbashi]':
+	des2 = "新　橋";
+	break;
+	case '[odpt.Station:Toei.Asakusa.Ningyocho]':
+	des2 = "人形町";
+	break;
+	case '[odpt.Station:Toei.Asakusa.Asakusabashi]':
+	des2 = "浅草橋";
+	break;
+	case '[odpt.Station:Keisei.NaritaSkyAccess.NaritaAirportTerminal1]':
+	case '[odpt.Station:Keisei.Main.NaritaAirportTerminal1]':
+	des2 = "成田空港";
+	break;
+	case '[odpt.Station:Keisei.Main.KeiseiSakura]':
+	des2 = "京成佐倉";
+	break;
+	case '[odpt.Station:Hokuso.Hokuso.ImbaNihonIdai]':
+	des2 = "印旛日医";
+	break;
+	case '[odpt.Station:Keisei.Oshiage.Aoto]':
+	des2 = "青　砥";
+	break;
+	case '[odpt.Station:Hokuso.Hokuso.InzaiMakinohara]':
+	des2 = "印西牧原";
+	break;
+	case '[odpt.Station:Toei.Asakusa.Oshiage]':
+	des2 = "押　上";
+	break;
+	case '[odpt.Station:Keisei.Main.KeiseiNarita]':
+	des2 = "京成成田";
+	break;
+	case '[odpt.Station:Keisei.Main.Sogosando]':
+	des2 = "宗吾参道";
+	break;
+	case '[odpt.Station:Shibayama.Shibayama.ShibayamaChiyoda]':
+	des2 = "芝山千代";
+	break;
+	default:
+	des2 = "―";
+	break;
+	}
+}
+	document.getElementById("a01dep11").innerHTML= kind1 ;
+	document.getElementById("a01dep12").innerHTML= des1 ;
+	document.getElementById("a01dep13").innerHTML= dep1 ;
+	document.getElementById("a01dep14").innerHTML= num1 ;
+	document.getElementById("a01dep15").innerHTML= ptf1 ;
+
+	document.getElementById("a01dep21").innerHTML= kind2 ;
+	document.getElementById("a01dep22").innerHTML= des2 ;
+	document.getElementById("a01dep23").innerHTML= dep2 ;
+	document.getElementById("a01dep24").innerHTML= num2 ;
+	document.getElementById("a01dep25").innerHTML= ptf2 ;
+
+//ここまで
+
+
+
+    }
+  }
+};
+
+
+
+request3.send(null);
+
+    }
+  }
+};
+
+
+
+request2.send(null);
+
+</script>
+<script type="module" >
+
+
+/////////////////////////////////////ここから京急
+
+var request2 = new XMLHttpRequest();
+request2.open("GET", "https://api-challenge.odpt.org/api/v4/odpt:Train?odpt:operator=odpt.Operator:Keikyu&acl:consumerKey=l839g98l6b5ua7gxknup87hv4o4jrj3ru61qzr9yw25dg5x8k4ucfuu6p9nqugci", true);
+request2.responseType = "text";
+
+request2.onload = () => {
+  if (request2.readyState === request2.DONE) {
+    if (request2.status === 200) {
+var data0 = request2.responseText.replaceAll("dc:","dc");
+var data2 = JSON.parse(data0.replaceAll("odpt:","odpt"));
+
+
+
+var request3 = new XMLHttpRequest();
+request3.open("GET", "https://api-public.odpt.org/api/v4/odpt:StationTimetable?odpt:station=odpt.Station:Toei.Asakusa.Mita", true);
+request3.responseType = "text";
+
+request3.onload = () => {
+  if (request3.readyState === request3.DONE) {
+    if (request3.status === 200) {
+var data3 = JSON.parse(request3.responseText.replaceAll("odpt:","odpt"));
+
+//更新時刻
+var koshinH =   JSON.stringify(data2[0].dcdate) ;
+koshinH = "京急更新：" + koshinH.replaceAll('-','/');
+koshinH =  koshinH.replaceAll('T',' ');
+koshinH =  koshinH.replaceAll('+09:00','');
+koshinH =  koshinH.replaceAll('"','');
+
+console.log(koshinH);
+document.getElementById("koshin-H").innerHTML = koshinH ;
+
+
+//在線情報の処理
+let nowtime = Math.floor(Date.now() / 60000) ;
+      let info = '';
+      let len = '';
+      let len3 = '';
+
+      let kind = '';
+      let unban = '';
+      let unban1 = '';
+      let des = '';
+      let stid = '';
+      let scid = '';
+      let trid = '';
+      let sha = '';
+      let hensei = '';
+      let delay = '';
+      let line = '';
+      let cars = '';
+      let dai = 0;
+      let n = 1;
+      let m = 1;
+      let p = 1;
+      let timesec = 0;
+
+      let shinagawa = '';
+      let shinagawaa = '';
+      let shinagawab = '';
+      let shinagawac = '';
+
+
+	var kama3a = '';
+	var kama3b = '';
+	var kama6a = '';
+	var kama6b = ''; 
+
+      len = JSON.stringify(data2.length) ;
+      let now = new Date();
+      let day = now.getDay();
+      let month = now.getMonth();
+      let date = now.getDate();
+
+
+
+	if ( month == 0 && date > 0 && date < 4 ) {
+	day = 0;
+	}
+	if ( month == 1 && date == 11 ) {
+	day = 0;
+	}
+	if ( month == 1 && date == 23 ) {
+	day = 0;
+	}
+	if ( month == 3 && date == 29 ) {
+	day = 0;
+	}
+	if ( month == 4 && date == 3 ) {
+	day = 0;
+	}
+	if ( month == 4 && date == 4 ) {
+	day = 0;
+	}
+	if ( month == 4 && date == 5 ) {
+	day = 0;
+	}
+	if ( month == 10 && date == 3 ) {
+	day = 0;
+	}
+	if ( month == 10 && date == 23 ) {
+	day = 0;
+	}
+
+	now = now.getHours();
+
+	if ( now < 3 ) {
+		timesec = 4;
+	} else if ( now > 2 && now < 10 ) {
+		timesec = 1;
+		m = 0;
+	} else if ( now < 15 ) {
+		timesec = 2;
+		m = 50;
+		if ( day > 0 && day < 6 ) {
+		m = 60;
+		}
+	} else if ( now < 20 ) {
+		timesec = 3;
+		m = 90;
+		if ( day > 0 && day < 6 ) {
+		m = 120;
+		}
+	} else if ( now < 25 ) {
+		timesec = 4;
+		m = 140;
+		if ( day > 0 && day < 6 ) {
+		m = 170;
+		}
+	}
+	p = m;
+	let nameText = document.getElementById('ty01-3a');
+	var dest = {};
+	var mita = {};
+	var newkind = {};
+if ( day > 0 && day < 6 ) {
+      var data4= JSON.parse(JSON.stringify(data3[1].odptstationTimetableObject)); 
+} else {
+      var data4= JSON.parse(JSON.stringify(data3[0].odptstationTimetableObject)); 
+}
+      len3 = JSON.stringify(data4.length) ;
+if ( len3 - m > 100 && timesec != 4 ){
+	len3 = m +100 ;
+}
+
+ now = Math.floor(Date.now() / 60000) ;
+
+for ( m = m; m < len3; m++) {
+//三田北行ダイヤデータ
+	var dest1 = JSON.stringify(data4[m].odpttrainNumber); 
+	var dest2 = JSON.stringify(data4[m].odptdestinationStation); 
+	var dest3 = JSON.stringify(data4[m].odpttrainType);  
+	var dest4 = JSON.stringify(data4[m].odptdepartureTime); 
+	dest4 = dest4.replaceAll('"',''); 
+	    let date = new Date()  ;
+	date = date.getFullYear() + '-'+ (date.getMonth()+1) + '-' + date.getDate() ;
+	dest4 = new Date(date + ' ' + dest4);
+	dest4 = Math.floor(dest4 / 60000)
+
+
+switch (dest3) {
+case '"odpt.TrainType:Toei.Local"':
+	dest3 = "普";
+	break;
+case '"odpt.TrainType:Toei.Express"':
+	dest3 = "急";
+	break;
+case '"odpt.TrainType:Toei.LimitedExpress"':
+	dest3 = "特";
+	break;
+case '"odpt.TrainType:Toei.RapidLimitedExpress"':
+	dest3 = "快";
+	break;
+case '"odpt.TrainType:Toei.Rapid"':
+	dest3 = "速";
+	break;
+case '"odpt.TrainType:Toei.AccessExpress"':
+	dest3 = "ア";
+	break;
+case '"odpt.TrainType:Toei.AirportRapidLimitedExpress"':
+	dest3 = "エ";
+	break;
+case '"odpt.TrainType:Toei.CommuterLimitedExpress"':
+	dest3 = "通";
+	break;
+case 'null':
+	dest3 = "　";
+	break;
+}
+	dest[dest1] = dest2;
+	newkind[dest1] = dest3;
+	mita[dest1] = dest4;
+
+}
+
+
+if ( day > 0 && day < 6 ) {
+      var data4= JSON.parse(JSON.stringify(data3[3].odptstationTimetableObject)); 
+} else {
+      var data4= JSON.parse(JSON.stringify(data3[2].odptstationTimetableObject)); 
+}
+      len3 = JSON.stringify(data4.length) ;
+if ( len3 - p > 100 && timesec != 4 ){
+	len3 = p +100 ;
+}
+
+
+
+for ( m = p; m < len3; m++) {
+//三田南行ダイヤデータ
+	var dest1 = JSON.stringify(data4[m].odpttrainNumber); 
+	var dest2 = JSON.stringify(data4[m].odptdestinationStation); 
+	dest[dest1] = dest2;
+}
+
+
+
+for ( n = 0; n < len; n++) {
+
+
+
+dai = 0;
+
+//種別設定
+       kind= JSON.stringify(data2[n].odpttrainType); 
+	switch (kind) {
+case '"odpt.TrainType:Keikyu.Local"':
+	kind = "普";
+	break;
+case '"odpt.TrainType:Keikyu.Express"':
+	kind = "急";
+	break;
+case '"odpt.TrainType:Keikyu.LimitedExpress"':
+	kind = "特";
+	break;
+case '"odpt.TrainType:Keikyu.RapidLimitedExpress"':
+	kind = "快";
+	break;
+case '"odpt.TrainType:Keikyu.Rapid"':
+	kind = "速";
+	break;
+case '"odpt.TrainType:Keikyu.AccessExpress"':
+	kind = "ア";
+	break;
+case '"odpt.TrainType:Keikyu.AirportRapidLimitedExpress"':
+	kind = "エ";
+	break;
+case '"odpt.TrainType:Keikyu.MorningWing"':
+case '"odpt.TrainType:Keikyu.EveningWing"':
+	kind = "Ｗ";
+	break;
+case '"回"':
+	kind = "回";
+	break;
+case 'null':
+	kind = "　";
+	break;
+}
+
+      trid= JSON.stringify(data2[n].odptrailDirection) ;
+
+
+
+//運番設定
+      unban1 = JSON.stringify(data2[n].odpttrainNumber) ;
+	if( unban1.substr ( -3,2) == 'SH' || unban1.substr ( -3,2) == 'DX' ){
+      unban = unban1.substr( -5,4 ) ;
+	} else if ( unban1.substr ( -2,1) == 'B' || unban1.substr ( -2,1) == 'C' || unban1.substr ( -2,1) == 'D' || unban1.substr ( -2,1) == 'H' || unban1.substr ( -2,1) == 'K' ||unban1.substr ( -2,1) == 'N' ||unban1.substr ( -2,1) == 'T' ||unban1.substr ( -2,1) == 'A'  ) {
+      unban = unban1.substr( -4,3 ) ;
+	} else {
+	if ( unban1 > 9000 ){
+	unban = unban1 ;
+	} else {
+	unban = unban1.substr( -3,2 ) ;
+	}
+	}
+      sha = '' ;
+
+      if (unban1.substr ( -4,3) == '84A'  || unban1.substr ( -4,3) == '82A' || unban1.substr ( -4,3) == '80A' || unban1.substr ( -4,3) == '78A' || unban1.substr ( -4,3) == '76A' || unban1.substr ( -4,3) == '74A' || unban1.substr ( -4,3) == '72A' || unban1.substr ( -4,3) == '70A'){
+ 	kind = "Ｗ";
+}
+
+//行先設定(データなし)
+	
+      des= dest[unban1.replace('SH','H')]
+      dest4= mita[unban1.replace('SH','H')]
+
+      if ( des == undefined ) {
+	des = '' ;
+}
+switch (des) {
+case '["odpt.Station:Keisei.Main.KeiseiTakasago"]':
+	des = "高";
+	break;
+case '["odpt.Station:Toei.Asakusa.Sengakuji"]':
+	des = "泉";
+	break;
+case '["odpt.Station:Toei.Asakusa.NishiMagome"]':
+	des = "西";
+	break;
+case '["odpt.Station:Toei.Asakusa.Magome"]':
+	des = "馬";
+	break;
+case '["odpt.Station:Toei.Asakusa.Gotanda"]':
+	des = "五";
+	break;
+case '["odpt.Station:Toei.Asakusa.Shimbashi"]':
+	des = "新";
+	break;
+case '["odpt.Station:Toei.Asakusa.Ningyocho"]':
+	des = "人";
+	break;
+case '["odpt.Station:Toei.Asakusa.Asakusabashi"]':
+	des = "橋";
+	break;
+case '["odpt.Station:Keisei.NaritaSkyAccess.NaritaAirportTerminal1"]':
+case '["odpt.Station:Keisei.Main.NaritaAirportTerminal1"]':
+	des = "空";
+	break;
+case '["odpt.Station:Keisei.Main.KeiseiSakura"]':
+	des = "佐";
+	break;
+case '["odpt.Station:Hokuso.Hokuso.ImbaNihonIdai"]':
+	des = "医";
+	break;
+case '["odpt.Station:Keisei.Oshiage.Aoto"]':
+	des = "青";
+	break;
+case '["odpt.Station:Keikyu.Airport.HanedaAirportTerminal1and2"]':
+	des = "羽";
+	break;
+case '["odpt.Station:Keikyu.Kurihama.Misakiguchi"]':
+	des = "三";
+	break;
+case '["odpt.Station:Keikyu.Main.KanagawaShimmachi"]':
+	des = "神";
+	break;
+case '["odpt.Station:Keikyu.Main.KanazawaBunko"]':
+	des = "文";
+	break;
+case '["odpt.Station:Keikyu.Kurihama.Miurakaigan"]':
+	des = "海";
+	break;
+case '["odpt.Station:Hokuso.Hokuso.InzaiMakinohara"]':
+	des = "牧";
+	break;
+case '["odpt.Station:Keikyu.Kurihama.KeikyuKurihama"]':
+	des = "久";
+	break;
+case '["odpt.Station:Keikyu.Zushi.ZushiHayama"]':
+	des = "逗";
+	break;
+case '["odpt.Station:Toei.Asakusa.Oshiage"]':
+	des = "押";
+	break;
+case '["odpt.Station:Keisei.Main.KeiseiNarita"]':
+	des = "成";
+	break;
+case '["odpt.Station:Keisei.Main.Sogosando"]':
+	des = "宗";
+	break;
+case '["odpt.Station:Shibayama.Shibayama.ShibayamaChiyoda"]':
+	des = "芝";
+	break;
+case '["odpt.Station:Keikyu.Main.Shinagawa"]':
+	des = "品";
+	break;
+default:
+	des = "―";
+	break;
+}
+
+
+//運番奇数化処理
+
+	if ( trid == '"odpt.RailDirection:Inbound"') {
+		} else {
+		var kisu = unban.substr( 1,1 ) ;
+		kisu = kisu - ( -1 ) 
+		unban = unban.substr( 0,1 ) + kisu + unban.substr( 2 )
+		}
+
+
+      stid= JSON.stringify(data2[n].odptfromStation) ;
+      scid= JSON.stringify(data2[n].odpttoStation) ;
+      delay= "0" ;
+	delay = delay / 60 ;
+      cars= '' ;
+
+if ( trid == '"odpt.RailDirection:Outbound"') {
+if ( stid.match(/Kamata/)) {
+} else {
+if ( stid.match(/Airport/)) {
+	des = "羽";
+}
+}
+}
+
+//所属編成設定
+      hensei='';
+      line = '';
+
+
+//遅れ表示試験用
+ delay = "" ;
+
+
+      info =   '　　'+ des + '<br/>' +  '　' +　unban +　 '<br/>' +  sha  +　 '<br/>' +  '　　' ;
+		if ( unban.length == 4 ){
+      info =   '　　'+ des + '<br/>' +  '&nbsp;' +　unban +　 '<br/>' +  sha  +　 '<br/>' +  '　　' ;
+		}
+
+	nameText = 0;
+
+	var target;
+	var doc0= document.getElementById("ty99");  
+	var doc1= document.getElementById("ty99");
+	var doc2= document.getElementById("ty99");
+	let now = Math.floor(Date.now() / 60000) ;
+
+//console.log( unban1 + dest4 + ' ' + now);
+
+
+
+switch (stid){
+
+
+case ('"odpt.Station:Keikyu.Main.Shinagawa"'):
+	if ( sessionStorage.getItem("sengakuji2a").replace('　','').substr( 0, 2 ) == unban.replace('&nbsp;','').substr( 0, 2 ) && sessionStorage.getItem("sengakuji2a").replace('　','').substr( -1, 1 ) == unban.replace('&nbsp;','').substr( -1, 1 ) ) {
+	doc2= document.getElementById("a07-kke"); 
+	doc0= document.getElementById("a07-kkb");  
+	doc2.innerHTML= '' ;
+	doc0.innerHTML= '';
+	sessionStorage.setItem('sengakuji2a', '');
+	sessionStorage.setItem('sengakuji2b', '');
+	sessionStorage.setItem('sengakuji2c', '');
+	}
+	switch ( scid) {
+	case ( 'null' ):
+	if ( trid == '"odpt.RailDirection:Outbound"' ) {
+		if (( kind != '普' && kind != 'Ｗ' ) || des == '品' ){
+		nameText = document.getElementById('kk01-1a');
+		target = document.getElementById('kk01-1ad');
+		doc2= document.getElementById("kk01-1"); 
+		doc0= document.getElementById("kk01-1b");  
+		} else {
+		nameText = document.getElementById('kk01-3a');
+		target = document.getElementById('kk01-3ad');
+		doc2= document.getElementById("kk01-3"); 
+		doc0= document.getElementById("kk01-3b"); 
+		} 
+	} else {
+		nameText = document.getElementById('kk01-2a');
+		target = document.getElementById('kk01-2ad');
+		doc2= document.getElementById("kk01-2"); 
+		doc0= document.getElementById("kk01-2b");  
+		doc1= document.getElementById("kk01-2c");
+		if ( des != '―') {
+		shinagawa = unban ; 
+		shinagawaa = newkind[unban1.replace('SH','H')] ; 
+		shinagawab = info ;
+		sessionStorage.setItem('kstime', nowtime);
+		delay = now - dest4 + 4 ;
+			if ( delay < 2 ){
+			delay = "";
+			}
+ 		shinagawac = delay ; 	
+		}
+
+	}
+	break ;
+
+	case ( '"odpt.Station:Keikyu.Main.Kitashinagawa"'):	
+		nameText = document.getElementById('kk01-02');
+		target = document.getElementById('kk01-02d');
+		doc2= document.getElementById("kk01-02e"); 
+		doc0= document.getElementById("kk01-02b");  
+	break ;
+
+
+	default:
+	nameText = 0;
+        break ;
+	}
+        break ;
+
+case ('"odpt.Station:Keikyu.Main.Kitashinagawa"'):
+	switch ( scid) {
+	case ( 'null' ):
+	if ( trid == '"odpt.RailDirection:Outbound"' ) {
+		nameText = document.getElementById('kk02-1a');
+		target = document.getElementById('kk02-1ad');
+		doc2= document.getElementById("kk02-1"); 
+		doc0= document.getElementById("kk02-1b");  
+	} else {
+		nameText = document.getElementById('kk02-2a');
+		target = document.getElementById('kk02-2ad');
+		doc2= document.getElementById("kk02-2"); 
+		doc0= document.getElementById("kk02-2b");
+		doc1= document.getElementById("kk02-2c");
+		if ( des != '―' ){
+		delay = now - dest4 + 5 ;
+			if ( delay < 2 ){
+			delay = "";
+			}
+
+		} else {
+		delay = ""
+		}  
+	}
+	break ;
+
+	case ( '"odpt.Station:Keikyu.Main.Shinagawa"'):	
+		nameText = document.getElementById('kk02-01');
+		target = document.getElementById('kk02-01d');
+		doc2= document.getElementById("kk02-01e"); 
+		doc0= document.getElementById("kk02-01b"); 
+		doc1= document.getElementById("kk02-01c");
+		if ( des != '―' ){
+		delay = now - dest4 + 5 ;
+			if ( delay < 2 ){
+			delay = "";
+			}
+
+		} else {
+		delay = ""
+		}
+
+	break ;
+
+	case ( '"odpt.Station:Keikyu.Main.Shimbamba"'):	
+		nameText = document.getElementById('kk02-03');
+		target = document.getElementById('kk02-03d');
+		doc2= document.getElementById("kk02-03e"); 
+		doc0= document.getElementById("kk02-03b");  
+	break ;
+
+	default:
+	nameText = 0;
+        break ;
+	}
+        break ;
+
+case ('"odpt.Station:Keikyu.Main.Shimbamba"'):
+	switch ( scid) {
+	case ( 'null' ):
+	if ( trid == '"odpt.RailDirection:Outbound"' ) {
+		nameText = document.getElementById('kk03-1a');
+		target = document.getElementById('kk03-1ad');
+		doc2= document.getElementById("kk03-1"); 
+		doc0= document.getElementById("kk03-1b");
+	} else {
+		nameText = document.getElementById('kk03-2a');
+		target = document.getElementById('kk03-2ad');
+		doc2= document.getElementById("kk03-2"); 
+		doc0= document.getElementById("kk03-2b");  
+		doc1= document.getElementById("kk03-2c");
+		if ( des != '―' ){
+		delay = now - dest4 + 6 ;
+			if ( delay < 2 ){
+			delay = "";
+			}
+		} else {
+		delay = ""
+		}
+
+	}
+	break ;
+
+	case ( '"odpt.Station:Keikyu.Main.Kitashinagawa"'):	
+		nameText = document.getElementById('kk03-02');
+		target = document.getElementById('kk03-02d');
+		doc2= document.getElementById("kk03-02e"); 
+		doc0= document.getElementById("kk03-02b"); 
+		doc1= document.getElementById("kk03-02c");
+		if ( des != '―' ){
+		delay = now - dest4 + 6 ;
+			if ( delay < 2 ){
+			delay = "";
+			}
+		} else {
+		delay = ""
+		}
+ 
+	break ;
+
+	case ( '"odpt.Station:Keikyu.Main.AomonoYokocho"'):	
+		nameText = document.getElementById('kk03-04');
+		target = document.getElementById('kk03-04d');
+		doc2= document.getElementById("kk03-04e"); 
+		doc0= document.getElementById("kk03-04b");  
+	break ;
+
+
+	default:
+	nameText = 0;
+        break ;
+	}
+        break ;
+
+case ('"odpt.Station:Keikyu.Main.AomonoYokocho"'):
+	switch ( scid) {
+	case ( 'null' ):
+	if ( trid == '"odpt.RailDirection:Outbound"' ) {
+		nameText = document.getElementById('kk04-1a');
+		target = document.getElementById('kk04-1ad');
+		doc2= document.getElementById("kk04-1"); 
+		doc0= document.getElementById("kk04-1b");  
+	} else {
+		nameText = document.getElementById('kk04-2a');
+		target = document.getElementById('kk04-2ad');
+		doc2= document.getElementById("kk04-2"); 
+		doc0= document.getElementById("kk04-2b");  
+	}
+	break ;
+
+	case ( '"odpt.Station:Keikyu.Main.Shimbamba"'):	
+		nameText = document.getElementById('kk04-03');
+		target = document.getElementById('kk04-03d');
+		doc2= document.getElementById("kk04-03e"); 
+		doc0= document.getElementById("kk04-03b");  
+	break ;
+
+	case ( '"odpt.Station:Keikyu.Main.Samezu"'):	
+		nameText = document.getElementById('kk04-05');
+		target = document.getElementById('kk04-05d');
+		doc2= document.getElementById("kk04-05e"); 
+		doc0= document.getElementById("kk04-05b");  
+	break ;
+
+	default:
+	nameText = 0;
+        break ;
+	}
+        break ;
+
+case ('"odpt.Station:Keikyu.Main.Samezu"'):
+	switch ( scid) {
+	case ( 'null' ):
+	if ( trid == '"odpt.RailDirection:Outbound"' ) {
+	if ( kind == '普' ){
+		nameText = document.getElementById('kk05-2a');
+		target = document.getElementById('kk05-2ad');
+		doc2= document.getElementById("kk05-2"); 
+		doc0= document.getElementById("kk05-2b");  
+	} else {
+		nameText = document.getElementById('kk05-1a');
+		target = document.getElementById('kk05-1ad');
+		doc2= document.getElementById("kk05-1"); 
+		doc0= document.getElementById("kk05-1b");  
+	}
+	} else {
+	if ( kind == '普' ){
+		nameText = document.getElementById('kk05-3a');
+		target = document.getElementById('kk05-3ad');
+		doc2= document.getElementById("kk05-3"); 
+		doc0= document.getElementById("kk05-3b");   
+	} else {
+		nameText = document.getElementById('kk05-4a');
+		target = document.getElementById('kk05-4ad');
+		doc2= document.getElementById("kk05-4"); 
+		doc0= document.getElementById("kk05-4b");  
+	}
+	}
+	break ;
+
+	case ( '"odpt.Station:Keikyu.Main.AomonoYokocho"'):	
+		nameText = document.getElementById('kk05-04');
+		target = document.getElementById('kk05-04d');
+		doc2= document.getElementById("kk05-04e"); 
+		doc0= document.getElementById("kk05-04b");  
+	break ;
+
+	case ( '"odpt.Station:Keikyu.Main.Tachiaigawa"'):	
+		nameText = document.getElementById('kk05-06');
+		target = document.getElementById('kk05-06d');
+		doc2= document.getElementById("kk05-06e"); 
+		doc0= document.getElementById("kk05-06b");  
+	break ;
+
+	default:
+	nameText = 0;
+        break ;
+	}
+        break ;
+
+case ('"odpt.Station:Keikyu.Main.Tachiaigawa"'):
+	switch ( scid) {
+	case ( 'null' ):
+	if ( trid == '"odpt.RailDirection:Outbound"' ) {
+		nameText = document.getElementById('kk06-1a');
+		target = document.getElementById('kk06-1ad');
+		doc2= document.getElementById("kk06-1"); 
+		doc0= document.getElementById("kk06-1b");  
+	} else {
+		nameText = document.getElementById('kk06-2a');
+		target = document.getElementById('kk06-2ad');
+		doc2= document.getElementById("kk06-2"); 
+		doc0= document.getElementById("kk06-2b");  
+	}
+	break ;
+
+	case ( '"odpt.Station:Keikyu.Main.Samezu"'):	
+		nameText = document.getElementById('kk06-05');
+		target = document.getElementById('kk06-05d');
+		doc2= document.getElementById("kk06-05e"); 
+		doc0= document.getElementById("kk06-05b");  
+	break ;
+
+	case ( '"odpt.Station:Keikyu.Main.Omorikaigan"'):	
+		nameText = document.getElementById('kk06-07');
+		target = document.getElementById('kk06-07d');
+		doc2= document.getElementById("kk06-07e"); 
+		doc0= document.getElementById("kk06-07b");  
+	break ;
+
+	default:
+	nameText = 0;
+        break ;
+	}
+        break ;
+
+case ('"odpt.Station:Keikyu.Main.Omorikaigan"'):
+	switch ( scid) {
+	case ( 'null' ):
+	if ( trid == '"odpt.RailDirection:Outbound"' ) {
+		nameText = document.getElementById('kk07-1a');
+		target = document.getElementById('kk07-1ad');
+		doc2= document.getElementById("kk07-1"); 
+		doc0= document.getElementById("kk07-1b");  
+	} else {
+		nameText = document.getElementById('kk07-2a');
+		target = document.getElementById('kk07-2ad');
+		doc2= document.getElementById("kk07-2"); 
+		doc0= document.getElementById("kk07-2b");  
+	}
+	break ;
+
+	case ( '"odpt.Station:Keikyu.Main.Tachiaigawa"'):	
+		nameText = document.getElementById('kk07-06');
+		target = document.getElementById('kk07-06d');
+		doc2= document.getElementById("kk07-06e"); 
+		doc0= document.getElementById("kk07-06b");  
+	break ;
+
+	case ( '"odpt.Station:Keikyu.Main.Heiwajima"'):	
+		nameText = document.getElementById('kk07-08');
+		target = document.getElementById('kk07-08d');
+		doc2= document.getElementById("kk07-08e"); 
+		doc0= document.getElementById("kk07-08b");  
+	break ;
+
+	default:
+	nameText = 0;
+        break ;
+	}
+        break ;
+
+case ('"odpt.Station:Keikyu.Main.Heiwajima"'):
+	switch ( scid) {
+	case ( 'null' ):
+	if ( trid == '"odpt.RailDirection:Outbound"' ) {
+	if ( kind == '普' ){
+		nameText = document.getElementById('kk08-1a');
+		target = document.getElementById('kk08-1ad');
+		doc2= document.getElementById("kk08-1"); 
+		doc0= document.getElementById("kk08-1b");  
+	} else {
+		nameText = document.getElementById('kk08-2a');
+	if (nameText.value == '') {
+		target = document.getElementById('kk08-2ad');
+		doc2= document.getElementById("kk08-2"); 
+		doc0= document.getElementById("kk08-2b");  
+	} else {
+		nameText = document.getElementById('kk08-1a');
+		target = document.getElementById('kk08-1ad');
+		doc2= document.getElementById("kk08-1"); 
+		doc0= document.getElementById("kk08-1b"); 
+	}	
+
+	}
+	} else {
+	if ( kind == '普' ){
+		nameText = document.getElementById('kk08-4a');
+		target = document.getElementById('kk08-4ad');
+		doc2= document.getElementById("kk08-4"); 
+		doc0= document.getElementById("kk08-4b");   
+	} else {
+		nameText = document.getElementById('kk08-3a');
+	if (nameText.value == '') {
+		target = document.getElementById('kk08-3ad');
+		doc2= document.getElementById("kk08-3"); 
+		doc0= document.getElementById("kk08-3b");  
+	} else {
+		nameText = document.getElementById('kk08-4a');
+		target = document.getElementById('kk08-4ad');
+		doc2= document.getElementById("kk08-4"); 
+		doc0= document.getElementById("kk08-4b");   
+	}
+
+
+
+	}
+	}
+	break ;
+
+	case ( '"odpt.Station:Keikyu.Main.Omorikaigan"'):	
+		nameText = document.getElementById('kk08-07');
+		target = document.getElementById('kk08-07d');
+		doc2= document.getElementById("kk08-07e"); 
+		doc0= document.getElementById("kk08-07b");  
+	break ;
+
+	case ( '"odpt.Station:Keikyu.Main.Omorimachi"'):	
+		nameText = document.getElementById('kk08-09');
+		target = document.getElementById('kk08-09d');
+		doc2= document.getElementById("kk08-09e"); 
+		doc0= document.getElementById("kk08-09b");  
+	break ;
+
+	default:
+	nameText = 0;
+        break ;
+	}
+        break ;
+
+case ('"odpt.Station:Keikyu.Main.Omorimachi"'):
+	switch ( scid) {
+	case ( 'null' ):
+	if ( trid == '"odpt.RailDirection:Outbound"' ) {
+		nameText = document.getElementById('kk09-1a');
+		target = document.getElementById('kk09-1ad');
+		doc2= document.getElementById("kk09-1"); 
+		doc0= document.getElementById("kk09-1b");  
+	} else {
+		nameText = document.getElementById('kk09-2a');
+		target = document.getElementById('kk09-2ad');
+		doc2= document.getElementById("kk09-2"); 
+		doc0= document.getElementById("kk09-2b"); 
+	}
+	break ;
+
+	case ( '"odpt.Station:Keikyu.Main.Heiwajima"'):	
+		nameText = document.getElementById('kk09-08');
+		target = document.getElementById('kk09-08d');
+		doc2= document.getElementById("kk09-08e"); 
+		doc0= document.getElementById("kk09-08b");  
+	break ;
+
+	case ( '"odpt.Station:Keikyu.Main.Umeyashiki"'):	
+		nameText = document.getElementById('kk09-10');
+		target = document.getElementById('kk09-10d');
+		doc2= document.getElementById("kk09-10e"); 
+		doc0= document.getElementById("kk09-10b");  
+	break ;
+
+	default:
+	nameText = 0;
+        break ;
+	}
+        break ;
+
+case ('"odpt.Station:Keikyu.Main.Umeyashiki"'):
+	switch ( scid) {
+	case ( 'null' ):
+	if ( trid == '"odpt.RailDirection:Outbound"' ) {
+		nameText = document.getElementById('kk10-1a');
+		target = document.getElementById('kk10-1ad');
+		doc2= document.getElementById("kk10-1"); 
+		doc0= document.getElementById("kk10-1b");  
+	} else {
+		nameText = document.getElementById('kk10-2a');
+		target = document.getElementById('kk10-2ad');
+		doc2= document.getElementById("kk10-2"); 
+		doc0= document.getElementById("kk10-2b"); 
+	}
+	break ;
+
+	case ( '"odpt.Station:Keikyu.Main.Omorimachi"'):	
+		nameText = document.getElementById('kk10-09');
+		target = document.getElementById('kk10-09d');
+		doc2= document.getElementById("kk10-09e"); 
+		doc0= document.getElementById("kk10-09b");  
+	break ;
+
+	case ( '"odpt.Station:Keikyu.Main.KeikyuKamata"'):	
+		nameText = document.getElementById('kk10-11');
+		target = document.getElementById('kk10-11d');
+		doc2= document.getElementById("kk10-11e"); 
+		doc0= document.getElementById("kk10-11b");  
+	break ;
+
+
+	default:
+	nameText = 0;
+        break ;
+	}
+        break ;
+
+///京急蒲田(本線)
+case ('"odpt.Station:Keikyu.Main.KeikyuKamata"'):
+	switch ( scid) {
+	case ( 'null' ):
+	if ( trid == '"odpt.RailDirection:Outbound"' ) {
+		if ( des == '羽' ){
+		nameText = document.getElementById('kk11-1a');
+		target = document.getElementById('kk11-1ad');
+		doc2= document.getElementById("kk11-1"); 
+		doc0= document.getElementById("kk11-1b");  
+		} else {
+		nameText = document.getElementById('kk11-3a');
+		if ( nameText.value == '' ) {
+		target = document.getElementById('kk11-3ad');
+		doc2= document.getElementById("kk11-3"); 
+		doc0= document.getElementById("kk11-3b"); 
+		kama3a = kind ;
+		kama3b = info ;  
+		} else {
+		nameText = document.getElementById('kk11-2a');
+		target = document.getElementById('kk11-2ad');
+		doc2= document.getElementById("kk11-2"); 
+		doc0= document.getElementById("kk11-2b"); 
+		if ( kama3a = '普' ) {
+		doc2.innerHTML= kama3a ;
+		doc0.innerHTML= kama3b ;
+		doc0.style.backgroundColor = '#ffffff'; //背景
+		nameText = document.getElementById('kk11-3a');
+		target = document.getElementById('kk11-3ad');
+		doc2= document.getElementById("kk11-3"); 
+		doc0= document.getElementById("kk11-3b");  
+		}
+		}
+		}
+	} else {
+	if ( kind == '急' ) {
+		nameText = document.getElementById('kk11-1a');
+		target = document.getElementById('kk11-1ad');
+		doc2= document.getElementById("kk11-1"); 
+		doc0= document.getElementById("kk11-1b");  
+	} else {
+		nameText = document.getElementById('kk11-6a');
+		if ( nameText.value == '' ) {
+		target = document.getElementById('kk11-6ad');
+		doc2= document.getElementById("kk11-6"); 
+		doc0= document.getElementById("kk11-6b"); 
+		kama6a = kind ;
+		kama6b = info ; 
+		} else {
+		nameText = document.getElementById('kk11-5a');
+		target = document.getElementById('kk11-5ad');
+		doc2= document.getElementById("kk11-5"); 
+		doc0= document.getElementById("kk11-5b"); 
+		if ( kama6a = '普' ) {
+		doc2.innerHTML= kama6a ;
+		doc0.innerHTML= kama6b ;
+		doc0.style.backgroundColor = '#ffffff'; //背景
+		nameText = document.getElementById('kk11-6a');
+		target = document.getElementById('kk11-6ad');
+		doc2= document.getElementById("kk11-6"); 
+		doc0= document.getElementById("kk11-6b"); 
+		}
+		}
+	}
+	}
+	break ;
+
+	case ( '"odpt.Station:Keikyu.Main.Umeyashiki"'):	
+		nameText = document.getElementById('kk11-10');
+		target = document.getElementById('kk11-10d');
+		doc2= document.getElementById("kk11-10e"); 
+		doc0= document.getElementById("kk11-10b");   
+	break ;
+
+	case ( '"odpt.Station:Keikyu.Main.Zoshiki"'):	
+		nameText = document.getElementById('kk11-18');
+		target = document.getElementById('kk11-18d');
+		doc2= document.getElementById("kk11-18e"); 
+		doc0= document.getElementById("kk11-18b");   
+	break ;
+
+
+	default:
+	nameText = 0;
+        break ;
+	}
+        break ;
+
+case ('"odpt.Station:Keikyu.Main.Zoshiki"'):
+	switch ( scid) {
+	case ( 'null' ):
+	if ( trid == '"odpt.RailDirection:Outbound"' ) {
+		nameText = document.getElementById('kk18-1a');
+		target = document.getElementById('kk18-1ad');
+		doc2= document.getElementById("kk18-1"); 
+		doc0= document.getElementById("kk18-1b");  
+	} else {
+		nameText = document.getElementById('kk18-2a');
+		target = document.getElementById('kk18-2ad');
+		doc2= document.getElementById("kk18-2"); 
+		doc0= document.getElementById("kk18-2b");  
+	}
+	break ;
+
+	case ( '"odpt.Station:Keikyu.Main.KeikyuKamata"'):	
+		nameText = document.getElementById('kk18-11');
+		if ( nameText.value == '' ) {
+		target = document.getElementById('kk18-11d');
+		doc2= document.getElementById("kk18-11e"); 
+		doc0= document.getElementById("kk18-11b"); 
+		} else {
+		nameText = document.getElementById('kk18-11p');
+		target = document.getElementById('kk18-11dp');
+		doc2= document.getElementById("kk18-11ep"); 
+		doc0= document.getElementById("kk18-11bp"); 
+		}  
+	break ;
+
+	case ( '"odpt.Station:Keikyu.Main.Rokugodote"'):	
+		nameText = document.getElementById('kk18-19');
+		target = document.getElementById('kk18-19d');
+		doc2= document.getElementById("kk18-19e"); 
+		doc0= document.getElementById("kk18-19b"); 
+	break ;
+	default:
+	nameText = 0;
+        break ;
+	}
+        break ;
+
+case ('"odpt.Station:Keikyu.Main.Rokugodote"'):
+	switch ( scid) {
+	case ( 'null' ):
+	if ( trid == '"odpt.RailDirection:Outbound"' ) {
+		nameText = document.getElementById('kk19-1a');
+		target = document.getElementById('kk19-1ad');
+		doc2= document.getElementById("kk19-1"); 
+		doc0= document.getElementById("kk19-1b");  
+	} else {
+		nameText = document.getElementById('kk19-2a');
+		target = document.getElementById('kk19-2ad');
+		doc2= document.getElementById("kk19-2"); 
+		doc0= document.getElementById("kk19-2b");  
+	}
+	break ;
+
+	case ( '"odpt.Station:Keikyu.Main.Zoshiki"'):	
+		nameText = document.getElementById('kk19-18');
+		target = document.getElementById('kk19-18d');
+		doc2= document.getElementById("kk19-18e"); 
+		doc0= document.getElementById("kk19-18b"); 
+	break ;
+
+	case ( '"odpt.Station:Keikyu.Main.KeikyuKawasaki"'):	
+		nameText = document.getElementById('kk19-20');
+		target = document.getElementById('kk19-20d');
+		doc2= document.getElementById("kk19-20e"); 
+		doc0= document.getElementById("kk19-20b"); 
+	break ;
+
+	default:
+	nameText = 0;
+        break ;
+	}
+        break ;
+
+case ('"odpt.Station:Keikyu.Main.KeikyuKawasaki"'):
+	switch ( scid) {
+	case ( 'null' ):
+	if ( trid == '"odpt.RailDirection:Outbound"' ) {
+	if ( kind == '普' ){
+		nameText = document.getElementById('kk20-1a');
+		target = document.getElementById('kk20-1ad');
+		doc2= document.getElementById("kk20-1"); 
+		doc0= document.getElementById("kk20-1b");  
+	} else {
+		nameText = document.getElementById('kk20-2a');
+	if (nameText.value == '') {
+		target = document.getElementById('kk20-2ad');
+		doc2= document.getElementById("kk20-2"); 
+		doc0= document.getElementById("kk20-2b");  
+	} else {
+		nameText = document.getElementById('kk20-1a');
+		target = document.getElementById('kk20-1ad');
+		doc2= document.getElementById("kk20-1"); 
+		doc0= document.getElementById("kk20-1b"); 
+	}
+	}
+	} else {
+	if ( kind == '普' ){
+		nameText = document.getElementById('kk20-4a');
+		target = document.getElementById('kk20-4ad');
+		doc2= document.getElementById("kk20-4"); 
+		doc0= document.getElementById("kk20-4b");   
+	} else {
+		nameText = document.getElementById('kk20-3a');
+	if (nameText.value == '') {
+		target = document.getElementById('kk20-3ad');
+		doc2= document.getElementById("kk20-3"); 
+		doc0= document.getElementById("kk20-3b");  
+	} else {
+		nameText = document.getElementById('kk20-4a');
+		target = document.getElementById('kk20-4ad');
+		doc2= document.getElementById("kk20-4"); 
+		doc0= document.getElementById("kk20-4b");   
+	}
+	}
+	}
+	break ;
+
+	case ( '"odpt.Station:Keikyu.Main.Rokugodote"'):	
+		nameText = document.getElementById('kk20-19');
+		target = document.getElementById('kk20-19d');
+		doc2= document.getElementById("kk20-19e"); 
+		doc0= document.getElementById("kk20-19b"); 
+	break ;
+
+	default:
+	nameText = 0;
+        break ;
+	}
+        break ;
+
+
+
+///京急蒲田(空港線)
+case ('"odpt.Station:Keikyu.Airport.KeikyuKamata"'):
+	switch ( scid) {
+	case ( 'null' ):
+	if ( trid == '"odpt.RailDirection:Outbound"' ) {
+		nameText = document.getElementById('kk11-1a');
+		target = document.getElementById('kk11-1ad');
+		doc2= document.getElementById("kk11-1"); 
+		doc0= document.getElementById("kk11-1b");  
+		if ( sessionStorage.getItem('kamata4') == unban ){
+		nameText = document.getElementById('kk11-4a');
+		target = document.getElementById('kk11-4ad');
+		doc2= document.getElementById("kk11-4"); 
+		doc0= document.getElementById("kk11-4b");  
+		}
+	} else {
+		nameText = document.getElementById('kk11-4a');
+		target = document.getElementById('kk11-4ad');
+		doc2= document.getElementById("kk11-4"); 
+		doc0= document.getElementById("kk11-4b");  
+		sessionStorage.setItem('kamata4', unban );
+	}
+	break ;
+
+	case ( '"odpt.Station:Keikyu.Airport.Kojiya"'):	
+		nameText = document.getElementById('kk11-12');
+		if ( nameText.value == '' ) {
+		target = document.getElementById('kk11-12d');
+		doc2= document.getElementById("kk11-12e"); 
+		doc0= document.getElementById("kk11-12b"); 
+		} else {
+		nameText = document.getElementById('kk11-12p');
+		target = document.getElementById('kk11-12dp');
+		doc2= document.getElementById("kk11-12ep"); 
+		doc0= document.getElementById("kk11-12bp");
+		}
+
+		if ( sessionStorage.getItem('kamata4') == unban ){
+		sessionStorage.setItem('kamata4', '' );
+		}
+	break ;
+
+
+	default:
+	nameText = 0;
+        break ;
+	}
+        break ;
+
+case ('"odpt.Station:Keikyu.Airport.Kojiya"'):
+	switch ( scid) {
+	case ( 'null' ):
+	if ( trid == '"odpt.RailDirection:Outbound"' ) {
+		nameText = document.getElementById('kk12-1a');
+		target = document.getElementById('kk12-1ad');
+		doc2= document.getElementById("kk12-1"); 
+		doc0= document.getElementById("kk12-1b");  
+	} else {
+		nameText = document.getElementById('kk12-2a');
+		target = document.getElementById('kk12-2ad');
+		doc2= document.getElementById("kk12-2"); 
+		doc0= document.getElementById("kk12-2b");  
+	if ( unban.substr ( -1,1) == 'D' ) {
+		 document.getElementById("kamata").innerHTML= '↑' ;
+	} else if ( des != '―' ){
+		 document.getElementById("kamata").innerHTML= '→' ;
+	}  
+	}
+	break ;
+
+	case ( '"odpt.Station:Keikyu.Airport.KeikyuKamata"'):	
+		nameText = document.getElementById('kk12-11');
+		target = document.getElementById('kk12-11d');
+		doc2= document.getElementById("kk12-11e"); 
+		doc0= document.getElementById("kk12-11b");   
+	if ( unban.substr ( -1,1) == 'D' ) {
+		 document.getElementById("kamata").innerHTML= '↑' ;
+	} else if ( des != '―' ){
+		 document.getElementById("kamata").innerHTML= '→' ;
+	}  
+	break ;
+
+	case ( '"odpt.Station:Keikyu.Airport.Otorii"'):	
+		nameText = document.getElementById('kk12-13');
+		target = document.getElementById('kk12-13d');
+		doc2= document.getElementById("kk12-13e"); 
+		doc0= document.getElementById("kk12-13b"); 
+	break ;
+
+
+	default:
+	nameText = 0;
+        break ;
+	}
+        break ;
+
+
+case ('"odpt.Station:Keikyu.Airport.Otorii"'):
+	switch ( scid) {
+	case ( 'null' ):
+	if ( trid == '"odpt.RailDirection:Outbound"' ) {
+		nameText = document.getElementById('kk13-1a');
+		target = document.getElementById('kk13-1ad');
+		doc2= document.getElementById("kk13-1"); 
+		doc0= document.getElementById("kk13-1b");  
+	} else {
+		nameText = document.getElementById('kk13-2a');
+		target = document.getElementById('kk13-2ad');
+		doc2= document.getElementById("kk13-2"); 
+		doc0= document.getElementById("kk13-2b"); 
+	}
+	break ;
+
+	case ( '"odpt.Station:Keikyu.Airport.Kojiya"'):	
+		nameText = document.getElementById('kk13-12');
+		target = document.getElementById('kk13-12d');
+		doc2= document.getElementById("kk13-12e"); 
+		doc0= document.getElementById("kk13-12b");  
+	break ;
+
+	case ( '"odpt.Station:Keikyu.Airport.AnamoriInari"'):	
+		nameText = document.getElementById('kk13-14');
+		target = document.getElementById('kk13-14d');
+		doc2= document.getElementById("kk13-14e"); 
+		doc0= document.getElementById("kk13-14b");  
+	break ;
+
+	default:
+	nameText = 0;
+        break ;
+	}
+        break ;
+
+
+case ('"odpt.Station:Keikyu.Airport.AnamoriInari"'):
+	switch ( scid) {
+	case ( 'null' ):
+	if ( trid == '"odpt.RailDirection:Outbound"' ) {
+		nameText = document.getElementById('kk14-1a');
+		target = document.getElementById('kk14-1ad');
+		doc2= document.getElementById("kk14-1"); 
+		doc0= document.getElementById("kk14-1b");  
+	} else {
+		nameText = document.getElementById('kk14-2a');
+		target = document.getElementById('kk14-2ad');
+		doc2= document.getElementById("kk14-2"); 
+		doc0= document.getElementById("kk14-2b"); 
+	}
+	break ;
+
+	case ( '"odpt.Station:Keikyu.Airport.Otorii"'):	
+		nameText = document.getElementById('kk14-13');
+		target = document.getElementById('kk14-13d');
+		doc2= document.getElementById("kk14-13e"); 
+		doc0= document.getElementById("kk14-13b"); 
+	break ;
+
+	case ( '"odpt.Station:Keikyu.Airport.Tenkubashi"'):	
+		nameText = document.getElementById('kk14-15');
+		target = document.getElementById('kk14-15d');
+		doc2= document.getElementById("kk14-15e"); 
+		doc0= document.getElementById("kk14-15b"); 
+	break ;
+
+	default:
+	nameText = 0;
+        break ;
+	}
+        break ;
+
+case ('"odpt.Station:Keikyu.Airport.Tenkubashi"'):
+	switch ( scid) {
+	case ( 'null' ):
+	if ( trid == '"odpt.RailDirection:Outbound"' ) {
+		nameText = document.getElementById('kk15-1a');
+		target = document.getElementById('kk15-1ad');
+		doc2= document.getElementById("kk15-1"); 
+		doc0= document.getElementById("kk15-1b");  
+	} else {
+		nameText = document.getElementById('kk15-2a');
+		target = document.getElementById('kk15-2ad');
+		doc2= document.getElementById("kk15-2"); 
+		doc0= document.getElementById("kk15-2b"); 
+	}
+	break ;
+
+	case ( '"odpt.Station:Keikyu.Airport.AnamoriInari"'):	
+		nameText = document.getElementById('kk15-14');
+		target = document.getElementById('kk15-14d');
+		doc2= document.getElementById("kk15-14e"); 
+		doc0= document.getElementById("kk15-14b");  
+	break ;
+
+	case ( '"odpt.Station:Keikyu.Airport.HanedaAirportTerminal3"'):	
+		nameText = document.getElementById('kk15-16');
+		target = document.getElementById('kk15-16d');
+		doc2= document.getElementById("kk15-16e"); 
+		doc0= document.getElementById("kk15-16b");  
+	break ;
+
+	default:
+	nameText = 0;
+        break ;
+	}
+        break ;
+
+case ('"odpt.Station:Keikyu.Airport.HanedaAirportTerminal3"'):
+	switch ( scid) {
+	case ( 'null' ):
+	if ( trid == '"odpt.RailDirection:Outbound"' ) {
+		nameText = document.getElementById('kk16-1a');
+		target = document.getElementById('kk16-1ad');
+		doc2= document.getElementById("kk16-1"); 
+		doc0= document.getElementById("kk16-1b");  
+	} else {
+		nameText = document.getElementById('kk16-2a');
+		target = document.getElementById('kk16-2ad');
+		doc2= document.getElementById("kk16-2"); 
+		doc0= document.getElementById("kk16-2b"); 
+	}
+	break ;
+
+	
+	case ( '"odpt.Station:Keikyu.Airport.Tenkubashi"'):	
+		nameText = document.getElementById('kk16-15');
+		target = document.getElementById('kk16-15d');
+		doc2= document.getElementById("kk16-15e"); 
+		doc0= document.getElementById("kk16-15b"); 
+	break ;
+
+	case ( '"odpt.Station:Keikyu.Airport.HanedaAirportTerminal1and2"'):	
+		nameText = document.getElementById('kk16-17');
+		target = document.getElementById('kk16-17d');
+		doc2= document.getElementById("kk16-17e"); 
+		doc0= document.getElementById("kk16-17b"); 
+	break ;
+
+	default:
+	nameText = 0;
+        break ;
+	}
+        break ;
+
+case ('"odpt.Station:Keikyu.Airport.HanedaAirportTerminal1and2"'):
+	switch ( scid) {
+	case ( 'null' ):
+		nameText = document.getElementById('kk17-1a');
+	if (nameText.value == '') {
+		target = document.getElementById('kk17-1ad');
+		doc2= document.getElementById("kk17-1"); 
+		doc0= document.getElementById("kk17-1b");  
+	} else {
+		nameText = document.getElementById('kk17-2a');
+		target = document.getElementById('kk17-2ad');
+		doc2= document.getElementById("kk17-2"); 
+		doc0= document.getElementById("kk17-2b"); 
+	}
+	break ;
+
+	case ( '"odpt.Station:Keikyu.Airport.HanedaAirportTerminal3"'):	
+		nameText = document.getElementById('kk17-16');
+		target = document.getElementById('kk17-16d');
+		doc2= document.getElementById("kk17-16e"); 
+		doc0= document.getElementById("kk17-16b");  
+	break ;
+
+	default:
+	nameText = 0;
+        break ;
+	}
+        break ;
+
+
+default:
+	
+	nameText = 0;
+        break ;
+
+}
+
+if ( delay == "0"){
+ delay = "" ;
+} else if ( delay < 10 ) {
+ delay = "　 " + delay + "　" ;
+} else {
+ delay = "　" + delay　+ "　";
+}
+
+
+
+	doc2.innerHTML= kind ;
+if ( nameText.value == "" ){
+	doc0.innerHTML= info.replace("―999","留置");
+	doc1.innerHTML= delay;
+}
+
+doc0.style.backgroundColor = '#ffffff'; //背景
+doc1.style.backgroundColor = '#ffffff'; //背景
+doc2.style.backgroundColor = '#ffffff'; //背景
+
+
+if ( nameText == 0 ){
+} else {
+nameText.value = "　";
+
+
+switch (kind) {
+case '急' :
+doc2.style.color = '#0000ff'; //文字
+break;
+case '特' :
+doc2.style.color = '#ff0000'; //文字
+break;
+case '快' :
+case 'Ｗ' :
+doc2.style.color = '#32cd32'; //文字
+break;
+case 'ア' :
+case 'エ' :
+doc2.style.color = '#ff8c00'; //文字
+break;
+case '速' :
+doc2.style.color = '#ff69b4'; //文字
+break;
+
+}
+
+
+switch (cars) {
+	case '"6"' :
+	doc0.style.textDecoration = "underline";
+	break;
+	case '"8"' :
+	break;
+	case '"10"' :
+	doc0.style.fontWeight = "bold";
+	break;
+}
+}
+
+}
+
+//品川～泉岳寺仮想表示
+
+if (shinagawa == sessionStorage.getItem("shinagawa1a") ) {
+	sessionStorage.setItem('shinagawa1a', shinagawa);
+	sessionStorage.setItem('shinagawa1b', shinagawaa);
+	sessionStorage.setItem('shinagawa1c', shinagawab);
+	sessionStorage.setItem('shinagawa1d', shinagawac);
+} else {
+
+	nameText = document.getElementById('kk-a07');
+	target = document.getElementById('kk-a07d');
+	doc2= document.getElementById("kk-a07e"); 
+	doc0= document.getElementById("kk-a07b");  
+	doc1= document.getElementById("kk-a07c");  
+	doc2.innerHTML= sessionStorage.getItem("shinagawa1b") ;
+	doc0.innerHTML= sessionStorage.getItem("shinagawa1c");
+	doc1.innerHTML= sessionStorage.getItem("shinagawa1d");
+	doc0.style.backgroundColor = '#ffffff'; //背景
+	doc1.style.backgroundColor = '#ffffff'; //背景
+	doc2.style.backgroundColor = '#ffffff'; //背景
+	switch (sessionStorage.getItem("shinagawa1b")) {
+	case '急' :
+	case '通' :
+	doc2.style.color = '#0000ff'; //文字
+	break;
+	case '特' :
+	doc2.style.color = '#ff0000'; //文字
+	break;
+	case '快' :
+	doc2.style.color = '#32cd32'; //文字
+	break;
+	case 'エ' :
+	case 'ア' :
+	doc2.style.color = '#ff8c00'; //文字
+	break;
+	case '速' :
+	doc2.style.color = '#ff69b4'; //文字
+	break;
+	}
+
+	sessionStorage.setItem('shinagawa2a', sessionStorage.getItem("shinagawa1a"));
+	sessionStorage.setItem('shinagawa2b', sessionStorage.getItem("shinagawa1b"));
+	sessionStorage.setItem('shinagawa2c', sessionStorage.getItem("shinagawa1c"));
+	sessionStorage.setItem('shinagawa2d', sessionStorage.getItem("shinagawa1d"));
+	sessionStorage.setItem('shinagawa1a', shinagawa);
+	sessionStorage.setItem('shinagawa1b', shinagawaa);
+	sessionStorage.setItem('shinagawa1c', shinagawab);
+	sessionStorage.setItem('shinagawa1d', shinagawac);
+}
+
+if ( sessionStorage.getItem("shinagawa2a") != '' && sessionStorage.getItem("shinagawa2a") != 'null') {
+	nameText = document.getElementById('kk-a07');
+	target = document.getElementById('kk-a07d');
+	doc2= document.getElementById("kk-a07e"); 
+	doc0= document.getElementById("kk-a07b"); 
+	doc1= document.getElementById("kk-a07c");   
+	doc2.innerHTML= sessionStorage.getItem("shinagawa2b") ;
+	doc0.innerHTML= sessionStorage.getItem("shinagawa2c");
+	doc1.innerHTML= sessionStorage.getItem("shinagawa2d");
+	doc0.style.backgroundColor = '#ffffff'; //背景
+	doc2.style.backgroundColor = '#ffffff'; //背景
+	switch (sessionStorage.getItem("shinagawa2b")) {
+	case '急' :
+	case '通' :
+	doc2.style.color = '#0000ff'; //文字
+	break;
+	case '特' :
+	doc2.style.color = '#ff0000'; //文字
+	break;
+	case '快' :
+	doc2.style.color = '#32cd32'; //文字
+	break;
+	case 'エ' :
+	case 'ア' :
+	doc2.style.color = '#ff8c00'; //文字
+	break;
+	case '速' :
+	doc2.style.color = '#ff69b4'; //文字
+	break;
+	}
+}
+
+
+
+
+    }
+  }
+};
+request3.send(null);
+
+function sleepSetInterval(ms, callback, count) {
+  let i = 0;
+  const interval = setInterval(() => {
+    callback();
+    i++;
+    if (i === count) {
+      clearInterval(interval);
+    }
+  }, ms);
+}
+
+var YY = sessionStorage.getItem('Y0');
+window.scrollTo(0, YY );
+
+sleepSetInterval(2000, () =>{
+      sessionStorage.setItem('Y0',window.pageYOffset) ;
+}
+, 7)
+
+    }
+  }
+};
+
+request2.send(null);
+
+</script>
+
+
+
+</script>
+
+
+  </body>
+</html>
