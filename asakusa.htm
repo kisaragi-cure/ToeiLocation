@@ -4,7 +4,7 @@
 <html lang="ja">
   <head>
     <meta charset="utf-8" content="noindex,noarchive,nofollow" />
-    <title>都営浅草線・京急線在線モニタ - 如月交通Ａ団</title>
+    <title>都営ロケーション(浅草線) - 如月交通Ａ団</title>
 	<link rel="icon" href="A.ico">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta http-equiv="refresh" content="15">
@@ -45,6 +45,13 @@ background-color: #ffffff;
     padding: 7px;
     font-size: 14pt;
 }
+.shinjukubutton{
+    width: 120px;
+    height: 2em;
+    padding: 7px;
+    font-size: 14pt;
+}
+
 
 
 </style>
@@ -54,8 +61,13 @@ background-color: #ffffff;
 
   <body>
 
+
+<!バージョン情報>
+<! 2026/07/01 4.00 集約化>
+
+
 <nobr>
-<p> 都営浅草線～京急線　[自動更新：15秒]　　　　　　　　　　　　　　　　　　　　(C)Cure_kisaragi 2024-2026 / Ver.3.00 03/10</p>
+<p> 都営浅草線～京急線　[自動更新：15秒]　　　　　　　　　　　　　　　　　　　　(C)Cure_kisaragi 2024-2026 / Ver.4.00 07/01</p>
 <div style="position: absolute; top: 20px; left:10px; font-size:10pt"><p>本Webアプリが利用する公共交通データは、公共交通オープンデータセンターにおいて提供されるものです。交通事業者により提供されたデータを元に</p></div>
 <div style="position: absolute; top: 35px; left:10px; font-size:10pt"><p>していますが、必ずしも正確・完全なものとは限りません。本Webアプリの表示内容について、交通事業者への直接の問合せは行わないでください。</p></div>
 
@@ -76,6 +88,10 @@ background-color: #ffffff;
 <div style="position: absolute; top: 225px; left:370px;  color:#ff8c00; font-size:14pt"><p>●</p></div> <!ア特>
 <div style="position: absolute; top: 245px; left:300px; font-size:18pt"><p>押　上</p></div>
 <div style="position: absolute; top: 275px; left:250px; font-size:12pt"><p><スカイツリー前></p></div>
+
+<div style="position: absolute; top: 330px; left:660px; font-size:12pt"><p>＜ [SS]京成押上変電</p></div>
+<div style="position: absolute; top: 350px; left:660px; font-size:12pt"><p>　 [SP]押上区分</p></div>
+
 
 
 <div style="position: absolute; top: 200px; left:720px; font-size:12pt"><p>(押上駅について)</p></div>
@@ -123,7 +139,7 @@ background-color: #ffffff;
 <div id="a18-2b" style="position: absolute; top: 700px; left:485px; font-size:12pt; "></div>
 <div id="a18-2" style="position: absolute; top: 700px; left:495px; font-size:12pt; "></div>
 <div id="a18-2c" style="position: absolute; top: 755px; left:485px; font-size:12pt; color:#FF0000; "></div>
-
+<div style="position: absolute; top: 750px; left:630px; font-size:12pt"><p>＜ [SS]駒形変電</p></div>
 <!浅草-蔵前>
 <div id="a18-17d" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "a18-17" disabled / name="address" size="14" value=""　></div>
 <div id="a18-17b" style="position: absolute; top: 800px; left:545px; font-size:12pt; "></div>
@@ -185,6 +201,10 @@ background-color: #ffffff;
 <div id="a15-2" style="position: absolute; top: 1420px; left:495px; font-size:12pt; "></div>
 <div id="a15-2c" style="position: absolute; top: 1475px; left:485px; font-size:12pt; color:#FF0000; "></div>
 
+
+<div style="position: absolute; top: 1530px; left:650px; font-size:24pt"><input type="button" id = "shinjuku" value="都営新宿線" class="shinjukubutton"></div>
+
+
 <!東日本橋-人形町>
 <div id="a15-14d" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "a15-14" disabled / name="address" size="14" value=""　></div>
 <div id="a15-14b" style="position: absolute; top: 1520px; left:545px; font-size:12pt; "></div>
@@ -214,6 +234,7 @@ background-color: #ffffff;
 <div id="a13-14b" style="position: absolute; top: 1780px; left:485px; font-size:12pt; "></div>
 <div id="a13-14e" style="position: absolute; top: 1780px; left:495px; font-size:12pt; "></div>
 <div id="a13-14c" style="position: absolute; top: 1835px; left:485px; font-size:12pt; color:#FF0000; "></div>
+<div style="position: absolute; top: 1780px; left:630px; font-size:12pt"><p>＜ [SS]人形町変電</p></div>
 
 <div style="position: absolute; top: 1860px; left:370px;  color:#ff8c00; font-size:14pt"><p>●</p></div> <!エア快>
 <div style="position: absolute; top: 1880px; left:330px; font-size:18pt"><p>日本橋</p></div>
@@ -307,6 +328,8 @@ background-color: #ffffff;
 <div id="a09-2b" style="position: absolute; top: 2790px; left:485px; font-size:12pt; "></div>
 <div id="a09-2" style="position: absolute; top: 2790px; left:495px; font-size:12pt; "></div>
 <div id="a09-2c" style="position: absolute; top: 2845px; left:485px; font-size:12pt; color:#FF0000; "></div>
+<div style="position: absolute; top: 2870px; left:630px; font-size:12pt"><p>＜ [SS]大門変電</p></div>
+
 
 <!大門-三田>
 <div id="a09-08d" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "a09-08" disabled / name="address" size="14" value=""　></div>
@@ -383,6 +406,8 @@ background-color: #ffffff;
 <div id="a06-2b" style="position: absolute; top: 3700px; left:240px; font-size:12pt; "></div>
 <div id="a06-2" style="position: absolute; top: 3700px; left:250px; font-size:12pt; "></div>
 <div id="a06-2c" style="position: absolute; top: 3755px; left:240px; font-size:12pt; color:#FF0000; "></div>
+<div style="position: absolute; top: 3780px; left:90px; font-size:12pt"><p>[SS]二本榎変電 ＞</p></div>
+
 
 <!高輪台-五反田>
 <div id="a06-05d" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "a06-05" disabled / name="address" size="14" value=""　></div>
@@ -464,6 +489,9 @@ background-color: #ffffff;
 <div id="a02-2" style="position: absolute; top: 4500px; left:250px; font-size:12pt; "></div>
 <div id="a02-2c" style="position: absolute; top: 4555px; left:240px; font-size:12pt; color:#FF0000; "></div>
 
+<div style="position: absolute; top: 4680px; left:100px; font-size:12pt"><p>[SS]馬込変電 ＞</p></div>
+
+
 <!馬込-西馬込>
 <div id="a02-01d" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "a02-01" disabled / name="address" size="14" value=""　></div>
 <div id="a02-01b" style="position: absolute; top: 4630px; left:310px; font-size:12pt; "></div>
@@ -521,6 +549,9 @@ background-color: #ffffff;
 <div id="kk-a07e" style="position: absolute; top: 3605px; left:670px; font-size:12pt; "></div>
 <div id="kk-a07c" style="position: absolute; top: 3660px; left:660px; font-size:12pt; color:#FF0000; "></div>
 
+<div style="position: absolute; top: 3550px; left:840px; font-size:12pt"><p>＜ [SP]泉岳寺開閉</p></div>
+
+
 <div style="position: absolute; top: 3720px; left:520px;  color:#0000ff; font-size:14pt"><p>●</p></div> <!急行>
 <div style="position: absolute; top: 3720px; left:540px;  color:#ff0000; font-size:14pt"><p>●</p></div> <!特急>
 <div style="position: absolute; top: 3720px; left:560px;  color:#32cd32; font-size:14pt"><p>●</p></div> <!快特>
@@ -575,7 +606,7 @@ background-color: #ffffff;
 <div id="kk03-2b" style="position: absolute; top: 4230px; left:700px; font-size:12pt; "></div>
 <div id="kk03-2" style="position: absolute; top: 4230px; left:710px; font-size:12pt; "></div>
 <div id="kk03-2c" style="position: absolute; top: 4295px; left:700px; font-size:12pt; color:#FF0000; "></div>
-
+<div style="position: absolute; top: 4310px; left:840px; font-size:12pt"><p>＜ [SS]品川変電</p></div>
 
 <!新馬場-青物横丁>
 <div id="kk03-04d" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "kk03-04" disabled / name="address" size="14" value=""　></div>
@@ -649,6 +680,8 @@ background-color: #ffffff;
 <div id="kk07-2ad" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "kk07-2a" disabled / name="address" size="14" value=""　></div>
 <div id="kk07-2b" style="position: absolute; top: 5125px; left:700px; font-size:12pt; "></div>
 <div id="kk07-2" style="position: absolute; top: 5125px; left:710px; font-size:12pt; "></div>
+
+<div style="position: absolute; top: 5200px; left:840px; font-size:12pt"><p>＜ [SS]大森変電</p></div>
 
 <!大森海岸-平和島>
 <div id="kk07-08d" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "kk07-08" disabled / name="address" size="14" value=""　></div>
@@ -939,7 +972,11 @@ document.getElementById("keisei").addEventListener("click", function () {
 }, false);
 
 document.getElementById("mita").addEventListener("click", function () {
-  location.href ="https://kisaragi-cure.github.io/ToeiMita";
+  location.href ="https://kisaragi-cure.github.io/ToeiLocation/mita.htm";
+}, false);
+
+document.getElementById("shinjuku").addEventListener("click", function () {
+  location.href ="https://kisaragi-cure.github.io/ToeiLocation/shinjuku.htm";
 }, false);
 
 var request2 = new XMLHttpRequest();
