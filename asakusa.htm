@@ -67,7 +67,7 @@ background-color: #ffffff;
 
 
 <nobr>
-<p> 都営浅草線～京急線　[自動更新：15秒]　　　　　　　　　　　　　　　　　　　　(C)Cure_kisaragi 2024-2026 / Ver.4.00 07/01</p>
+<p> 都営浅草線～京急線　[自動更新：15秒]　　　　　　　　　　　　　　　　　　　　(C)Cure_kisaragi 2024-2026 / Ver.4.01 07/08</p>
 <div style="position: absolute; top: 20px; left:10px; font-size:10pt"><p>本Webアプリが利用する公共交通データは、公共交通オープンデータセンターにおいて提供されるものです。交通事業者により提供されたデータを元に</p></div>
 <div style="position: absolute; top: 35px; left:10px; font-size:10pt"><p>していますが、必ずしも正確・完全なものとは限りません。本Webアプリの表示内容について、交通事業者への直接の問合せは行わないでください。</p></div>
 
@@ -91,6 +91,8 @@ background-color: #ffffff;
 
 <div style="position: absolute; top: 330px; left:660px; font-size:12pt"><p>＜ [SS]京成押上変電</p></div>
 <div style="position: absolute; top: 350px; left:660px; font-size:12pt"><p>　 [SP]押上区分</p></div>
+
+<div style="position: absolute; top: 150px; left:30px; font-size:28pt"><input type="button" id = "rosen" value="路線選択" class="shinjukubutton"></div>
 
 
 
@@ -977,6 +979,10 @@ document.getElementById("mita").addEventListener("click", function () {
 
 document.getElementById("shinjuku").addEventListener("click", function () {
   location.href ="https://kisaragi-cure.github.io/ToeiLocation/shinjuku.htm";
+}, false);
+
+document.getElementById("rosen").addEventListener("click", function () {
+  location.href ="https://kisaragi-cure.github.io/ToeiLocation/";
 }, false);
 
 var request2 = new XMLHttpRequest();
@@ -2799,7 +2805,7 @@ request2.send(null);
 /////////////////////////////////////ここから京急
 
 var request2 = new XMLHttpRequest();
-request2.open("GET", "https://api-challenge.odpt.org/api/v4/odpt:Train?odpt:operator=odpt.Operator:Keikyu&acl:consumerKey=l839g98l6b5ua7gxknup87hv4o4jrj3ru61qzr9yw25dg5x8k4ucfuu6p9nqugci", true);
+request2.open("GET", "https://api-challenge.odpt.org/api/v4/odpt:Train?odpt:operator=odpt.Operator:Keikyu&acl:consumerKey=wizrymexdtbv1gh681zdmx5twvcfnanpmwoc5qu6iuzwunny8c4v0c5q4c1hm7r0", true);
 request2.responseType = "text";
 
 request2.onload = () => {
