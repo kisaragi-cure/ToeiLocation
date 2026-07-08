@@ -2243,23 +2243,6 @@ case ('"odpt.Station:Toei.Shinjuku.Ichigaya"'):
 		doc2= document.getElementById("ti18-19"); 
 		doc0= document.getElementById("ti18-19b");  
 		doc1= document.getElementById("ti18-19c");  
-		//京王結合
-		if ( sessionStorage.getItem('D102tr') != '') {
-		localStorage.setItem( 'ts' + unban + 'tr' , sessionStorage.getItem('D102tr') );
-		if ( delay2 <= 10 ) {
-		localStorage.setItem( 'ko' + sessionStorage.getItem('D102tr') + 'tr' , unban );
-		localStorage.setItem( 'ko' + sessionStorage.getItem('D102tr') + 'time' , now );
-		}
-		localStorage.setItem( 'ts' + unban + 'sy' , sessionStorage.getItem('D102sy') );
-		localStorage.setItem( 'ts' + unban + 'time' , now );
-		}
-		if (sessionStorage.getItem('E102tr') == localStorage.getItem( 'ts' + unban + 'tr')){
-		nameText = document.getElementById('ti19-1a');
-		target = document.getElementById('ti19-1ad');
-		doc2= document.getElementById("ti19-1"); 
-		doc0= document.getElementById("ti19-1b");  
-		doc1= document.getElementById("ti19-1c");  
-		}
 	break ;
 
 	default:
@@ -2300,24 +2283,6 @@ case ('"odpt.Station:Toei.Shinjuku.Akebonobashi"'):
 		doc2= document.getElementById("ti19-1"); 
 		doc0= document.getElementById("ti19-1b");  
 		doc1= document.getElementById("ti19-1c"); 
-		//京王結合
-		if ( sessionStorage.getItem('E102tr') != '') {
-		localStorage.setItem( 'ts' + unban + 'tr' , sessionStorage.getItem('E102tr') );
-		if ( delay2 <= 10 ) {
-		localStorage.setItem( 'ko' + sessionStorage.getItem('D102tr') + 'tr' , unban );
-		localStorage.setItem( 'ko' + sessionStorage.getItem('D102tr') + 'time' , now );
-		}
-
-		localStorage.setItem( 'ts' + unban + 'sy' , sessionStorage.getItem('E102sy') );
-		localStorage.setItem( 'ts' + unban + 'time' , now );
-		}
-		if (sessionStorage.getItem('D101tr') == localStorage.getItem( 'ts' + unban + 'tr')){
-		nameText = document.getElementById('ti19-20a');
-		target = document.getElementById('ti19-20ad');
-		doc2= document.getElementById("ti19-20"); 
-		doc0= document.getElementById("ti19-20b");  
-		doc1= document.getElementById("ti19-20c");
-		}
 	}
 	break ;
 	case ( '"odpt.Station:Toei.Shinjuku.Ichigaya"'):	
@@ -2350,24 +2315,6 @@ case ('"odpt.Station:Toei.Shinjuku.Akebonobashi"'):
 		doc2= document.getElementById("ti19-20"); 
 		doc0= document.getElementById("ti19-20b");  
 		doc1= document.getElementById("ti19-20c");
-		//京王結合
-		if ( sessionStorage.getItem('D101tr') != '') {
-		localStorage.setItem( 'ts' + unban + 'tr' , sessionStorage.getItem('D101tr') );
-		if ( delay2 <= 10 ) {
-		localStorage.setItem( 'ko' + sessionStorage.getItem('D102tr') + 'tr' , unban );
-		localStorage.setItem( 'ko' + sessionStorage.getItem('D102tr') + 'time' , now );
-		}
-
-		localStorage.setItem( 'ts' + unban + 'sy' , sessionStorage.getItem('D101sy') );
-		localStorage.setItem( 'ts' + unban + 'time' , now );
-		}
-		if (sessionStorage.getItem('E101tr') == localStorage.getItem( 'ts' + unban + 'tr')){
-		nameText = document.getElementById('ti20-1a');
-		target = document.getElementById('ti20-1ad');
-		doc2= document.getElementById("ti20-1"); 
-		doc0= document.getElementById("ti20-1b");  
-		doc1= document.getElementById("ti20-1c");  
-		}
 	break ;
 
 	default:
