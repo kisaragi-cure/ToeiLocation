@@ -2345,7 +2345,7 @@ case ('"odpt.Station:Toei.Oedo.Tsukijishijo"'):
 		des2 = desna1[index1[unban1] +1 ].replaceAll('"','');
 		dep2 = newkinda1[index1[unban1] +1 ].replaceAll('"','');
 		num2 = desta1[index1[unban1] +1 ].replaceAll('"','');
-		ptf2 = from[index1[unban1] +1 ].replaceAll('"','');
+		ptf2 = from1[index1[unban1] +1 ].replaceAll('"','');
 	}
 		}
 	}
@@ -2410,7 +2410,7 @@ case ('"odpt.Station:Toei.Oedo.Kachidoki"'):
 		des2 = desna1[index1[unban1] +1 ].replaceAll('"','');
 		dep2 = newkinda1[index1[unban1] +1 ].replaceAll('"','');
 		num2 = desta1[index1[unban1] +1 ].replaceAll('"','');
-		ptf2 = from[index1[unban1] +1 ].replaceAll('"','');
+		ptf2 = from1[index1[unban1] +1 ].replaceAll('"','');
 	}
 
 		}
@@ -2454,7 +2454,7 @@ case ('"odpt.Station:Toei.Oedo.Kachidoki"'):
 		des2 = desna1[index1[unban1] +1 ].replaceAll('"','');
 		dep2 = newkinda1[index1[unban1] +1 ].replaceAll('"','');
 		num2 = desta1[index1[unban1] +1 ].replaceAll('"','');
-		ptf2 = from[index1[unban1] +1 ].replaceAll('"','');
+		ptf2 = from1[index1[unban1] +1 ].replaceAll('"','');
 	}
 
 		}
@@ -2510,7 +2510,7 @@ case ('"odpt.Station:Toei.Oedo.Tsukishima"'):
 		des2 = desna1[index1[unban1] +1 ].replaceAll('"','');
 		dep2 = newkinda1[index1[unban1] +1 ].replaceAll('"','');
 		num2 = desta1[index1[unban1] +1 ].replaceAll('"','');
-		ptf2 = from[index1[unban1] +1 ].replaceAll('"','');
+		ptf2 = from1[index1[unban1] +1 ].replaceAll('"','');
 	}
 
 		}
@@ -2555,7 +2555,7 @@ case ('"odpt.Station:Toei.Oedo.Tsukishima"'):
 		des2 = desna1[index1[unban1] +1 ].replaceAll('"','');
 		dep2 = newkinda1[index1[unban1] +1 ].replaceAll('"','');
 		num2 = desta1[index1[unban1] +1 ].replaceAll('"','');
-		ptf2 = from[index1[unban1] +1 ].replaceAll('"','');
+		ptf2 = from1[index1[unban1] +1 ].replaceAll('"','');
 	}
 
 		}
@@ -2613,7 +2613,7 @@ case ('"odpt.Station:Toei.Oedo.MonzenNakacho"'):
 		des2 = desna1[index1[unban1] +1 ].replaceAll('"','');
 		dep2 = newkinda1[index1[unban1] +1 ].replaceAll('"','');
 		num2 = desta1[index1[unban1] +1 ].replaceAll('"','');
-		ptf2 = from[index1[unban1] +1 ].replaceAll('"','');
+		ptf2 = from1[index1[unban1] +1 ].replaceAll('"','');
 	}
 
 		}
@@ -2656,7 +2656,7 @@ case ('"odpt.Station:Toei.Oedo.MonzenNakacho"'):
 		des2 = desna1[index1[unban1] +1 ].replaceAll('"','');
 		dep2 = newkinda1[index1[unban1] +1 ].replaceAll('"','');
 		num2 = desta1[index1[unban1] +1 ].replaceAll('"','');
-		ptf2 = from[index1[unban1] +1 ].replaceAll('"','');
+		ptf2 = from1[index1[unban1] +1 ].replaceAll('"','');
 	}
 
 		}
@@ -2803,7 +2803,7 @@ case ('"odpt.Station:Toei.Oedo.KiyosumiShirakawa"'):
 		des2 = desna1[index1[unban1] +1 ].replaceAll('"','');
 		dep2 = newkinda1[index1[unban1] +1 ].replaceAll('"','');
 		num2 = desta1[index1[unban1] +1 ].replaceAll('"','');
-		ptf2 = from[index1[unban1] +1 ].replaceAll('"','');
+		ptf2 = from1[index1[unban1] +1 ].replaceAll('"','');
 	}
 
 		}
@@ -3015,6 +3015,7 @@ if (kind1 != ""){
 
 	if (ptf1 == "3") {
 	ptf1 = "3番 始発"
+	document.getElementById("te26dep15").style.color = '#ffff55';
 	} else {
 	ptf1 = "4番"
 	}
@@ -3046,8 +3047,9 @@ if (kind1 != ""){
 if (kind2 != ""){
 	if (ptf2 == "3") {
 	ptf2 = "3番 始発"
+	document.getElementById("te26dep25").style.color = '#ffff55';
 	} else {
-	
+	ptf2 = "4番"
 	}
 
 	if (kind2 == 'odpt.TrainType:Toei.Express') {
