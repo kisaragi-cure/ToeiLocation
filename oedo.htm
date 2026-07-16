@@ -2692,7 +2692,7 @@ case ('"odpt.Station:Toei.Oedo.KiyosumiShirakawa"'):
 	case ( 'null' ):
 		if ( trid == '"odpt.RailDirection:OuterLoop"' ) {
 			if ( index1[unban1] != undefined){
-				if ( idx1 < index1[unban1] ){
+				if ( idx1 +　1 == index1[unban1] ){
 				idx1 = 	index1[unban1];
 					if ( kindna1[index1[unban1] -1 ] != undefined ){
 						kind1 = kindna1[index1[unban1] -1].replaceAll('"','');
@@ -2734,7 +2734,7 @@ case ('"odpt.Station:Toei.Oedo.KiyosumiShirakawa"'):
 
 		} else {
 			if ( index2[unban1] != undefined){
-				if ( idx3 < index2[unban1] ){
+				if ( idx3 + 1 == index2[unban1] ){
 				idx3 = 	index2[unban1];
 					if ( kindna2[index2[unban1] -1 ] != undefined ){
 						kind3 = kindna2[index2[unban1] -1].replaceAll('"','');
