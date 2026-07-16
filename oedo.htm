@@ -2710,7 +2710,7 @@ case ('"odpt.Station:Toei.Oedo.KiyosumiShirakawa"'):
 					}
 				}
 			}
-			if (des == "清" || ptf1 == "3"  ){
+			if (des == "清" || from1[index1[unban1] -1].replaceAll('"','') == "3"  ){
 				nameText = document.getElementById('te25-2a');
 				if ( nameText.value == "" ){
 					target = document.getElementById('te25-2ad');
@@ -2757,7 +2757,7 @@ case ('"odpt.Station:Toei.Oedo.KiyosumiShirakawa"'):
 			if (des == "↓"){
 			des = "都";
 			}
-			if (des == "清" || ptf3 == "2"  ){
+			if (des == "清" || from2[index2[unban1] -1].replaceAll('"','') == "2"  ){
 				nameText = document.getElementById('te25-2a');
 				if ( nameText.value == "" ){
 					target = document.getElementById('te25-2ad');
