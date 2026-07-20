@@ -49,7 +49,7 @@ background-color: #ffffff;
 <! 2026/05/13 1.00 >
 
 <nobr>
-<p> 都営大江戸線　[自動更新：15秒]　　　　　　　　　　　　　　　　　　　　　　　　(C)Cure_kisaragi 2026 / Ver.4.01 07/16</p>
+<p> 都営大江戸線　[自動更新：15秒]　　　　　　　　　　　　　　　　　　　　　　　　(C)Cure_kisaragi 2026 / Ver.4.02 07/21</p>
 
 <div style="position: absolute; top: 20px; left:10px; font-size:10pt"><p>本Webアプリが利用する公共交通データは、公共交通オープンデータセンターにおいて提供されるものです。交通事業者により提供されたデータを元に</p></div>
 <div style="position: absolute; top: 35px; left:10px; font-size:10pt"><p>していますが、必ずしも正確・完全なものとは限りません。本Webアプリの表示内容について、交通事業者への直接の問合せは行わないでください。</p></div>
@@ -610,6 +610,16 @@ background-color: #ffffff;
 <div id="te25-3ad" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "te25-3a" disabled / name="address" size="14" value=""　></div>
 <div id="te25-3b" style="position: absolute; top: 5595px; left:545px; font-size:12pt; "></div>
 <div id="te25-3" style="position: absolute; top: 5595px; left:555px; font-size:12pt; "></div>
+
+<!清澄白河-森下>
+<div id="te25-26ad" style="position: absolute; top:-100px; left:-100px;"><input type="text"  id = "te25-26a" disabled / name="address" size="14" value=""　></div>
+<div id="te25-26b" style="position: absolute; top: 5315px; left:755px; font-size:12pt; "></div>
+<div id="te25-26" style="position: absolute; top: 5315px; left:765px; font-size:12pt; "></div>
+<div id="te25-26c" style="position: absolute; top: 5365px; left:755px; font-size:12pt; color:#FF0000; "></div>
+<div id="te26-25ad" style="position: absolute; top: -100px; left:-100px;"><input type="text"  id = "te26-25a" disabled / name="address" size="14" value=""　></div>
+<div id="te26-25b" style="position: absolute; top: 5315px; left:825px; font-size:12pt; "></div>
+<div id="te26-25" style="position: absolute; top: 5315px; left:835px; font-size:12pt; "></div>
+<div id="te26-25c" style="position: absolute; top: 5365px; left:825px; font-size:12pt; color:#FF0000; "></div>
 
 
 
@@ -2692,7 +2702,7 @@ case ('"odpt.Station:Toei.Oedo.KiyosumiShirakawa"'):
 	case ( 'null' ):
 		if ( trid == '"odpt.RailDirection:OuterLoop"' ) {
 			if ( index1[unban1] != undefined){
-				if ( idx1 +　1 == index1[unban1] ){
+				if ( idx1 +　1 == index1[unban1] || idx1 == 0){
 				idx1 = 	index1[unban1];
 					if ( kindna1[index1[unban1] -1 ] != undefined ){
 						kind1 = kindna1[index1[unban1] -1].replaceAll('"','');
@@ -2734,7 +2744,7 @@ case ('"odpt.Station:Toei.Oedo.KiyosumiShirakawa"'):
 
 		} else {
 			if ( index2[unban1] != undefined){
-				if ( idx3 + 1 == index2[unban1] ){
+				if ( idx3 + 1 == index2[unban1] || idx3 == 0 ){
 				idx3 = 	index2[unban1];
 					if ( kindna2[index2[unban1] -1 ] != undefined ){
 						kind3 = kindna2[index2[unban1] -1].replaceAll('"','');
@@ -2815,7 +2825,11 @@ case ('"odpt.Station:Toei.Oedo.KiyosumiShirakawa"'):
 		if (des == "↓"){
 		des = "都";
 		}
-	
+		nameText = document.getElementById('te25-26a');
+		target = document.getElementById('te25-26ad');
+		doc2= document.getElementById("te25-26"); 
+		doc0= document.getElementById("te25-26b");  
+		doc1= document.getElementById("te25-26c"); 
 		
  
 if ( index2[unban1] != undefined){
