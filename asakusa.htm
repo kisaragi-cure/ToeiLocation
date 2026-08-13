@@ -1247,7 +1247,9 @@ case 'null':
 
 //行先設定
       des= JSON.stringify(data[n].odptdestinationStation) ;
-      des0= JSON.stringify(data[n].odptdestinationStation).replaceAll('"','') ;
+if (des == undefined ){
+	des = "―";
+}
 	switch (des) {
 case '["odpt.Station:Keisei.Main.KeiseiTakasago"]':
 	des = "高";
