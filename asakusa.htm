@@ -71,12 +71,12 @@ background-color: #ffffff;
 
 <!バージョン情報>
 <! 2026/07/01 4.00 集約化>
-<! 2026/07/01 4.03 祝日設定更新>
-
+<! 2026/08/11 4.03 祝日設定更新>
+<! 2026/09/20 4.04 軽微なバグ修正>
 
 
 <nobr>
-<p> 都営浅草線～京急線　[自動更新：15秒]　　　　　　　　　　　　　　　　　　　　(C)Cure_kisaragi 2024-2026 / Ver.4.03 08/11</p>
+<p> 都営浅草線～京急線　[自動更新：15秒]　　　　　　　　　　　　　　　　　　　　(C)Cure_kisaragi 2024-2026 / Ver.4.04 09/20</p>
 <div style="position: absolute; top: 20px; left:10px; font-size:10pt"><p>本Webアプリが利用する公共交通データは、公共交通オープンデータセンターにおいて提供されるものです。交通事業者により提供されたデータを元に</p></div>
 <div style="position: absolute; top: 35px; left:10px; font-size:10pt"><p>していますが、必ずしも正確・完全なものとは限りません。本Webアプリの表示内容について、交通事業者への直接の問合せは行わないでください。</p></div>
 
@@ -1250,7 +1250,6 @@ case 'null':
 if (des == undefined ){
 	des = "―";
 }
-des0= des.replaceAll('"','') ;
 	switch (des) {
 case '["odpt.Station:Keisei.Main.KeiseiTakasago"]':
 	des = "高";
@@ -3271,6 +3270,9 @@ switch (stid){
 
 
 case ('"odpt.Station:Keikyu.Main.Shinagawa"'):
+	if ( sessionStorage.getItem("sengakuji2a").length < 1 ){
+	sessionStorage.setItem("sengakuji2a",'  ');
+	}
 	if ( sessionStorage.getItem("sengakuji2a").replace('　','').substr( 0, 2 ) == unban.replace('&nbsp;','').substr( 0, 2 ) && sessionStorage.getItem("sengakuji2a").replace('　','').substr( -1, 1 ) == unban.replace('&nbsp;','').substr( -1, 1 ) ) {
 	doc2= document.getElementById("a07-kke"); 
 	doc0= document.getElementById("a07-kkb");  
