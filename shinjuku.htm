@@ -69,6 +69,10 @@ background-color: #ffffff;
 
 <div id="koshin-T" style="position: absolute; top: 80px; left:370px; color:#000000; font-size:12pt; ">都営更新：ー</div>
 
+<div style="position: absolute; top: 190px; left:30px; font-size:28pt"><input type="button" id = "weekend" value="休日ダイヤ" class="asakusabutton"></div>
+<div style="position: absolute; top: 190px; left:160px; font-size:28pt"><input type="button" id = "weekday" value="平日ダイヤ" class="asakusabutton"></div>
+
+
 <!本八幡発車>
 <div style="position: absolute; top: 120px; left:690px; color:#ffffff; font-size:12pt"><p>本八幡発車順序</p></div>
 <div id="ti01dep11" style="position: absolute; top: 165px; left:670px; color:#ffffff; font-size:12pt; "></div>
@@ -583,6 +587,12 @@ background-color: #ffffff;
 
 
 ///////////////////////////////ここから新宿線
+	let now = new Date();
+      	let date = now.getDate();
+      	let month = now.getMonth();
+      	let year = now.getYear();
+	let today = '' + year +  month +  date;
+
 
 document.getElementById("asakusa").addEventListener("click", function () {
   location.href ="https://kisaragi-cure.github.io/ToeiLocation/asakusa.htm";
@@ -604,6 +614,23 @@ document.getElementById("oedo2").addEventListener("click", function () {
 document.getElementById("rosen").addEventListener("click", function () {
   location.href ="https://kisaragi-cure.github.io/ToeiLocation/";
 }, false);
+
+
+document.getElementById("weekend").addEventListener("click", function () {
+      weekend.style.color = '#ff0000'; //文字
+      weekday.style.color = '#000000'; //文字	
+	localStorage.setItem("weekend",today);
+	localStorage.setItem("weekday",'');
+}, false);
+
+document.getElementById("weekday").addEventListener("click", function () {
+      weekend.style.color = '#000000'; //文字
+      weekday.style.color = '#0000ff'; //文字
+	localStorage.setItem("weekday",today);
+	localStorage.setItem("weekend",'');
+
+}, false);
+
 
 var request = new XMLHttpRequest();
 request.open("GET", "https://api.odpt.org/api/v4/odpt:Train?odpt:railway=odpt.Railway:Toei.Shinjuku&acl:consumerKey=qkpjriztbhvaxwjzum1oluug1hnfvwfq3ztxnsb56xtbt6qve7zdwv8bb73ajavy", true);
@@ -728,9 +755,6 @@ document.getElementById("koshin-T").innerHTML = koshinT ;
 	if ( month == 4 && date == 4 ) {
 	day = 0;
 	}
-	if ( month == 8 && date == 23 ) {
-	day = 0;
-	}
 	if ( month == 4 && date == 5 ) {
 	day = 0;
 	}
@@ -738,6 +762,16 @@ document.getElementById("koshin-T").innerHTML = koshinT ;
 	day = 0;
 	}
 	if ( month == 10 && date == 23 ) {
+	day = 0;
+	}
+if (localStorage.getItem('weekday') == today) {
+      weekend.style.color = '#000000'; //文字
+      weekday.style.color = '#0000ff'; //文字
+	day = 1;
+	}
+	if (localStorage.getItem('weekend') == today) {
+      weekend.style.color = '#ff0000'; //文字
+      weekday.style.color = '#000000'; //文字
 	day = 0;
 	}
 
@@ -768,11 +802,15 @@ if ( day > 0 && day < 6 ) {
       var data6= JSON.parse(JSON.stringify(data5[1].odptstationTimetableObject)); 
       var data8= JSON.parse(JSON.stringify(data7[3].odptstationTimetableObject)); 
       var data9= JSON.parse(JSON.stringify(data5[1].odptstationTimetableObject)); 
+      weekday.style.color = '#0000ff'; //文字
+
 } else {
       var data4= JSON.parse(JSON.stringify(data3[0].odptstationTimetableObject)); 
       var data6= JSON.parse(JSON.stringify(data5[0].odptstationTimetableObject)); 
       var data8= JSON.parse(JSON.stringify(data7[2].odptstationTimetableObject)); 
       var data9= JSON.parse(JSON.stringify(data5[0].odptstationTimetableObject)); 
+      weekend.style.color = '#ff0000'; //文字
+
 }
       len3 = JSON.stringify(data4.length) ;
 if ( len3 - m > 100 && timesec != 4 ){
