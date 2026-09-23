@@ -72,11 +72,11 @@ background-color: #ffffff;
 <!バージョン情報>
 <! 2026/07/01 4.00 集約化>
 <! 2026/08/11 4.03 祝日設定更新>
-<! 2026/09/20 4.04 軽微なバグ修正>
+<! 2026/09/23 4.04 ダイヤ選択機能>
 
 
 <nobr>
-<p> 都営浅草線～京急線　[自動更新：15秒]　　　　　　　　　　　　　　　　　　　　(C)Cure_kisaragi 2024-2026 / Ver.4.04 09/20</p>
+<p> 都営浅草線～京急線　[自動更新：15秒]　　　　　　　　　　　　　　　　　　　　(C)Cure_kisaragi 2024-2026 / Ver.4.04 09/23</p>
 <div style="position: absolute; top: 20px; left:10px; font-size:10pt"><p>本Webアプリが利用する公共交通データは、公共交通オープンデータセンターにおいて提供されるものです。交通事業者により提供されたデータを元に</p></div>
 <div style="position: absolute; top: 35px; left:10px; font-size:10pt"><p>していますが、必ずしも正確・完全なものとは限りません。本Webアプリの表示内容について、交通事業者への直接の問合せは行わないでください。</p></div>
 
@@ -103,7 +103,8 @@ background-color: #ffffff;
 
 <div style="position: absolute; top: 150px; left:30px; font-size:28pt"><input type="button" id = "rosen" value="路線選択" class="shinjukubutton"></div>
 
-
+<div style="position: absolute; top: 190px; left:30px; font-size:28pt"><input type="button" id = "weekend" value="休日ダイヤ" class="shinjukubutton"></div>
+<div style="position: absolute; top: 190px; left:160px; font-size:28pt"><input type="button" id = "weekday" value="平日ダイヤ" class="shinjukubutton"></div>
 
 <div style="position: absolute; top: 200px; left:720px; font-size:12pt"><p>(押上駅について)</p></div>
 <div style="position: absolute; top: 222px; left:720px; font-size:11pt"><p>押上駅はこちらで確認できます↓</p></div>
@@ -986,7 +987,13 @@ background-color: #ffffff;
 <script type="module" >
 
 
+
 /////////////////////////////////////ここから都営
+	let now = new Date();
+      	let date = now.getDate();
+      	let month = now.getMonth();
+      	let year = now.getYear();
+	let today = '' + year +  month +  date;
 
 document.getElementById("keisei").addEventListener("click", function () {
   location.href ="https://zaisen.tid-keisei.jp/html/zaisen.html?line=4";
@@ -1010,6 +1017,22 @@ document.getElementById("oedo2").addEventListener("click", function () {
 
 document.getElementById("rosen").addEventListener("click", function () {
   location.href ="https://kisaragi-cure.github.io/ToeiLocation/";
+}, false);
+
+
+document.getElementById("weekend").addEventListener("click", function () {
+      weekend.style.color = '#ff0000'; //文字
+      weekday.style.color = '#000000'; //文字	
+	localStorage.setItem("weekend",today);
+	localStorage.setItem("weekday",'');
+}, false);
+
+document.getElementById("weekday").addEventListener("click", function () {
+      weekend.style.color = '#000000'; //文字
+      weekday.style.color = '#0000ff'; //文字
+	localStorage.setItem("weekday",today);
+	localStorage.setItem("weekend",'');
+
 }, false);
 
 var request2 = new XMLHttpRequest();
@@ -1131,9 +1154,6 @@ let now = new Date();
 	if ( month == 4 && date == 5 ) {
 	day = 0;
 	}
-	if ( month == 8 && date == 23 ) {
-	day = 0;
-	}
 	if ( month == 7 && date == 11 ) {
 	day = 0;
 	}
@@ -1147,6 +1167,16 @@ let now = new Date();
 	day = 0;
 	}
 	if ( month == 11 && date == 31 ) {
+	day = 0;
+	}
+	if (localStorage.getItem('weekday') == today) {
+      weekend.style.color = '#000000'; //文字
+      weekday.style.color = '#0000ff'; //文字
+	day = 1;
+	}
+	if (localStorage.getItem('weekend') == today) {
+      weekend.style.color = '#ff0000'; //文字
+      weekday.style.color = '#000000'; //文字
 	day = 0;
 	}
 
@@ -1184,8 +1214,10 @@ now = now.getHours();
 	var desn = {};
 if ( day > 0 && day < 6 ) {
       var data4= JSON.parse(JSON.stringify(data3[1].odptstationTimetableObject)); 
+      weekday.style.color = '#0000ff'; //文字
 } else {
       var data4= JSON.parse(JSON.stringify(data3[0].odptstationTimetableObject)); 
+      weekend.style.color = '#ff0000'; //文字
 }
       len3 = JSON.stringify(data4.length) ;
 if ( len3 - m > 100 && timesec != 4 ){
@@ -2716,6 +2748,7 @@ if (kind1 != ""){
 	case '[odpt.Station:Shibayama.Shibayama.ShibayamaChiyoda]':
 	des1 = "芝山千代";
 	break;
+
 	default:
 	des1 = "―";
 	break;
@@ -2803,6 +2836,7 @@ if (kind2 != ""){
 	case '[odpt.Station:Shibayama.Shibayama.ShibayamaChiyoda]':
 	des2 = "芝山千代";
 	break;
+
 	default:
 	des2 = "―";
 	break;
@@ -2845,6 +2879,13 @@ request2.send(null);
 
 
 /////////////////////////////////////ここから京急
+	let now = new Date();
+      	let date = now.getDate();
+      	let month = now.getMonth();
+      	let year = now.getYear();
+	let today = '' + year +  month +  date;
+
+
 
 var request2 = new XMLHttpRequest();
 request2.open("GET", "https://api-challenge.odpt.org/api/v4/odpt:Train?odpt:operator=odpt.Operator:Keikyu&acl:consumerKey=wizrymexdtbv1gh681zdmx5twvcfnanpmwoc5qu6iuzwunny8c4v0c5q4c1hm7r0", true);
@@ -2942,13 +2983,20 @@ let nowtime = Math.floor(Date.now() / 60000) ;
 	if ( month == 4 && date == 5 ) {
 	day = 0;
 	}
-	if ( month == 8 && date == 23 ) {
-	day = 0;
-	}
 	if ( month == 10 && date == 3 ) {
 	day = 0;
 	}
 	if ( month == 10 && date == 23 ) {
+	day = 0;
+	}
+	if (localStorage.getItem('weekday') == today) {
+      weekend.style.color = '#000000'; //文字
+      weekday.style.color = '#0000ff'; //文字
+	day = 1;
+	}
+	if (localStorage.getItem('weekend') == today) {
+      weekend.style.color = '#ff0000'; //文字
+      weekday.style.color = '#000000'; //文字
 	day = 0;
 	}
 
